@@ -1,46 +1,4 @@
-<!doctype html>
-<html>
-
-<head>
-  <meta charset="utf-8">
-  <title></title>
-  <link rel="stylesheet" href="common/css/styles.css?v=3">
-</head>
-
-<body>
-  <div id="main-container">
-
-    <div id="main-navigation">
-      <ul>
-        <li><a href="#">Inicio</a></li>
-        <li>
-          <a href="#">Desarrollos</a>
-          <div class="sub-navigation">
-            <p class="head">
-              Preventa
-            </p>
-            <ul>
-              <li><a href="#">HÁ Tulúm La Velata</a></li>
-              <li><a href="#">HÁ Tulúm Riviera Maya</a></li>
-            </ul>
-            <p class="head">
-              Proyectos Anteriores
-            </p>
-            <ul>
-              <li><a href="#">HÁ Proyecto 1</a></li>
-              <li><a href="#">HÁ Proyecto 2</a></li>
-              <li><a href="#">HÁ Proyecto 3</a></li>
-              <li><a href="#">HÁ Proyecto 4</a></li>
-              <li><a href="#">HÁ Proyecto 5</a></li>
-            </ul>
-          </div>
-        </li>
-        <li><a href="#">Nosotros</a></li>
-        <li><a href="#">Feature</a></li>
-        <li><a href="#">Contacto</a></li>
-        <li class="language"><a href="#">English</a></li>
-      </ul>
-    </div>
+<? get_header() ?>
 
     <div id="project-navigation">
       <ul>
@@ -54,7 +12,6 @@
 
     <section id="project-description" class="screen">
       <div class="screen-container">
-        <!--<div class="container-fluid">-->
         <div class="row no-gutters">
           <div class="col-md-6">
             <div class="content">
@@ -94,7 +51,6 @@
             </div>
           </div>
         </div>
-        <!--</div>-->
       </div>
     </section>
 
@@ -300,16 +256,4 @@
       </div>
     </section>
 
-    <footer id="main-footer">
-      <nav>
-        <a href="#">Términos y Condiciones</a>
-        |
-        <a href="#">Política de Privacidad</a>
-      </nav>
-    </footer>
-  </div>
-
-  <script src="common/js/bundle.js"></script>
-</body>
-
-</html>
+<? get_gooter() ?>
