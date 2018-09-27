@@ -47,55 +47,68 @@
       </div>
     </section>
 
+    <? if (have_rows('features')): ?>
+    <? while (have_rows('features')) : the_row(); ?>
     <section id="project-about" class="screen">
       <div class="screen-container">
         <div class="row no-gutters">
-          <div class="col-md-3">
-            <div class="content">
-              <p>
-                <span class="option">Arquitectura</span>
-                <br>Void Studio
-              </p>
-              <p>
-                <span class="option">Constructora</span>
-                <br>TechnéS.A. de C. V.
-              </p>
-              <p>
-                <span class="option">Uso</span>
-                <br>Residencial
-              </p>
-              <p>
-                <span class="option">No. Unidades</span>
-                <br>4
-              </p>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="content">
-              <p>
-                <span class="option">Niveles</span>
-                <br>3
-              </p>
-              <p>
-                <span class="option">Estatus</span>
-                <br>En construcción
-              </p>
-              <p>
-                <span class="option">Ubicación</span>
-                <br>La Veleta, Tulum, Q.R. México
-              </p>
-              <p>
-                <span class="option">M2 por unidad</span>
-                <br>De 150m<sup>2</sup> a 270m<sup>2</sup> totales incluyendo áreas Interiores y Exteriores
-                privativas
-              </p>
+          <div class="col-md-6">
+            <div class="row no-gutters">
+              <div class="col-md-6">
+                <div class="content">
+                  <p>
+                    <span class="option">Arquitectura</span>
+                    <br><?= get_sub_field( 'architecture' ) ?>
+                  </p>
+                  <p>
+                    <span class="option">Constructora</span>
+                    <br><?= get_sub_field( 'construction' ) ?>
+                  </p>
+                  <p>
+                    <span class="option">Uso</span>
+                    <br><?= get_sub_field( 'use' ) ?>
+                  </p>
+                  <p>
+                    <span class="option">No. Unidades</span>
+                    <br><?= get_sub_field( 'units' ) ?>
+                  </p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="content">
+                  <p>
+                    <span class="option">Niveles</span>
+                    <br><?= get_sub_field( 'levels' ) ?>
+                  </p>
+                  <p>
+                    <span class="option">Estatus</span>
+                    <br><?= get_sub_field( 'status' ) ?>
+                  </p>
+                  <p>
+                    <span class="option">Ubicación</span>
+                    <br><?= get_sub_field( 'location' ) ?>
+                  </p>
+                  <p>
+                    <span class="option">M2 por unidad</span>
+                    <br><?= get_sub_field( 'area' ) ?>
+                  </p>
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="content">
+                  <p>
+                    <span class="option">Infotmación adicional</span>
+                    <br><?= get_sub_field( 'aditional-information' ) ?>
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
           <div class="col-md-6">
             <div class="content">
               <p class="text-right">
                 Si deseas más información sobre este desarrollo
-                <br><a href="#" class="ha-btn ha-btn-submit">Descarga el documento</a>
+                <br><a href="<?= get_sub_field( 'pdf' ) ?>" class="ha-btn ha-btn-submit">Descarga el documento</a>
               </p>
             </div>
           </div>
@@ -129,6 +142,8 @@
         </div>
       </div>
     </section>
+    <? endwhile ?>
+    <? endif ?>
 
     <section id="project-map" class="screen">
       <div class="screen-container">
