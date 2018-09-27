@@ -101,7 +101,7 @@
       </div>
     </section>
 
-    <? $about_us =  get_field( 'about-us' ) ?>
+    <?= $about_us =  get_field( 'about-us' ) ?>
 
     <section id="about-us" class="screen">
       <div class="screen-container">
