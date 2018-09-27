@@ -102,9 +102,7 @@
     </section>
 
     <? if (have_rows('about-us')): ?>
-
     <? while (have_rows('about-us')) : the_row(); ?>
-
     <section id="about-us" class="screen">
       <div class="screen-container">
         <div class="content">
@@ -132,42 +130,31 @@
         <? endif ?>
       </div>
     </section>
-
     <? endwhile ?>
-
     <? endif ?>
 
+    <? if (have_rows('feature')): ?>
+    <? while (have_rows('feature')) : the_row(); ?>
     <section id="feature" class="screen">
       <div class="screen-container screen-container-regular">
         <div class="row no-gutters">
           <div class="col-lg-6">
-            <div class="image"></div>
+            <? $image = wp_get_attachment_image_src(get_sub_field('image'), 'full') ?>
+            <div class="image" style="background-image:url(<?= $image[0] ?>)"></div>
           </div>
           <div class="col-lg-6">
             <div class="content">
               <p class="screen-title screen-title-border">
-                Human Architecture
+                <?= get_sub_field( 'title' ) ?>
               </p>
-              <p>
-                La estandarización se ha vuelto el lugar común en el desarrollo inmobiliario lo cual genera la
-                necesidad urgente de traer una mirada fresca dónde las personas estén al centro del diseño.
-              </p>
-              <p>
-                Para nosotros, diseñar una propiedad, se trata de crear un conjunto de experiencias y rituales que se
-                irán descubriendo a lo largo del tiempo. Bajo nuestro enfoque Human Architecture, desarrollamos
-                espacios que generan un sentido de pertenencia, que se adaptan al momento de vida de sus habitantes y
-                sobre todo, despiertan la curiosidad, la creatividad y la comodidad en el momento justo.
-              </p>
-              <p>
-                Por ello, nunca escatimamos en la calidad y la personalidad de cada espacio, elegimos los elementos,
-                texturas y distribución para que, sin importar quién habite en cada espacio, siempre podra sentirlo
-                como suyo.
-              </p>
+              <?= get_sub_field( 'description' ) ?>
             </div>
           </div>
         </div>
       </div>
     </section>
+    <? endwhile ?>
+    <? endif ?>
 
     <section id="contact-us" class="screen">
       <div class="screen-container">
