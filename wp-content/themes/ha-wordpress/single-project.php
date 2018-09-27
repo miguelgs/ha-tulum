@@ -10,6 +10,8 @@
       <a href="#" class="cta">Solicita información</a>
     </div>
 
+    <? if (have_rows('description')): ?>
+    <? while (have_rows('feature')) : the_row(); ?>
     <section id="project-description" class="screen">
       <div class="screen-container">
         <div class="row no-gutters">
@@ -18,33 +20,12 @@
               <p class="screen-title screen-title-border">
                 HÁ Tulúm La Veleta
               </p>
-              <p>
-                Ubicado en la zona de mayor crecimiento y plusvalía de Tulúm, este sofisticado desarrollo de 4 casas
-                independientes emerge como un oasis personal.
-              </p>
-              <p>
-                Bajo un estilo eco-chic, HA Tulúm La Veleta tiene un diseño arquitectónico moderno, que privilegia la
-                conexión entre interior y exterior para dar un sentido de integración con la naturaleza.
-              </p>
-              <p>
-                Además, este desarrollo tiene algo que muy pocos pueden ofrecer: cada unidad es diferente a las
-                demás,
-                dando una sensación de exclusividad,
-              </p>
-              <p>
-                <b>¿Por qué invertir en Tulúm?</b>
-              </p>
-              <ul>
-                <li>Una inversión inteligente con alta plusvalía</li>
-                <li>Ubicación privilegiada a 10 minutos de la playa en bicicleta</li>
-                <li>Acceso a importantes vías de comunicación</li>
-                <li>Zona completamente urbanizada con todos los servicios</li>
-                <li>ROI (return of investment) atractivo</li>
-              </ul>
+              <?= get_sub_field( 'text' ) ?>
             </div>
           </div>
           <div class="col-md-6">
-            <div class="image image-display">
+            <? $image = wp_get_attachment_image_src(get_sub_field('image'), 'full') ?>
+            <div class="image image-display" style="background-image:url(<?= $image[0] ?>)">
               <p class="caption">
                 Lorem ipsum
               </p>
@@ -53,6 +34,8 @@
         </div>
       </div>
     </section>
+    <? endwhile ?>
+    <? endif ?>
 
     <section id="slider" class="screen">
       <div class="slider-container">
