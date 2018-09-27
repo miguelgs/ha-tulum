@@ -101,26 +101,15 @@
       </div>
     </section>
 
+    <? $about_us =  get_field( 'about-us' ) ?>
+
     <section id="about-us" class="screen">
       <div class="screen-container">
         <div class="content">
           <p class="screen-title screen-title-border">
-            Acerca de Nosotros
+            <? pll_string( 'about-us' ) ?>
           </p>
-          <p>
-            HÁ nace del reencuentro de un grupo de amigos quiénes habiendo trabajado juntos, se separaron para seguir
-            su
-            propio camino en distintas áreas como la arquitectura, la construcción y el interiorismo desde diferentes
-            partes del mundo. Pero años después, en una de esas conversaciones que cambian la vida, descubren una
-            visión
-            en
-            común: crear espacios con la más alta calidad y un profundo sentido personal.
-          </p>
-          <p>
-            Hoy, con más de 20 años de experiencia conjunta, este joven grupo se prepara para transformar el mercado
-            inmobiliario mexicano con una visión fresca y el apoyo de expertos en marketing, ventas contabilidad y
-            derecho.
-          </p>
+          <?= $about_us[ 'text' ] ?>
         </div>
         <div class="collaborators">
           <div class="content">
