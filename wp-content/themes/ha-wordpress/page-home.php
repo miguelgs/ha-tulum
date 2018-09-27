@@ -122,8 +122,8 @@
             <div class="carousel">
               <? while (have_rows('collaborators')) : the_row(); ?>
               <div class="item">
-                123
-                <div class="logo" style="background-image:url(assets/images/collaborators/logo-bios.jpg)"></div>
+                <? $image = wp_get_attachment_image_src(get_sub_field('image'), 'full') ?>
+                <div class="logo" style="background-image:url(<? $image[0] ?>)"></div>
               </div>
               <? endwhile ?>
             </div>
