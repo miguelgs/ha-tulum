@@ -107,7 +107,7 @@
       <div class="screen-container">
         <div class="content">
           <p class="screen-title screen-title-border">
-            <? pll_string( 'about-us' ) ?>
+            A<? //pll_string( 'about-us' ) ?>
           </p>
           <?= $about_us[ 'text' ] ?>
         </div>
