@@ -7,14 +7,14 @@
       <div class="slider-container">
         <? while ( have_rows('slider') ) : the_row(); ?>
         <? $image = wp_get_attachment_image(get_sub_field('image'), 'full') ?>
-        <div class="slide" style="background-image:url(assets/images/bg-ha-tulum.jpg)">
+        <div class="slide" style="background-image:url(<?= $image ?>)">
           <header>
             <div class="screen-container">
               <p class="title">
-                <? get_sub_field('title') ?>
+                <?= get_sub_field('title') ?>
               </p>
               <p class="mb-0">
-                <a href="<? get_sub_field('link') ?>" class="ha-btn ha-btn-lg ha-btn-white">Ver más</a>
+                <a href="<?= get_sub_field('link') ?>" class="ha-btn ha-btn-lg ha-btn-white">Ver más</a>
               </p>
             </div>
           </header>
