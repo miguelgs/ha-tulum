@@ -97,7 +97,7 @@
               <div class="col-md-12">
                 <div class="content">
                   <p>
-                    <span class="option">Infotmación adicional</span>
+                    <span class="option">Información adicional</span>
                     <br><?= get_sub_field( 'aditional-information' ) ?>
                   </p>
                 </div>
@@ -145,6 +145,8 @@
     <? endwhile ?>
     <? endif ?>
 
+    <? if (have_rows('location')): ?>
+    <? while (have_rows('location')) : the_row(); ?>
     <section id="project-map" class="screen">
       <div class="screen-container">
         <div class="row no-gutters">
@@ -153,22 +155,21 @@
               <p class="screen-title screen-title-border">
                 HÁ Tulúm La Veleta
               </p>
-              <p>
-                Calle 8 Sur, No. 6, Región 15,
-                <br>Tulum, Quintana Roo
-              </p>
+              <?= get_sub_field( 'address' ) ?>
               <p class="subtitle">
                 Atracciones y desarrollos cerca
               </p>
+              <?= get_sub_field( 'nearby' ) ?>
             </div>
           </div>
           <div class="col-md-8">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14977.355895994044!2d-87.48099086159607!3d20.203230433220142!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f4fd6ba60a36c31%3A0x2aefb3700fafb63c!2sLa+Veleta%2C+Tulum%2C+Q.R.!5e0!3m2!1ses!2smx!4v1537676051509"
-              frameborder="0" class="map" allowfullscreen></iframe>
+            <iframe src="<?= get_sub_field( 'map' ) ?>" frameborder="0" class="map" allowfullscreen></iframe>
           </div>
         </div>
       </div>
     </section>
+    <? endwhile ?>
+    <? endif ?>
 
     <section id="projects" class="screen">
       <div class="screen-container">
