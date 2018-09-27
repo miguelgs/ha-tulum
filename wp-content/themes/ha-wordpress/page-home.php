@@ -7,7 +7,7 @@
       <div class="slider-container">
         <? while ( have_rows('slider') ) : the_row(); ?>
         <? $image = wp_get_attachment_image_src(get_sub_field('image'), 'full') ?>
-        <div class="slide" style="background-image:url(<?= $image ?>)">
+        <div class="slide" style="background-image:url(<?= $image[0] ?>)">
           <header>
             <div class="screen-container">
               <p class="title">
