@@ -1,3 +1,5 @@
+<? /* Template Name: Home */ ?>
+
 <? get_header() ?>
 
     <section id="slider" class="screen">
