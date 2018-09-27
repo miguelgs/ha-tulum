@@ -11,7 +11,7 @@
     </div>
 
     <? if (have_rows('description')): ?>
-    <? while (have_rows('feature')) : the_row(); ?>
+    <? while (have_rows('description')) : the_row(); ?>
     <section id="project-description" class="screen">
       <div class="screen-container">
         <div class="row no-gutters">
