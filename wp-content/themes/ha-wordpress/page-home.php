@@ -111,7 +111,7 @@
           <p class="screen-title screen-title-border">
             =<? //pll_string( 'about-us' ) ?>
           </p>
-          <?= get_subfield( 'text' ) ?>
+          <?= get_sub_field( 'text' ) ?>
         </div>
         <? if (have_rows('collaborators')) : ?>
         <div class="collaborators">
