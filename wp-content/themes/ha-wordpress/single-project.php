@@ -256,4 +256,4 @@
       </div>
     </section>
 
-<? get_gooter() ?>
+<? get_footer() ?>
