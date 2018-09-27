@@ -1,0 +1,35 @@
+#about-us {
+
+  .content {
+    padding-top: 100px;
+
+    p {
+      &:not(.screen-title){
+        padding: 0 25px;
+      }
+    }
+  }
+
+  .collaborators {
+    padding-top: 50px;
+
+    .content {
+      padding: 0;
+
+      .carousel {
+        .item {
+          display: block;
+          height: 150px;
+
+          .logo {
+            background: center center no-repeat;
+            background-size: contain;
+            display: block;
+            height: 100%;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,67 @@
+#project-about {
+  background: url(../../assets/images/bg-flower.png) right center no-repeat;
+  background-size: 280px;
+
+  .content {
+    padding-top: 100px;
+
+    p {
+      &:not(.screen-title){
+        padding-left: 25px;
+      }
+
+      &.text-right {
+        padding-right: 100px;
+
+        .ha-btn {
+          padding-left: 20px;
+          padding-right: 20px;
+
+          &:after {
+            background:  center center no-repeat;
+            background-image: url(../../assets//images/icons/pdf-mirage.svg);
+            background-size: 24px 24px;
+            content: '';
+            display: inline-block;
+            height: 24px;
+            margin-left: 5px;
+            vertical-align: middle;
+            width: 24px;
+          }
+
+          &:hover {
+            &:after {
+              background-image: url(../../assets//images/icons/pdf-white.svg);
+            }
+          }
+        }
+      }
+
+      .option {
+        font-weight: 800;
+      }
+    }
+  }
+
+  .collaborators {
+
+    .content {
+      padding-top: 50px;
+
+      .carousel {
+        .item {
+          display: block;
+          height: 150px;
+
+          .logo {
+            background: center center no-repeat;
+            background-size: contain;
+            display: block;
+            height: 100%;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}

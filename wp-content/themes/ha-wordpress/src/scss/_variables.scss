@@ -1,0 +1,19 @@
+$fonts-path : '../fonts/';
+
+$app-colors : (
+  'bismark'    : #427184,
+  'black'      : #000000,
+  'black-haze' : #f6f7f7,
+  'gallery'    : #eeeeee,
+  'mirage'     : #1d2c33,
+  'white'      : #ffffff,
+);
+
+@function getAppColor($name){
+  @return map-get($app-colors, $name);
+}
+
+@function getAppColorAlpha($name, $level){
+  $color: map-get($app-colors, $name);
+  @return rgba($color, $level);
+}

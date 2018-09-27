@@ -1,0 +1,207 @@
+*, body {
+  font-family: 'Neutraface2Display';
+}
+
+body {
+  font-size: 18px;
+  letter-spacing: 1px;
+}
+
+b {
+  font-weight: 800;
+}
+
+#main-container {
+  height: 100vh;
+  position: relative;
+  z-index: 25;
+}
+
+#main-navigation {
+  align-items: flex-end;
+  background: getAppColor('mirage') url(../../assets/images/logo-ha.svg) center 50px no-repeat;
+  background-size: 120px;
+  display: flex;
+  height: 580px;
+  left: 0;
+  padding-bottom: 50px;
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 210px;
+  z-index: 50;
+
+  > ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+
+    > li {
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      //padding-left: 50px;
+      text-transform: uppercase;
+
+      &:not(:last-child){
+        margin-bottom: 10px;
+      }
+
+      &.language {
+        
+        /*a {
+          border-top: 1px solid getAppColorAlpha('white',0.3);
+          margin-top: 20px;
+          padding-top: 20px;
+        }*/
+      }
+
+      > a {
+        color: getAppColorAlpha('white',0.3);
+        display: block;
+        padding: 0 50px;
+        text-decoration: none;
+        transition: all 0.25s ease-in-out;
+
+        &:hover {
+          color: getAppColorAlpha('white',1);
+        }
+      }
+
+      .sub-navigation {
+        background: getAppColor('gallery');
+        bottom: 0;
+        //display: none;
+        left: 100%;
+        opacity: 0;
+        padding: 50px;
+        position: absolute;
+        transition: all 0.25s ease-in-out;
+        visibility: hidden;
+        width: 350px;
+
+        p, ul {
+          list-style: none;
+          margin: 0;
+          padding: 0;
+        }
+
+        p {
+          &.head {
+            border-bottom: 1px solid getAppColor('mirage');
+            font-size: 120%;
+            margin-bottom: 15px;
+          }
+        }
+
+        ul {
+          &:not(:last-child){
+            margin-bottom: 25px;
+          }
+
+          li {
+            padding: 0;
+
+            &:not(:last-child){
+              margin-bottom: 10px;
+            }
+
+            a {
+              color: getAppColorAlpha('mirage', 0.5);
+              text-decoration: none;
+              transition: all 0.25s ease-in-out;
+
+              &:hover {
+                color: getAppColorAlpha('mirage',1);
+              }
+            }
+          }
+        }
+      }
+
+      &:hover {
+
+        .sub-navigation {
+          visibility: visible;
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+#main-footer {
+  background: getAppColor('mirage');
+  padding: 100px 0;
+  position: relative;
+  z-index: 25;
+
+  nav {
+    color: getAppColorAlpha('white',0.5);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-align: center;
+    text-transform: uppercase;
+
+    a {
+      color: getAppColorAlpha('white',0.7);
+      margin: 0 50px;
+      text-decoration: none;
+      transition: all 0.25s ease-in-out;
+
+      &:hover {
+        color: getAppColorAlpha('white',1);
+      }
+    }
+  }
+}
+
+//
+
+#project-navigation {
+  align-items: center;
+  background: getAppColor('white');
+  display: flex;
+  height: 50px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 50;
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0 0 0 260px;
+
+    li {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+
+      &:not(:last-child){
+        margin-right: 25px;
+      }
+
+      a {
+        color: getAppColor('mirage');
+        text-decoration: none;
+      }
+    }
+  }
+
+  .cta {
+    background: getAppColor('mirage');
+    color: getAppColor('white');
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-left: auto;
+    padding: 10px 25px;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+}

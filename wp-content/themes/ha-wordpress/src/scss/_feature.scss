@@ -1,0 +1,25 @@
+#feature {
+  background: getAppColor('mirage');
+
+  .screen-container {
+    padding: 0;
+
+    .image {
+      background: url(../../assets/images/bg-feature.jpg) center center no-repeat;
+      background-size: cover;
+      height: 100vh;
+    }
+
+    .content {
+      padding: 100px 75px 0;
+
+      p {
+        color: getAppColorAlpha('white',0.75);
+
+        &:not(.screen-title){
+          padding-left: 25px;
+        }
+      }
+    }
+  }
+}

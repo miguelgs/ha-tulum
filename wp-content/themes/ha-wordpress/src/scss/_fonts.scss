@@ -1,0 +1,32 @@
+@font-face {
+  font-family: 'Neutraface2Display';
+  src: url('#{$fonts-path}Neutraface2Display-Medium.eot?#iefix') format('embedded-opentype'),
+       url('#{$fonts-path}Neutraface2Display-Medium.otf')  format('opentype'),
+       url('#{$fonts-path}Neutraface2Display-Medium.woff') format('woff'),
+       url('#{$fonts-path}Neutraface2Display-Medium.ttf')  format('truetype'),
+       url('#{$fonts-path}Neutraface2Display-Medium.svg#Neutraface2Display-Bold') format('svg');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Neutraface2Display';
+  src: url('#{$fonts-path}Neutraface2Display-Bold.eot?#iefix') format('embedded-opentype'),
+       url('#{$fonts-path}Neutraface2Display-Bold.otf')  format('opentype'),
+       url('#{$fonts-path}Neutraface2Display-Bold.woff') format('woff'),
+       url('#{$fonts-path}Neutraface2Display-Bold.ttf')  format('truetype'),
+       url('#{$fonts-path}Neutraface2Display-Bold.svg#Neutraface2Display-Bold') format('svg');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Neutraface2Display';
+  src: url('#{$fonts-path}Neutraface2Display-Titling.eot?#iefix') format('embedded-opentype'),
+       url('#{$fonts-path}Neutraface2Display-Titling.otf')  format('opentype'),
+       url('#{$fonts-path}Neutraface2Display-Titling.woff') format('woff'),
+       url('#{$fonts-path}Neutraface2Display-Titling.ttf')  format('truetype'),
+       url('#{$fonts-path}Neutraface2Display-Titling.svg#Neutraface2Display-Bold') format('svg');
+  font-weight: 900;
+  font-style: normal;
+}

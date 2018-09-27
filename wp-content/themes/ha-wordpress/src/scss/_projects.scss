@@ -1,0 +1,40 @@
+#projects {
+  background: getAppColor('black-haze');
+
+  .screen-container {
+    padding: 0 70px 0 280px;
+  }
+
+  .content {
+    padding: 100px 0;
+
+    .current-projects {
+      margin-bottom: 50px;
+    }
+
+    .project {
+      padding: 0 5px;
+      
+      .project-image {
+        align-items: center;
+        background: getAppColor('bismark');
+        display: flex;
+        height: 240px;
+        justify-content: center;
+        margin-bottom: 10px;
+      }
+
+      .project-name {
+        align-items: center;
+        border-left: 5px solid getAppColor('bismark');
+        display: flex;
+        font-size: 15px;
+        font-weight: 800;
+        height: 50px;
+        margin: 0;
+        padding-left: 15px;
+        text-transform: uppercase;
+      }
+    }
+  }
+}

@@ -1,0 +1,32 @@
+#project-contact-us {
+
+  .screen-container {
+
+    .content {
+      padding-top: 100px;
+
+      .form {
+        padding-left: 25px;
+
+        .form-group {
+
+          .form-control {
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid getAppColor('mirage');
+            border-radius: 0;
+            outline: none;
+      
+            &:focus {
+              box-shadow: none;
+            }
+          }
+        }
+
+        .ha-btn-submit {
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+}

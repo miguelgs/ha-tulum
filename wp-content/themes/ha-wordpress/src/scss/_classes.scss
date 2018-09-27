@@ -1,0 +1,90 @@
+.screen {
+  min-height: 100vh;
+}
+
+.screen-container {
+  padding-left: 285px;
+}
+
+%title {
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.title {
+  @extend %title;
+  font-size: 24px;
+}
+
+.subtitle {
+  @extend %title;
+  font-size: 20px;
+}
+
+.screen-title {
+  @extend %title;
+  color: getAppColorAlpha('mirage',0.9);
+  font-size: 36px;
+  
+  &-border {
+    margin-bottom: 75px;
+
+    &:after {
+      background: getAppColor('bismark');
+      content: '';
+      display: block;
+      height: 5px;
+      width: 80px;
+    }
+  }
+}
+
+.ha-btn {
+  border: 1px solid getAppColor('mirage');
+  color: getAppColor('mirage');
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 900;
+  letter-spacing: 2px;
+  padding: 10px 50px;
+  transition: all 0.25s ease-in-out;
+
+  &:hover {
+    background-color: getAppColor('mirage');
+    border-color: getAppColor('mirage');
+    color: getAppColor('white');
+    text-decoration: none;
+  }
+
+  &-lg {
+    font-size: 18px;
+  }
+
+  &-white {
+    border-color: getAppColor('white');
+    color: getAppColor('white');
+
+    &:hover {
+      background-color: getAppColorAlpha('white',0.75);
+      border-color: getAppColor('white');
+      color: getAppColor('mirage');
+    }
+  }
+}
+
+.image-display {
+  position: relative;
+
+  .caption {
+    color: getAppColor('white');
+    bottom: 0;
+    font-size: 80%;
+    margin: 0;
+    line-height: 1em;
+    padding: 25px;
+    position: absolute;
+    right: 0;
+    text-transform: uppercase;
+  }
+}
