@@ -101,7 +101,9 @@
       </div>
     </section>
 
-    <? $about_us =  get_field( 'about-us' ) ?>
+    <? if (have_rows('about-us')): ?>
+
+    <? while (have_rows('about-us')) : the_row(); ?>
 
     <section id="about-us" class="screen">
       <div class="screen-container">
@@ -109,15 +111,16 @@
           <p class="screen-title screen-title-border">
             =<? //pll_string( 'about-us' ) ?>
           </p>
-          <?= $about_us[ 'text' ] ?>
+          <?= get_subfield( 'text' ) ?>
         </div>
+        <? if (have_rows('collaborators')) : ?>
         <div class="collaborators">
           <div class="content">
             <p class="title">
               Nuestros colaboradores
             </p>
             <div class="carousel">
-              <? while ( have_rows('collaborators') ) : the_row(); ?>
+              <? while (have_rows('collaborators')) : the_row(); ?>
               <div class="item">
                 123
                 <div class="logo" style="background-image:url(assets/images/collaborators/logo-bios.jpg)"></div>
@@ -126,8 +129,13 @@
             </div>
           </div>
         </div>
+        <? endif ?>
       </div>
     </section>
+
+    <? endwhile ?>
+
+    <? endif ?>
 
     <section id="feature" class="screen">
       <div class="screen-container screen-container-regular">
