@@ -2,22 +2,27 @@
 
 <? get_header() ?>
 
+    <? if( have_rows('slider') ): ?>
     <section id="slider" class="screen">
       <div class="slider-container">
+        <? while ( have_rows('slider') ) : the_row(); ?>
+        <? $image = wp_get_attachment_image(get_sub_field('image'), 'full') ?>
         <div class="slide" style="background-image:url(assets/images/bg-ha-tulum.jpg)">
           <header>
             <div class="screen-container">
               <p class="title">
-                HÁ Tulúm La Veleta
+                <? get_sub_field('title') ?>
               </p>
               <p class="mb-0">
-                <a href="#" class="ha-btn ha-btn-lg ha-btn-white">Ver más</a>
+                <a href="<? get_sub_field('link') ?>" class="ha-btn ha-btn-lg ha-btn-white">Ver más</a>
               </p>
             </div>
           </header>
         </div>
+        <? endwhile ?>
       </div>
     </section>
+    <? endif ?>
 
     <section id="projects" class="screen">
       <div class="screen-container">
