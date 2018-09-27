@@ -101,13 +101,13 @@
       </div>
     </section>
 
-    <?= $about_us =  get_field( 'about-us' ) ?>
+    <? $about_us =  get_field( 'about-us' ) ?>
 
     <section id="about-us" class="screen">
       <div class="screen-container">
         <div class="content">
           <p class="screen-title screen-title-border">
-            A<? //pll_string( 'about-us' ) ?>
+            =<? //pll_string( 'about-us' ) ?>
           </p>
           <?= $about_us[ 'text' ] ?>
         </div>
@@ -117,24 +117,12 @@
               Nuestros colaboradores
             </p>
             <div class="carousel">
+              <? while ( have_rows('collaborators') ) : the_row(); ?>
               <div class="item">
+                123
                 <div class="logo" style="background-image:url(assets/images/collaborators/logo-bios.jpg)"></div>
               </div>
-              <div class="item">
-                <div class="logo" style="background-image:url(assets/images/collaborators/logo-techne.jpg)"></div>
-              </div>
-              <div class="item">
-                <div class="logo" style="background-image:url(assets/images/collaborators/logo-bios.jpg)"></div>
-              </div>
-              <div class="item">
-                <div class="logo" style="background-image:url(assets/images/collaborators/logo-techne.jpg)"></div>
-              </div>
-              <div class="item">
-                <div class="logo" style="background-image:url(assets/images/collaborators/logo-bios.jpg)"></div>
-              </div>
-              <div class="item">
-                <div class="logo" style="background-image:url(assets/images/collaborators/logo-bios.jpg)"></div>
-              </div>
+              <? endwhile ?>
             </div>
           </div>
         </div>
