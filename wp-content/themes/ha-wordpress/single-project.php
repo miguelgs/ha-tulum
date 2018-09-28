@@ -37,15 +37,20 @@
     <? endwhile ?>
     <? endif ?>
 
+    <? $images = get_field('gallery') ?>
+    <? if($images): ?>
+    <? foreach($images as $image): ?>
     <section id="slider" class="screen">
       <div class="slider-container">
-        <div class="slide image-display" style="background-image:url()">
+        <div class="slide image-display" style="background-image:url(<?= wp_get_attachment_image( $image['ID'], 'full' ) ?>)">
           <p class="caption">
-            Lorem ipsum
+            <?= $image['caption'] ?>
           </p>
         </div>
       </div>
     </section>
+    <? endforeach ?>
+    <? endif ?>
 
     <? if (have_rows('features')): ?>
     <? while (have_rows('features')) : the_row(); ?>
