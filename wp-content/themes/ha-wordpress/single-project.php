@@ -42,7 +42,8 @@
     <? foreach($images as $image): ?>
     <section id="slider" class="screen">
       <div class="slider-container">
-        <div class="slide image-display" style="background-image:url(<?= wp_get_attachment_image_src( $image['ID'], 'full' ) ?>)">
+        <? $file = wp_get_attachment_image_src( $image['ID'], 'full' ) ?>
+        <div class="slide image-display" style="background-image:url(<?= $file[0] ?>)">
           <p class="caption">
             <?= $image['caption'] ?>
           </p>
