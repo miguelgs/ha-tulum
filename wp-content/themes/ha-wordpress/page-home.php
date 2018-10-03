@@ -28,11 +28,11 @@
 
     <?
 
-      $param = array(
+      $params = array(
         'limit' => 5,
       );
 
-      $projects = pods('project');
+      $projects = pods('project', $params );
 
       echo '<br>------<br>';
 
