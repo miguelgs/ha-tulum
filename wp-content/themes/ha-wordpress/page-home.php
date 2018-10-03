@@ -34,9 +34,9 @@
 
       $projects = pods('project', $params );
 
-      foreach( $projects as $project) {
+      while($projects->fetch()) {
 
-        $project->field('title');
+        $projects->field('title');
       
       }
 
