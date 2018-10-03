@@ -19,39 +19,48 @@ if ( function_exists( 'pll_register_string' ) ) {
 
   // Navigation
 
-  pll_register_string('home',       'Inicio',      'nav', false);
-  pll_register_string('projects',   'Desarrollos', 'nav', false); 
-  pll_register_string('about-us',   'Nosotros',    'nav', false); 
-  pll_register_string('feature',    'Feature',     'nav', false); 
-  pll_register_string('contact-us', 'Contacto',    'nav', false);
-  pll_register_string('language',   'English',     'nav', false);
+  pll_register_string('home',       'Inicio',      'Nav', false);
+  pll_register_string('projects',   'Desarrollos', 'Nav', false); 
+  pll_register_string('about-us',   'Nosotros',    'Nav', false); 
+  pll_register_string('feature',    'Feature',     'Nav', false); 
+  pll_register_string('contact-us', 'Contacto',    'Nav', false);
+  pll_register_string('language',   'English',     'Nav', false);
+
+  pll_register_string('projects',   'Descripción',   'Secondary Nav', false); 
+  pll_register_string('about-us',   'Galería',       'Secondary Nav', false); 
+  pll_register_string('data-sheet', 'Ficha Técnica', 'Secondary Nav', false); 
+  pll_register_string('location',   'Ubicación',     'Secondary Nav', false);
+
+  pll_register_string('current-projects',  'Desarrollos en preventa', 'Sub Nav', false);
+  pll_register_string('previews-projects', 'Desarrollos anteriores',  'Sub Nav', false);
 
   // UI
 
-  pll_register_string('more',      '', 'ui', false);
-  pll_register_string('collaborators', '', 'ui', false);
+  pll_register_string('more',          'Ver más',                'UI', false);
+  pll_register_string('collaborators', 'Nuestros Colaboradores', 'UI', false);
 
   // Sections
 
-  pll_register_string('header-about-us',   '', 'sections', false);
-  pll_register_string('header-contact-us', '', 'sections', false);
+  pll_register_string('header-about-us',   'Acerca de nosotros',             'Screens', false);
+  pll_register_string('header-contact-us', 'Ponte en contacto con nosotros', 'Screens', false);
 
   // Features
 
-  pll_register_string('architecture', '', 'features', false);
-  pll_register_string('construction', '', 'features', false);
-  pll_register_string('use',          '', 'features', false);
-  pll_register_string('units',        '', 'features', false);
-  pll_register_string('levels',       '', 'features', false);
-  pll_register_string('status',       '', 'features', false);
-  pll_register_string('location',     '', 'features', false);
-  pll_register_string('area',         '', 'features', false);
-  pll_register_string('information',  '', 'features', false);
+  pll_register_string('architecture', 'Arquitectura',                                    'Features', false);
+  pll_register_string('construction', 'Constructora',                                    'Features', false);
+  pll_register_string('use',          'Uso',                                             'Features', false);
+  pll_register_string('units',        'No. Unidades',                                    'Features', false);
+  pll_register_string('levels',       'Niveles',                                         'Features', false);
+  pll_register_string('status',       'Estatus',                                         'Features', false);
+  pll_register_string('location',     'Ubicación',                                       'Features', false);
+  pll_register_string('area',         'M2 por unidad',                                   'Features', false);
+  pll_register_string('information',  'Si deseas más información sobre este desarrollo', 'Features', false);
+  pll_register_string('download',     'Descarga el documento',                           'Features', false);
 
   // Footer
 
-  pll_register_string('terms',   '', 'footer', false);
-  pll_register_string('privacy', '', 'footer', false);
+  pll_register_string('terms',   '', 'Footer', false);
+  pll_register_string('privacy', '', 'Footer', false);
 } 
 
 ?>

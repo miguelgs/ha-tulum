@@ -14,7 +14,7 @@
                 <?= get_sub_field('title') ?>
               </p>
               <p class="mb-0">
-                <a href="<?= get_sub_field('link') ?>" class="ha-btn ha-btn-lg ha-btn-white"><?= pll_e( 'more' ); ?></a>
+                <a href="<?= get_sub_field('link') ?>" class="ha-btn ha-btn-lg ha-btn-white"><?= pll_e( 'Ver más' ) ?></a>
               </p>
             </div>
           </header>
@@ -28,13 +28,13 @@
       <div class="screen-container">
         <div class="content">
           <p class="screen-title">
-            Desarrollos en preventa
+            <?= pll_e( 'Desarrollos en preventa' ) ?>
           </p>
           <div class="projects-container current-projects row no-gutters">
             <div class="col-lg-4">
               <div class="project">
                 <div class="project-image">
-                  <a href="#" class="ha-btn ha-btn-white">Ver más</a>
+                  <a href="#" class="ha-btn ha-btn-white"><?= pll_e( 'Ver más' ) ?></a>
                 </div>
                 <p class="project-name">
                   HÁ Tulúm La Veleta
@@ -44,7 +44,7 @@
             <div class="col-lg-4">
               <div class="project">
                 <div class="project-image">
-                  <a href="#" class="ha-btn ha-btn-white">Ver más</a>
+                  <a href="#" class="ha-btn ha-btn-white"><?= pll_e( 'Ver más' ) ?></a>
                 </div>
                 <p class="project-name">
                   HÁ Tulúm La Veleta
@@ -54,7 +54,7 @@
             <div class="col-lg-4">
               <div class="project">
                 <div class="project-image">
-                  <a href="#" class="ha-btn ha-btn-white">Ver más</a>
+                  <a href="#" class="ha-btn ha-btn-white"><?= pll_e( 'Ver más' ) ?></a>
                 </div>
                 <p class="project-name">
                   HÁ Tulúm La Veleta
@@ -63,13 +63,13 @@
             </div>
           </div>
           <p class="screen-title">
-            Desarrollos anteriores
+            <?= pll_e( 'Desarrollos anteriores' ) ?>
           </p>
           <div class="projects-container previews-projects row no-gutters">
             <div class="col-lg-4">
               <div class="project">
                 <div class="project-image">
-                  <a href="#" class="ha-btn ha-btn-white">Ver más</a>
+                  <a href="#" class="ha-btn ha-btn-white"><?= pll_e( 'Ver más' ) ?></a>
                 </div>
                 <p class="project-name">
                   HÁ Tulúm La Veleta
@@ -79,7 +79,7 @@
             <div class="col-lg-4">
               <div class="project">
                 <div class="project-image">
-                  <a href="#" class="ha-btn ha-btn-white">Ver más</a>
+                  <a href="#" class="ha-btn ha-btn-white"><?= pll_e( 'Ver más' ) ?></a>
                 </div>
                 <p class="project-name">
                   HÁ Tulúm La Veleta
@@ -89,7 +89,7 @@
             <div class="col-lg-4">
               <div class="project">
                 <div class="project-image">
-                  <a href="#" class="ha-btn ha-btn-white">Ver más</a>
+                  <a href="#" class="ha-btn ha-btn-white"><?= pll_e( 'Ver más' ) ?></a>
                 </div>
                 <p class="project-name">
                   HÁ Tulúm La Veleta
@@ -115,7 +115,7 @@
         <div class="collaborators">
           <div class="content">
             <p class="title">
-              Nuestros colaboradores
+              <?= pll_e( 'Nuestros colaboradores' ) ?>
             </p>
             <div class="carousel">
               <? while (have_rows('collaborators')) : the_row(); ?>
@@ -160,7 +160,7 @@
       <div class="screen-container">
         <div class="content">
           <p class="screen-title screen-title-border">
-            Ponte en contacto con nosotros
+            <?= pll_e( 'Ponte en contacto con nosotros' ) ?>
           </p>
           <div class="form">
             <div class="row no-gutters">
@@ -190,7 +190,7 @@
                 </div>
               </div>
               <div class="col-6 d-flex align-items-end">
-                <a href="#" class="ha-btn ha-btn-submit">Enviar</a>
+                <a href="#" class="ha-btn ha-btn-submit"><?= pll_e( 'Enviar' ) ?></a>
               </div>
             </div>
           </div>

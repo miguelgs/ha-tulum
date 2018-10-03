@@ -12,17 +12,17 @@
       <ul>
         <li><a href="#"><?= pll_e( 'Inicio' ) ?></a></li>
         <li>
-          <a href="#">Desarrollos</a>
+          <a href="#"><?= pll_e( 'Desarrollos' ) ?></a>
           <div class="sub-navigation">
             <p class="head">
-              Preventa
+              <?= pll_e( 'Desarrollos en Preventa' ) ?>
             </p>
             <ul>
               <li><a href="#">HÁ Tulúm La Velata</a></li>
               <li><a href="#">HÁ Tulúm Riviera Maya</a></li>
             </ul>
             <p class="head">
-              Proyectos Anteriores
+            <?= pll_e( 'Desarrollos anteriores' ) ?>
             </p>
             <ul>
               <li><a href="#">HÁ Proyecto 1</a></li>
