@@ -24,7 +24,7 @@
     </section>
     <? endif ?>
 
-    PROYECTOS
+    PROYECTOS<br>
 
     <?
 
@@ -33,6 +33,12 @@
       );
 
       $pods = pods('project', $params);
+
+      echo '<br>------<br>';
+
+      echo $pods;
+
+      echo '<br>------<br>';
 
       echo 'TOTAL:' . $pods->total() . '<br>';
 
