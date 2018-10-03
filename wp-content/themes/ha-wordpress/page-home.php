@@ -14,7 +14,7 @@
                 <?= get_sub_field('title') ?>
               </p>
               <p class="mb-0">
-                <a href="<?= get_sub_field('link') ?>" class="ha-btn ha-btn-lg ha-btn-white">Ver más</a>
+                <a href="<?= get_sub_field('link') ?>" class="ha-btn ha-btn-lg ha-btn-white"><?= pll_e( 'more' ); ?></a>
               </p>
             </div>
           </header>
