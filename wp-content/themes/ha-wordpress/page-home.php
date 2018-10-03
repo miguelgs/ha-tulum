@@ -29,24 +29,16 @@
     <?
 
       $params = array(
-        'limit' => 5,
+        'limit' => 5
       );
 
       $projects = pods('project', $params );
 
-      echo '<br>------<br>';
-
       foreach( $projects as $project) {
 
-        //echo $project->display('title');
-
-        echo 'proyecto<br>';
+        $project->display('title');
       
       }
-
-      echo '<br>------<br>';
-
-      //echo 'TOTAL:' . $projects->total() . '<br>';
 
     ?>
 
