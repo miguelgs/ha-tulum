@@ -29,10 +29,12 @@
     <?
 
       $param = array(
-      'limit' => 5,
+        'limit' => 5,
       );
 
       $pods = pods('project', $params);
+
+      echo 'TOTAL:' . $pods->total() . '<br>';
 
       if ($pods->total() > 0):
 
