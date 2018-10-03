@@ -10,7 +10,7 @@
 
     <div id="main-navigation">
       <ul>
-        <li><a href="#">Inicio</a></li>
+        <li><a href="#"><?= pll_e( 'home' ) ?></a></li>
         <li>
           <a href="#">Desarrollos</a>
           <div class="sub-navigation">

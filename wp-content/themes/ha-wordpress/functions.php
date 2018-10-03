@@ -19,12 +19,12 @@ if ( function_exists( 'pll_register_string' ) ) {
 
   // Navigation
 
-  pll_register_string('home',       '', 'nav', false);
-  pll_register_string('projects',   '', 'nav', false); 
-  pll_register_string('about-us',   '', 'nav', false); 
-  pll_register_string('feature',    '', 'nav', false); 
-  pll_register_string('contact-us', '', 'nav', false);
-  pll_register_string('language',   '', 'nav', false);
+  pll_register_string('home',       'Inicio',      'nav', false);
+  pll_register_string('projects',   'Desarrollos', 'nav', false); 
+  pll_register_string('about-us',   'Nosotros',    'nav', false); 
+  pll_register_string('feature',    'Feature',     'nav', false); 
+  pll_register_string('contact-us', 'Contacto',    'nav', false);
+  pll_register_string('language',   'English',     'nav', false);
 
   // UI
 
