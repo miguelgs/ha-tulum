@@ -36,7 +36,7 @@
 
       foreach( $projects as $project) {
 
-        $project->display('title');
+        $project->field('title');
       
       }
 
