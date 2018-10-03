@@ -28,21 +28,27 @@
 
     <?
 
-      $projects = pods('project');
+      $param = array(
+      'limit' => 5,
+      );
 
-      /*$params = array(
-          'where' => 'event.id = 3'
-      );*/
+      $pods = pods('project', $params);
+
+      if ($pods->total() > 0):
+
+      while ($pods->fetch()):
+
+    ?>
+      
+    <?= $pods->field('title'); ?>
+
+    <?
     
-      //$projects->find($params);
+      endwhile;
 
-      while($projects->fetch()):
+      endif;
     
     ?>
-
-    PROYECTO<BR>
-
-    <? endwhile ?>
 
     <section id="projects" class="screen">
       <div class="screen-container">
