@@ -24,9 +24,11 @@
     </section>
     <? endif ?>
 
+    PROYECTOS
+
     <?
 
-      $projects = pods('projects');
+      $projects = pods('project');
 
       $params = array(
           'where' => 'event.id = 3'
