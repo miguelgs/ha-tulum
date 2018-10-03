@@ -26,10 +26,11 @@ if ( function_exists( 'pll_register_string' ) ) {
   pll_register_string('contact-us', 'Contacto',    'Nav', false);
   pll_register_string('language',   'English',     'Nav', false);
 
-  pll_register_string('projects',   'Descripción',   'Secondary Nav', false); 
-  pll_register_string('about-us',   'Galería',       'Secondary Nav', false); 
-  pll_register_string('data-sheet', 'Ficha Técnica', 'Secondary Nav', false); 
-  pll_register_string('location',   'Ubicación',     'Secondary Nav', false);
+  pll_register_string('projects',   'Descripción',           'Secondary Nav', false); 
+  pll_register_string('about-us',   'Galería',               'Secondary Nav', false); 
+  pll_register_string('data-sheet', 'Ficha Técnica',         'Secondary Nav', false); 
+  pll_register_string('location',   'Ubicación',             'Secondary Nav', false);
+  pll_register_string('get-info',   'Solicitar información', 'Secondary Nav', false);
 
   pll_register_string('current-projects',  'Desarrollos en preventa', 'Sub Nav', false);
   pll_register_string('previews-projects', 'Desarrollos anteriores',  'Sub Nav', false);
@@ -52,7 +53,7 @@ if ( function_exists( 'pll_register_string' ) ) {
   pll_register_string('units',        'No. Unidades',                                    'Features', false);
   pll_register_string('levels',       'Niveles',                                         'Features', false);
   pll_register_string('status',       'Estatus',                                         'Features', false);
-  pll_register_string('location',     'Ubicación',                                       'Features', false);
+  pll_register_string('map',          'Ubicación',                                       'Features', false);
   pll_register_string('area',         'M2 por unidad',                                   'Features', false);
   pll_register_string('information',  'Si deseas más información sobre este desarrollo', 'Features', false);
   pll_register_string('download',     'Descarga el documento',                           'Features', false);
