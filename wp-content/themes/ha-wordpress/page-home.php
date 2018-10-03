@@ -36,9 +36,13 @@
     
       //$projects->find($params);
 
-      print_r($projects->fetch());
+      while($projects->fetch()):
     
     ?>
+
+    PROYECTO<BR>
+
+    <? endwhile ?>
 
     <section id="projects" class="screen">
       <div class="screen-container">
