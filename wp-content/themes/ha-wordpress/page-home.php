@@ -36,7 +36,11 @@
 
       echo '<br>------<br>';
 
-      echo $projects;
+      foreach( $projects as $project) {
+
+        echo $project; 
+      
+      }
 
       echo '<br>------<br>';
 
