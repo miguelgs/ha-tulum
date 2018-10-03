@@ -38,13 +38,13 @@
 
       foreach( $projects as $project) {
 
-        echo $project; 
+        echo $project->display('title'); 
       
       }
 
       echo '<br>------<br>';
 
-      echo 'TOTAL:' . $projects->total() . '<br>';
+      //echo 'TOTAL:' . $projects->total() . '<br>';
 
     ?>
 
