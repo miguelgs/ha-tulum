@@ -36,7 +36,7 @@
 
       while($projects->fetch()) {
 
-        $projects->field('title');
+        echo $projects->display('title');
       
       }
 
