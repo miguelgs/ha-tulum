@@ -38,7 +38,9 @@
 
       foreach( $projects as $project) {
 
-        echo $project->display('title'); 
+        //echo $project->display('title');
+
+        echo 'proyecto<br>';
       
       }
 
