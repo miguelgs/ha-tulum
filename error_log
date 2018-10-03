@@ -86,3 +86,22 @@
 [27-Sep-2018 04:06:52 UTC] PHP Fatal error:  Call to undefined function get_gooter() in /home/bochides/public_html/clientes/voidstudio/ha-tulum/wp-content/themes/ha-wordpress/single-project.php on line 259
 [27-Sep-2018 04:11:00 UTC] PHP Fatal error:  Call to undefined function get_gooter() in /home/bochides/public_html/clientes/voidstudio/ha-tulum/wp-content/themes/ha-wordpress/page-home.php on line 224
 [27-Sep-2018 04:12:45 UTC] PHP Fatal error:  Call to undefined function get_gooter() in /home/bochides/public_html/clientes/voidstudio/ha-tulum/wp-content/themes/ha-wordpress/page-home.php on line 224
+[27-Sep-2018 14:23:16 UTC] PHP Fatal error:  Call to undefined function pll_string() in /home/bochides/public_html/clientes/voidstudio/ha-tulum/wp-content/themes/ha-wordpress/page-home.php on line 110
+[27-Sep-2018 14:34:59 UTC] PHP Fatal error:  Call to undefined function pll_string() in /home/bochides/public_html/clientes/voidstudio/ha-tulum/wp-content/themes/ha-wordpress/page-home.php on line 110
+[27-Sep-2018 14:36:01 UTC] PHP Fatal error:  Call to undefined function pll_string() in /home/bochides/public_html/clientes/voidstudio/ha-tulum/wp-content/themes/ha-wordpress/page-home.php on line 110
+[27-Sep-2018 15:12:56 UTC] PHP Fatal error:  Call to undefined function get_subfield() in /home/bochides/public_html/clientes/voidstudio/ha-tulum/wp-content/themes/ha-wordpress/page-home.php on line 114
+[03-Oct-2018 23:00:20 UTC] Error Unknown column 'event.id' in 'where clause' de la base de datos de WordPress para la consulta SELECT
+                
+                DISTINCT
+                `t`.*
+                FROM `wp_posts` AS `t`
+                
+                WHERE ( ( `event`.`id` = 3 ) AND ( `t`.`post_type` = "project" ) AND ( `t`.`post_status` IN ( "publish" ) ) )
+                
+                
+                ORDER BY `t`.`menu_order`, `t`.`post_title`, `t`.`post_date`
+                LIMIT 0, 15 realizada por require('wp-blog-header.php'), require_once('wp-includes/template-loader.php'), include('/themes/ha-wordpress/page-home.php'), Pods->find, PodsData->select, pods_query, PodsData::query
+[03-Oct-2018 23:32:57 UTC] PHP Fatal error:  Call to a member function display() on boolean in /home/bochides/public_html/clientes/voidstudio/ha-tulum/wp-content/themes/ha-wordpress/page-home.php on line 41
+[03-Oct-2018 23:33:09 UTC] PHP Fatal error:  Call to a member function display() on boolean in /home/bochides/public_html/clientes/voidstudio/ha-tulum/wp-content/themes/ha-wordpress/page-home.php on line 41
+[03-Oct-2018 23:33:31 UTC] PHP Fatal error:  Call to a member function display() on boolean in /home/bochides/public_html/clientes/voidstudio/ha-tulum/wp-content/themes/ha-wordpress/page-home.php on line 41
+[03-Oct-2018 23:36:51 UTC] PHP Fatal error:  Call to a member function display() on boolean in /home/bochides/public_html/clientes/voidstudio/ha-tulum/wp-content/themes/ha-wordpress/page-home.php on line 39
