@@ -24,6 +24,20 @@
     </section>
     <? endif ?>
 
+    <?
+
+      $projects = pods('projects');
+
+      $params = array(
+          'where' => 'event.id = 3'
+      );
+    
+      $projects->find($params);
+
+      print_r($projects);
+    
+    ?>
+
     <section id="projects" class="screen">
       <div class="screen-container">
         <div class="content">
