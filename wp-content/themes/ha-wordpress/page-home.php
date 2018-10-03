@@ -30,11 +30,11 @@
 
       $projects = pods('project');
 
-      $params = array(
+      /*$params = array(
           'where' => 'event.id = 3'
-      );
+      );*/
     
-      $projects->find($params);
+      //$projects->find($params);
 
       print_r($projects);
     
