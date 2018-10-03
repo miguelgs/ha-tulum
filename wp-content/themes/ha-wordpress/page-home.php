@@ -36,7 +36,7 @@
     
       //$projects->find($params);
 
-      print_r($projects);
+      print_r($projects->fetch());
     
     ?>
 
