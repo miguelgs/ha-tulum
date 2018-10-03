@@ -32,30 +32,16 @@
         'limit' => 5,
       );
 
-      $pods = pods('project', $params);
+      $projects = pods('project');
 
       echo '<br>------<br>';
 
-      echo $pods;
+      echo $projects;
 
       echo '<br>------<br>';
 
-      echo 'TOTAL:' . $pods->total() . '<br>';
+      echo 'TOTAL:' . $projects->total() . '<br>';
 
-      if ($pods->total() > 0):
-
-      while ($pods->fetch()):
-
-    ?>
-      
-    <?= $pods->field('title'); ?>
-
-    <?
-    
-      endwhile;
-
-      endif;
-    
     ?>
 
     <section id="projects" class="screen">
