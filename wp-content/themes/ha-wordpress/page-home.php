@@ -41,7 +41,10 @@
           <div class="projects-container current-projects row no-gutters">
 
             <?
-              $params = array('limit' => 10);
+              $params = array(
+                'limit' => 10,
+                'where' => 'project_type=preventa'
+              );
               $projects = pods('project', $params );
             ?>
 
