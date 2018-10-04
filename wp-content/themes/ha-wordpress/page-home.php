@@ -35,27 +35,33 @@
     <section id="projects" class="screen">
       <div class="screen-container">
         <div class="content">
+
+          <?
+            wp_reset_query();
+            
+            $args = array(
+              'post_type' => 'project',
+              'posts_per_page' => 3,
+              'tax_query' => array(
+                array(
+                  'taxonomy' => 'project_type',
+                  'field' => 'slug',
+                  'terms' => 'preventa'
+                )
+              )
+            ); 
+          ?>
+
+          <? $loop = new WP_Query( $args ) ?>
+  
+          <? if( $loop->have_posts() ): ?>
+
           <p class="screen-title">
             <?= pll_e( 'Desarrollos en preventa' ) ?>
           </p>
           <div class="projects-container current-projects row no-gutters">
 
-            <?
-              $params = array(
-                'limit' => 10,
-                'where' => 'project_type.slug=preventa'
-              );
-              $projects = pods('project', $params );
-            ?>
-
-            <? while($projects->fetch()): ?>
-          
-              <?
-                global $post; 
-                $post = get_post($projects->id());
-                setup_postdata( $post );
-              ?>
-
+            <? while( $loop->have_posts() ) : $loop->the_post() ?>
               <? if (have_rows('description')): ?>
                 <? while (have_rows('description')) : the_row(); ?>
 
@@ -73,12 +79,12 @@
 
                 <? endwhile ?>
               <? endif ?>
-
-              <? wp_reset_postdata() ?>
-
             <? endwhile ?>
 
           </div>
+
+          <? endif ?>
+
           <p class="screen-title">
             <?= pll_e( 'Desarrollos anteriores' ) ?>
           </p>
