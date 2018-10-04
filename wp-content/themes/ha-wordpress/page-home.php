@@ -56,76 +56,84 @@
   
           <? if( $loop->have_posts() ): ?>
 
-          <p class="screen-title">
-            <?= pll_e( 'Desarrollos en preventa' ) ?>
-          </p>
-          <div class="projects-container current-projects row no-gutters">
+            <p class="screen-title">
+              <?= pll_e( 'Desarrollos en preventa' ) ?>
+            </p>
+            <div class="projects-container current-projects row no-gutters">
 
-            <? while( $loop->have_posts() ) : $loop->the_post() ?>
-              <? if (have_rows('description')): ?>
-                <? while (have_rows('description')) : the_row(); ?>
+              <? while( $loop->have_posts() ) : $loop->the_post() ?>
+                <? if (have_rows('description')): ?>
+                  <? while (have_rows('description')) : the_row(); ?>
 
-                  <div class="col-lg-4">
-                    <div class="project">
-                      <? $image = wp_get_attachment_image_src(get_sub_field('image'), 'full') ?>
-                      <div class="project-image" style="background-image:url(<?= $image[0] ?>)">
-                        <a href="<? the_permalink() ?>" class="ha-btn ha-btn-white"><?= pll_e( 'Ver más' ) ?></a>
+                    <div class="col-lg-4">
+                      <div class="project">
+                        <? $image = wp_get_attachment_image_src(get_sub_field('image'), 'full') ?>
+                        <div class="project-image" style="background-image:url(<?= $image[0] ?>)">
+                          <a href="<? the_permalink() ?>" class="ha-btn ha-btn-white"><?= pll_e( 'Ver más' ) ?></a>
+                        </div>
+                        <p class="project-name">
+                          <? the_title() ?>
+                        </p>
                       </div>
-                      <p class="project-name">
-                        <? the_title() ?>
-                      </p>
                     </div>
-                  </div>
 
-                <? endwhile ?>
-              <? endif ?>
-            <? endwhile ?>
+                  <? endwhile ?>
+                <? endif ?>
+              <? endwhile ?>
 
-          </div>
+            </div>
 
           <? endif ?>
 
-          <p class="screen-title">
-            <?= pll_e( 'Desarrollos anteriores' ) ?>
-          </p>
-          <div class="projects-container previews-projects row no-gutters">
+          <?
+            wp_reset_query();
+            
+            $args = array(
+              'post_type' => 'project',
+              'posts_per_page' => 3,
+              'tax_query' => array(
+                array(
+                  'taxonomy' => 'project_type',
+                  'field' => 'slug',
+                  'terms' => 'preventa'
+                )
+              )
+            ); 
+          ?>
 
-            <?
-              $params = array('limit' => 10);
-              $projects = pods('project', $params );
-            ?>
+          <? $loop = new WP_Query( $args ) ?>
+  
+          <? if( $loop->have_posts() ): ?>
 
-            <? while($projects->fetch()): ?>
-          
-              <?
-                global $post; 
-                $post = get_post($projects->id());
-                setup_postdata( $post );
-              ?>
+            <p class="screen-title">
+              <?= pll_e( 'Desarrollos anteriores' ) ?>
+            </p>
+            <div class="projects-container previews-projects row no-gutters">
 
-              <? if (have_rows('description')): ?>
-                <? while (have_rows('description')) : the_row(); ?>
+              <? while( $loop->have_posts() ) : $loop->the_post() ?>
+                <? if (have_rows('description')): ?>
+                  <? while (have_rows('description')) : the_row(); ?>
 
-                  <div class="col-lg-4">
-                    <div class="project">
-                      <? $image = wp_get_attachment_image_src(get_sub_field('image'), 'full') ?>
-                      <div class="project-image" style="background-image:url(<?= $image[0] ?>)">
-                        <a href="<? the_permalink() ?>" class="ha-btn ha-btn-white"><?= pll_e( 'Ver más' ) ?></a>
+                    <div class="col-lg-4">
+                      <div class="project">
+                        <? $image = wp_get_attachment_image_src(get_sub_field('image'), 'full') ?>
+                        <div class="project-image" style="background-image:url(<?= $image[0] ?>)">
+                          <a href="<? the_permalink() ?>" class="ha-btn ha-btn-white"><?= pll_e( 'Ver más' ) ?></a>
+                        </div>
+                        <p class="project-name">
+                          <? the_title() ?>
+                        </p>
                       </div>
-                      <p class="project-name">
-                        <? the_title() ?>
-                      </p>
                     </div>
-                  </div>
 
-                <? endwhile ?>
-              <? endif ?>
+                  <? endwhile ?>
+                <? endif ?>
+              <? endwhile ?>
 
-              <? wp_reset_postdata() ?>
+            </div>
 
-            <? endwhile ?>
+          <? endif ?>
 
-          </div>
         </div>
       </div>
     </section>
