@@ -38,7 +38,7 @@ if ( function_exists( 'pll_register_string' ) ) {
   // UI
 
   pll_register_string('more',          'Ver más',                'UI', false);
-  pll_register_string('collaborators', 'Nuestros Colaboradores', 'UI', false);
+  pll_register_string('collaborators', 'Nuestros colaboradores', 'UI', false);
 
   // Sections
 
