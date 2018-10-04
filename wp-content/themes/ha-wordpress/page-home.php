@@ -37,8 +37,17 @@
       ?>
 
       <div>
-        <?= $projects->id() ?>
-        <?= $projects->display('title') ?>
+        <?
+          global $post; 
+          $post = get_post( $projects->id(), OBJECT );
+          setup_postdata( $post );
+        ?>
+
+        <? the_title() ?>
+
+        <?
+          wp_reset_postdata();
+        ?>
       </div>
       
       <? endwhile ?>
