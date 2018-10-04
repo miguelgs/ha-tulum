@@ -76,36 +76,42 @@
             <?= pll_e( 'Desarrollos anteriores' ) ?>
           </p>
           <div class="projects-container previews-projects row no-gutters">
-            <div class="col-lg-4">
-              <div class="project">
-                <div class="project-image">
-                  <a href="#" class="ha-btn ha-btn-white"><?= pll_e( 'Ver más' ) ?></a>
-                </div>
-                <p class="project-name">
-                  HÁ Tulúm La Veleta
-                </p>
-              </div>
-            </div>
-            <div class="col-lg-4">
-              <div class="project">
-                <div class="project-image">
-                  <a href="#" class="ha-btn ha-btn-white"><?= pll_e( 'Ver más' ) ?></a>
-                </div>
-                <p class="project-name">
-                  HÁ Tulúm La Veleta
-                </p>
-              </div>
-            </div>
-            <div class="col-lg-4">
-              <div class="project">
-                <div class="project-image">
-                  <a href="#" class="ha-btn ha-btn-white"><?= pll_e( 'Ver más' ) ?></a>
-                </div>
-                <p class="project-name">
-                  HÁ Tulúm La Veleta
-                </p>
-              </div>
-            </div>
+
+            <?
+              $params = array('limit' => 10);
+              $projects = pods('project', $params );
+            ?>
+
+            <? while($projects->fetch()): ?>
+          
+              <?
+                global $post; 
+                $post = get_post($projects->id());
+                setup_postdata( $post );
+              ?>
+
+              <? if (have_rows('description')): ?>
+                <? while (have_rows('description')) : the_row(); ?>
+
+                  <div class="col-lg-4">
+                    <div class="project">
+                      <? $image = wp_get_attachment_image_src(get_sub_field('image'), 'full') ?>
+                      <div class="project-image" style="background-image:url(<?= $image[0] ?>)">
+                        <a href="#" class="ha-btn ha-btn-white"><?= pll_e( 'Ver más' ) ?></a>
+                      </div>
+                      <p class="project-name">
+                        <? the_title() ?>
+                      </p>
+                    </div>
+                  </div>
+
+                <? endwhile ?>
+              <? endif ?>
+
+              <? wp_reset_postdata() ?>
+
+            <? endwhile ?>
+
           </div>
         </div>
       </div>
