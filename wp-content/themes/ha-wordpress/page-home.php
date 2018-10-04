@@ -43,7 +43,7 @@
             <?
               $params = array(
                 'limit' => 10,
-                'where' => 'project_type=preventa'
+                'where' => 't.project_type=preventa'
               );
               $projects = pods('project', $params );
             ?>
