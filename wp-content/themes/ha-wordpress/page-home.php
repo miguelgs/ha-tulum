@@ -37,8 +37,8 @@
       ?>
 
       <div>
-        <?= $projects ?>
-        <br>-----<br>
+        <?= $projects->id() ?>
+        <?= $projects->display('title') ?>
       </div>
       
       <? endwhile ?>
