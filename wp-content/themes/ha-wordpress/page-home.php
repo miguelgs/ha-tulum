@@ -56,7 +56,7 @@
                     <div class="project">
                       <? $image = wp_get_attachment_image_src(get_sub_field('image'), 'full') ?>
                       <div class="project-image" style="background-image:url(<?= $image[0] ?>)">
-                        <a href="#" class="ha-btn ha-btn-white"><?= pll_e( 'Ver más' ) ?></a>
+                        <a href="<? the_permalink() ?>" class="ha-btn ha-btn-white"><?= pll_e( 'Ver más' ) ?></a>
                       </div>
                       <p class="project-name">
                         <? the_title() ?>
@@ -97,7 +97,7 @@
                     <div class="project">
                       <? $image = wp_get_attachment_image_src(get_sub_field('image'), 'full') ?>
                       <div class="project-image" style="background-image:url(<?= $image[0] ?>)">
-                        <a href="#" class="ha-btn ha-btn-white"><?= pll_e( 'Ver más' ) ?></a>
+                        <a href="<? the_permalink() ?>" class="ha-btn ha-btn-white"><?= pll_e( 'Ver más' ) ?></a>
                       </div>
                       <p class="project-name">
                         <? the_title() ?>
