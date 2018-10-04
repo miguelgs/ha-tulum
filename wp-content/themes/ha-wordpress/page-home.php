@@ -24,8 +24,6 @@
     </section>
     <? endif ?>
 
-    PROYECTOS<br>
-
     <?
 
       $params = array(
@@ -34,13 +32,16 @@
 
       $projects = pods('project', $params );
 
-      while($projects->fetch()) {
+      while($projects->fetch()):
 
-        echo $projects->display('title');
+      ?>
+
+      <div>
+        <?= $projects ?>
+        <br>-----<br>
+      </div>
       
-      }
-
-    ?>
+      <? endwhile ?>
 
     <section id="projects" class="screen">
       <div class="screen-container">
