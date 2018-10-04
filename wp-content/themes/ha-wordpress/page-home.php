@@ -95,7 +95,7 @@
                 array(
                   'taxonomy' => 'project_type',
                   'field' => 'slug',
-                  'terms' => 'preventa'
+                  'terms' => 'anteriores'
                 )
               )
             ); 
