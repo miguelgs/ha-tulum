@@ -44,6 +44,17 @@
         ?>
 
         <? the_title() ?>
+        <? if (have_rows('description')): ?>
+        <? while (have_rows('description')) : the_row(); ?>
+        <? endwhile ?>
+        <? endif ?>
+
+        <? $image = wp_get_attachment_image_src(get_sub_field('image'), 'full') ?>
+        <div class="image image-display" style="background-image:url(<?= $image[0] ?>)">
+          <p class="caption">
+            Lorem ipsum
+          </p>
+        </div>
 
         <?
           wp_reset_postdata();
