@@ -60,8 +60,8 @@ if ( function_exists( 'pll_register_string' ) ) {
 
   // Footer
 
-  pll_register_string('terms',   '', 'Footer', false);
-  pll_register_string('privacy', '', 'Footer', false);
+  pll_register_string('terms',   'Términos y Condiciones', 'Footer', false);
+  pll_register_string('privacy', 'Política de Privacidad', 'Footer', false);
 } 
 
 ?>
