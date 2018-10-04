@@ -33,9 +33,9 @@
             </ul>
           </div>
         </li>
-        <li><a href="#">Nosotros</a></li>
-        <li><a href="#">Feature</a></li>
-        <li><a href="#">Contacto</a></li>
-        <li class="language"><a href="#">English</a></li>
+        <li><a href="#"><?= pll_e( 'Nosotros' ) ?></a></li>
+        <li><a href="#"><?= pll_e( 'Feature' ) ?></a></li>
+        <li><a href="#"><?= pll_e( 'Contacto' ) ?></a></li>
+        <li class="language"><a href="#"><?= pll_e( 'English' ) ?></a></li>
       </ul>
     </div>
