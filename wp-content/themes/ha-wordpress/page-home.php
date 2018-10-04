@@ -29,7 +29,7 @@
     <?
 
       $params = array(
-        'limit' => 5
+        'limit' => 10
       );
 
       $projects = pods('project', $params );
