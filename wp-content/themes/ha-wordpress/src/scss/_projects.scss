@@ -17,7 +17,8 @@
       
       .project-image {
         align-items: center;
-        background: getAppColor('bismark');
+        background: getAppColor('bismark') center center no-repeat;
+        background-size: cover;
         display: flex;
         height: 240px;
         justify-content: center;
