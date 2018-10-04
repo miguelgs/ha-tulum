@@ -24,46 +24,10 @@
     </section>
     <? endif ?>
 
-    <?
-
-      $params = array(
-        'limit' => 10
-      );
-
-      $projects = pods('project', $params );
-
-      while($projects->fetch()):
-
-      ?>
-
-      <div>
-        <?
-          global $post; 
-          $post = get_post( $projects->id(), OBJECT );
-          setup_postdata( $post );
-        ?>
-
-        <? the_title() ?>
-        <? if (have_rows('description')): ?>
-        <? while (have_rows('description')) : the_row(); ?>
-
-        <? $image = wp_get_attachment_image_src(get_sub_field('image'), 'full') ?>
-        <div class="image image-display" style="background-image:url(<?= $image[0] ?>)">
-          <p class="caption">
-            Lorem ipsum
-          </p>
-        </div>
-
-        <? endwhile ?>
-        <? endif ?>
-
-        <?
-          wp_reset_postdata();
-        ?>
-      </div>
+    <!----------
+      TEST
+    ----------->
       
-      <? endwhile ?>
-
     <section id="projects" class="screen">
       <div class="screen-container">
         <div class="content">
@@ -71,36 +35,42 @@
             <?= pll_e( 'Desarrollos en preventa' ) ?>
           </p>
           <div class="projects-container current-projects row no-gutters">
-            <div class="col-lg-4">
-              <div class="project">
-                <div class="project-image">
-                  <a href="#" class="ha-btn ha-btn-white"><?= pll_e( 'Ver más' ) ?></a>
-                </div>
-                <p class="project-name">
-                  HÁ Tulúm La Veleta
-                </p>
-              </div>
-            </div>
-            <div class="col-lg-4">
-              <div class="project">
-                <div class="project-image">
-                  <a href="#" class="ha-btn ha-btn-white"><?= pll_e( 'Ver más' ) ?></a>
-                </div>
-                <p class="project-name">
-                  HÁ Tulúm La Veleta
-                </p>
-              </div>
-            </div>
-            <div class="col-lg-4">
-              <div class="project">
-                <div class="project-image">
-                  <a href="#" class="ha-btn ha-btn-white"><?= pll_e( 'Ver más' ) ?></a>
-                </div>
-                <p class="project-name">
-                  HÁ Tulúm La Veleta
-                </p>
-              </div>
-            </div>
+
+            <?
+              $params = array('limit' => 10);
+              $projects = pods('project', $params );
+            ?>
+
+            <? while($projects->fetch()): ?>
+          
+              <?
+                global $post; 
+                $post = get_post($projects->id());
+                setup_postdata( $post );
+              ?>
+
+              <? if (have_rows('description')): ?>
+                <? while (have_rows('description')) : the_row(); ?>
+
+                  <div class="col-lg-4">
+                    <div class="project">
+                      <? $image = wp_get_attachment_image_src(get_sub_field('image'), 'full') ?>
+                      <div class="project-image" style="background-image:url(<?= $image[0] ?>)">
+                        <a href="#" class="ha-btn ha-btn-white"><?= pll_e( 'Ver más' ) ?></a>
+                      </div>
+                      <p class="project-name">
+                        <? the_title() ?>
+                      </p>
+                    </div>
+                  </div>
+
+                <? endwhile ?>
+              <? endif ?>
+
+              <? wp_reset_postdata() ?>
+
+            <? endwhile ?>
+
           </div>
           <p class="screen-title">
             <?= pll_e( 'Desarrollos anteriores' ) ?>
@@ -142,58 +112,58 @@
     </section>
 
     <? if (have_rows('about-us')): ?>
-    <? while (have_rows('about-us')) : the_row(); ?>
-    <section id="about-us" class="screen">
-      <div class="screen-container">
-        <div class="content">
-          <p class="screen-title screen-title-border">
-            =<? //pll_string( 'about-us' ) ?>
-          </p>
-          <?= get_sub_field( 'text' ) ?>
-        </div>
-        <? if (have_rows('collaborators')) : ?>
-        <div class="collaborators">
+      <? while (have_rows('about-us')) : the_row(); ?>
+      <section id="about-us" class="screen">
+        <div class="screen-container">
           <div class="content">
-            <p class="title">
-              <?= pll_e( 'Nuestros colaboradores' ) ?>
+            <p class="screen-title screen-title-border">
+              =<? //pll_string( 'about-us' ) ?>
             </p>
-            <div class="carousel">
-              <? while (have_rows('collaborators')) : the_row(); ?>
-              <div class="item">
-                <? $image = wp_get_attachment_image_src(get_sub_field('image'), 'full') ?>
-                <div class="logo" style="background-image:url(<?= $image[0] ?>)"></div>
+            <?= get_sub_field( 'text' ) ?>
+          </div>
+          <? if (have_rows('collaborators')) : ?>
+          <div class="collaborators">
+            <div class="content">
+              <p class="title">
+                <?= pll_e( 'Nuestros colaboradores' ) ?>
+              </p>
+              <div class="carousel">
+                <? while (have_rows('collaborators')) : the_row(); ?>
+                <div class="item">
+                  <? $image = wp_get_attachment_image_src(get_sub_field('image'), 'full') ?>
+                  <div class="logo" style="background-image:url(<?= $image[0] ?>)"></div>
+                </div>
+                <? endwhile ?>
               </div>
-              <? endwhile ?>
             </div>
           </div>
+          <? endif ?>
         </div>
-        <? endif ?>
-      </div>
-    </section>
-    <? endwhile ?>
+      </section>
+      <? endwhile ?>
     <? endif ?>
 
     <? if (have_rows('feature')): ?>
-    <? while (have_rows('feature')) : the_row(); ?>
-    <section id="feature" class="screen">
-      <div class="screen-container screen-container-regular">
-        <div class="row no-gutters">
-          <div class="col-lg-6">
-            <? $image = wp_get_attachment_image_src(get_sub_field('image'), 'full') ?>
-            <div class="image" style="background-image:url(<?= $image[0] ?>)"></div>
-          </div>
-          <div class="col-lg-6">
-            <div class="content">
-              <p class="screen-title screen-title-border">
-                <?= get_sub_field( 'title' ) ?>
-              </p>
-              <?= get_sub_field( 'description' ) ?>
+      <? while (have_rows('feature')) : the_row(); ?>
+      <section id="feature" class="screen">
+        <div class="screen-container screen-container-regular">
+          <div class="row no-gutters">
+            <div class="col-lg-6">
+              <? $image = wp_get_attachment_image_src(get_sub_field('image'), 'full') ?>
+              <div class="image" style="background-image:url(<?= $image[0] ?>)"></div>
+            </div>
+            <div class="col-lg-6">
+              <div class="content">
+                <p class="screen-title screen-title-border">
+                  <?= get_sub_field( 'title' ) ?>
+                </p>
+                <?= get_sub_field( 'description' ) ?>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-    <? endwhile ?>
+      </section>
+      <? endwhile ?>
     <? endif ?>
 
     <section id="contact-us" class="screen">
