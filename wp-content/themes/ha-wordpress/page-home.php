@@ -2,6 +2,10 @@
 
 <? get_header() ?>
 
+    <!--------------------------------------------------
+      Slider
+    --------------------------------------------------->
+
     <? if( have_rows('slider') ): ?>
     <section id="slider" class="screen">
       <div class="slider-container">
@@ -24,9 +28,9 @@
     </section>
     <? endif ?>
 
-    <!----------
-      TEST
-    ----------->
+    <!--------------------------------------------------
+      Projects
+    --------------------------------------------------->
       
     <section id="projects" class="screen">
       <div class="screen-container">
@@ -117,13 +121,17 @@
       </div>
     </section>
 
+    <!--------------------------------------------------
+      About us
+    --------------------------------------------------->
+
     <? if (have_rows('about-us')): ?>
       <? while (have_rows('about-us')) : the_row(); ?>
       <section id="about-us" class="screen">
         <div class="screen-container">
           <div class="content">
             <p class="screen-title screen-title-border">
-              =<? //pll_string( 'about-us' ) ?>
+              <?= pll_e( 'Acerca de nosotros' ) ?>
             </p>
             <?= get_sub_field( 'text' ) ?>
           </div>
@@ -149,6 +157,10 @@
       <? endwhile ?>
     <? endif ?>
 
+    <!--------------------------------------------------
+      Feature
+    --------------------------------------------------->
+
     <? if (have_rows('feature')): ?>
       <? while (have_rows('feature')) : the_row(); ?>
       <section id="feature" class="screen">
@@ -171,6 +183,10 @@
       </section>
       <? endwhile ?>
     <? endif ?>
+
+    <!--------------------------------------------------
+      Contact us
+    --------------------------------------------------->
 
     <section id="contact-us" class="screen">
       <div class="screen-container">
