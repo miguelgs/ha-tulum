@@ -1,4 +1,5 @@
 var $ = require('jquery');
+
 var slick = require('slick-carousel');
 
 $('#slider .slider-container').slick({
@@ -8,7 +9,6 @@ $('#slider .slider-container').slick({
   infinite: true,
   slidesToShow: 1
 });
-
 
 $('#about-us .collaborators .carousel').slick({
   arrows: false,

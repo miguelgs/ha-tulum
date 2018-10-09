@@ -101,7 +101,7 @@
                 </div>
               </div>
               <div class="col-md-12">
-                <div class="content">
+                <div class="content no-padding">
                   <p>
                     <span class="option">Información adicional</span>
                     <br><?= get_sub_field( 'aditional-information' ) ?>
