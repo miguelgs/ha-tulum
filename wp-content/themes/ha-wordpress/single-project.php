@@ -64,19 +64,19 @@
                 <div class="content">
                   <p>
                     <span class="option">Arquitectura</span>
-                    <br><?= get_sub_field( 'architecture' ) ?>
+                    <br><span class="value"><?= get_sub_field( 'architecture' ) ?></span>
                   </p>
                   <p>
                     <span class="option">Constructora</span>
-                    <br><?= get_sub_field( 'construction' ) ?>
+                    <br><span class="value"><?= get_sub_field( 'construction' ) ?></span>
                   </p>
                   <p>
                     <span class="option">Uso</span>
-                    <br><?= get_sub_field( 'use' ) ?>
+                    <br><span class="value"><?= get_sub_field( 'use' ) ?></span>
                   </p>
                   <p>
                     <span class="option">No. Unidades</span>
-                    <br><?= get_sub_field( 'units' ) ?>
+                    <br><span class="value"><?= get_sub_field( 'units' ) ?></span>
                   </p>
                 </div>
               </div>
@@ -84,19 +84,19 @@
                 <div class="content">
                   <p>
                     <span class="option">Niveles</span>
-                    <br><?= get_sub_field( 'levels' ) ?>
+                    <br><span class="value"><?= get_sub_field( 'levels' ) ?></span>
                   </p>
                   <p>
                     <span class="option">Estatus</span>
-                    <br><?= get_sub_field( 'status' ) ?>
+                    <br><span class="value"><?= get_sub_field( 'status' ) ?></span>
                   </p>
                   <p>
                     <span class="option">Ubicación</span>
-                    <br><?= get_sub_field( 'location' ) ?>
+                    <br><span class="value"><?= get_sub_field( 'location' ) ?></span>
                   </p>
                   <p>
                     <span class="option">M2 por unidad</span>
-                    <br><?= get_sub_field( 'area' ) ?>
+                    <br><span class="value"><?= get_sub_field( 'area' ) ?></span>
                   </p>
                 </div>
               </div>
@@ -104,7 +104,7 @@
                 <div class="content no-padding">
                   <p>
                     <span class="option">Información adicional</span>
-                    <br><?= get_sub_field( 'aditional-information' ) ?>
+                    <br><span class="value"><?= get_sub_field( 'aditional-information' ) ?></span>
                   </p>
                 </div>
               </div>
