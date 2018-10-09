@@ -118,33 +118,23 @@
               </p>
             </div>
           </div>
+          <? if (have_rows('collaborators')): ?>
           <div class="collaborators col-md-6">
             <div class="content">
               <p class="title">
                 Nuestros colaboradores
               </p>
               <div class="carousel">
+                <? while (have_rows('collaborators')) : the_row(); ?>
                 <div class="item">
-                  <div class="logo" style="background-image:url(assets/images/collaborators/logo-bios.jpg)"></div>
+                  <? $file = wp_get_attachment_image_src( get_sub_field( 'image' ), 'full' ) ?>
+                  <div class="logo" style="background-image:url(<?= $file[0] ?>)"></div>
                 </div>
-                <div class="item">
-                  <div class="logo" style="background-image:url(assets/images/collaborators/logo-techne.jpg)"></div>
-                </div>
-                <div class="item">
-                  <div class="logo" style="background-image:url(assets/images/collaborators/logo-bios.jpg)"></div>
-                </div>
-                <div class="item">
-                  <div class="logo" style="background-image:url(assets/images/collaborators/logo-techne.jpg)"></div>
-                </div>
-                <div class="item">
-                  <div class="logo" style="background-image:url(assets/images/collaborators/logo-bios.jpg)"></div>
-                </div>
-                <div class="item">
-                  <div class="logo" style="background-image:url(assets/images/collaborators/logo-bios.jpg)"></div>
-                </div>
+                <? endwhile ?>
               </div>
             </div>
           </div>
+          <? endif ?>
         </div>
       </div>
     </section>
