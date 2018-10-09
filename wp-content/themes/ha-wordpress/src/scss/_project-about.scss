@@ -11,6 +11,7 @@
 
     p {
       &:not(.screen-title){
+        color: getAppColor('bombay');
         //padding-left: 25px;
       }
 
@@ -42,6 +43,7 @@
       }
 
       .option {
+        color: getAppColor('mirage');
         font-weight: 800;
       }
     }
