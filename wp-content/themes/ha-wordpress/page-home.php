@@ -37,7 +37,7 @@
         <div class="content">
 
           <?
-            wp_reset_query();
+            //wp_reset_query();
             
             $args = array(
               'post_type' => 'project',
@@ -86,7 +86,7 @@
           <? endif ?>
 
           <?
-            wp_reset_query();
+            //wp_reset_query();
             
             $args = array(
               'post_type' => 'project',
