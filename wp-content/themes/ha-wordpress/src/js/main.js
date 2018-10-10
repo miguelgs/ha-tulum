@@ -2,6 +2,18 @@ var $ = require('jquery');
 
 var slick = require('slick-carousel');
 
+// Menu
+
+$( '#main-navigation > ul > li > a').click( function( e ) {
+  console.log($( this ).attr( 'rel' ));
+  if( $( this ).attr( 'rel' ) ) {
+    e.preventDefault();
+      $( 'body' ).animate({ scrollTop: $('#' + $( this ).attr( 'rel' ) ).offset().top }, 1000);
+  }
+});
+
+// Carousels
+
 $('#slider .slider-container').slick({
   arrows: false,
   autoplay: false,

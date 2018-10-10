@@ -13379,7 +13379,20 @@ return jQuery;
 
 },{"jquery":1}],3:[function(require,module,exports){
 var $ = require('jquery');
+
 var slick = require('slick-carousel');
+
+// Menu
+
+$( '#main-navigation > ul > li > a').click( function( e ) {
+  console.log($( this ).attr( 'rel' ));
+  if( $( this ).attr( 'rel' ) ) {
+    e.preventDefault();
+      $( 'body' ).animate({ scrollTop: $('#' + $( this ).attr( 'rel' ) ).offset().top }, 1000);
+  }
+});
+
+// Carousels
 
 $('#slider .slider-container').slick({
   arrows: false,
@@ -13388,7 +13401,6 @@ $('#slider .slider-container').slick({
   infinite: true,
   slidesToShow: 1
 });
-
 
 $('#about-us .collaborators .carousel').slick({
   arrows: false,
