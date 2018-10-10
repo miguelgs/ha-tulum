@@ -142,35 +142,45 @@
       About us
     --------------------------------------------------->
 
-    <? if (have_rows('about-us')): ?>
-      <? while (have_rows('about-us')) : the_row(); ?>
+    <? if( have_rows('about-us') ):  ?>
+      <? while( have_rows('about-us') ): the_row();  ?>
+      
       <section id="about-us" class="screen">
         <div class="screen-container">
           <div class="content">
             <p class="screen-title screen-title-border">
-              <?= pll_e( 'Acerca de nosotros' ) ?>
+              AN<? //pll_e( 'Acerca de nosotros' ) ?>
             </p>
             <?= get_sub_field( 'text' ) ?>
           </div>
-          <? if (have_rows('collaborators')) : ?>
+          
+          <? if ( have_rows('collaborators') ) : ?>
+          
           <div class="collaborators">
             <div class="content">
               <p class="title">
-                <?= pll_e( 'Nuestros colaboradores' ) ?>
+                NC<? //pll_e( 'Nuestros colaboradores' ) ?>
               </p>
               <div class="carousel">
-                <? while (have_rows('collaborators')) : the_row(); ?>
+                
+                <? while ( have_rows('collaborators') ) : the_row(); ?>
+                
                 <div class="item">
                   <? $image = wp_get_attachment_image_src(get_sub_field('image'), 'full') ?>
                   <div class="logo" style="background-image:url(<?= $image[0] ?>)"></div>
                 </div>
+
                 <? endwhile ?>
+
               </div>
             </div>
           </div>
+
           <? endif ?>
+
         </div>
       </section>
+
       <? endwhile ?>
     <? endif ?>
 
