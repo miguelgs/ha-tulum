@@ -149,7 +149,7 @@
         <div class="screen-container">
           <div class="content">
             <p class="screen-title screen-title-border">
-              AN<? //pll_e( 'Acerca de nosotros' ) ?>
+              <?= pll_e( 'Acerca de nosotros' ) ?>
             </p>
             <?= get_sub_field( 'text' ) ?>
           </div>
@@ -159,7 +159,7 @@
           <div class="collaborators">
             <div class="content">
               <p class="title">
-                NC<? //pll_e( 'Nuestros colaboradores' ) ?>
+                <?= pll_e( 'Nuestros colaboradores' ) ?>
               </p>
               <div class="carousel">
                 
