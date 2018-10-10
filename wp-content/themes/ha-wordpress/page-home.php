@@ -32,14 +32,121 @@
       Projects
     --------------------------------------------------->
       
-    
+    <section id="projects" class="screen">
+      <div class="screen-container">
+        <div class="content">
+
+          <?
+            //wp_reset_query();
+            
+            $args = array(
+              'post_type' => 'project',
+              'posts_per_page' => 3,
+              'tax_query' => array(
+                array(
+                  'taxonomy' => 'project_type',
+                  'field' => 'slug',
+                  'terms' => 'preventa'
+                )
+              )
+            ); 
+          ?>
+
+          <? $loop = new WP_Query( $args ) ?>
+  
+          <? if( $loop->have_posts() ): ?>
+
+            <p class="screen-title">
+              <?= pll_e( 'Desarrollos en preventa' ) ?>
+            </p>
+            <div class="projects-container current-projects row no-gutters">
+
+              <? while( $loop->have_posts() ) : $loop->the_post() ?>
+                <? if (have_rows('description')): ?>
+                  <? while (have_rows('description')) : the_row(); ?>
+
+                    <div class="col-lg-4">
+                      <div class="project">
+                        <? $image = wp_get_attachment_image_src(get_sub_field('image'), 'full') ?>
+                        <div class="project-image" style="background-image:url(<?= $image[0] ?>)">
+                          <a href="<? the_permalink() ?>" class="ha-btn ha-btn-white"><?= pll_e( 'Ver más' ) ?></a>
+                        </div>
+                        <p class="project-name">
+                          <? the_title() ?>
+                        </p>
+                      </div>
+                    </div>
+
+                  <? endwhile ?>
+                <? endif ?>
+              <? endwhile ?>
+
+              <? wp_reset_postdata() ?>
+
+            </div>
+
+          <? endif ?>
+
+          <?
+            //wp_reset_query();
+            
+            $args = array(
+              'post_type' => 'project',
+              'posts_per_page' => 3,
+              'tax_query' => array(
+                array(
+                  'taxonomy' => 'project_type',
+                  'field' => 'slug',
+                  'terms' => 'anteriores'
+                )
+              )
+            ); 
+          ?>
+
+          <? $loop = new WP_Query( $args ) ?>
+  
+          <? if( $loop->have_posts() ): ?>
+
+            <p class="screen-title">
+              <?= pll_e( 'Desarrollos anteriores' ) ?>
+            </p>
+            <div class="projects-container previews-projects row no-gutters">
+
+              <? while( $loop->have_posts() ) : $loop->the_post() ?>
+                <? if (have_rows('description')): ?>
+                  <? while (have_rows('description')) : the_row(); ?>
+
+                    <div class="col-lg-4">
+                      <div class="project">
+                        <? $image = wp_get_attachment_image_src(get_sub_field('image'), 'full') ?>
+                        <div class="project-image" style="background-image:url(<?= $image[0] ?>)">
+                          <a href="<? the_permalink() ?>" class="ha-btn ha-btn-white"><?= pll_e( 'Ver más' ) ?></a>
+                        </div>
+                        <p class="project-name">
+                          <? the_title() ?>
+                        </p>
+                      </div>
+                    </div>
+
+                  <? endwhile ?>
+                <? endif ?>
+              <? endwhile ?>
+
+              <? wp_reset_postdata() ?>
+
+            </div>
+
+          <? endif ?>
+
+        </div>
+      </div>
+    </section>
 
     <!--------------------------------------------------
       About us
     --------------------------------------------------->
 
     <? if( have_rows('about-us') ):  ?>
-        <div>SI HAY ABOUT</div>
       <? while( have_rows('about-us') ): the_row();  ?>
       
       <section id="about-us" class="screen">
