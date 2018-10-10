@@ -37,8 +37,6 @@
         <div class="content">
 
           <?
-            //wp_reset_query();
-            
             $args = array(
               'post_type' => 'project',
               'posts_per_page' => 3,
@@ -49,10 +47,10 @@
                   'terms' => 'preventa'
                 )
               )
-            ); 
-          ?>
+            );
 
-          <? $loop = new WP_Query( $args ) ?>
+            $loop = new WP_Query( $args );
+          ?>
   
           <? if( $loop->have_posts() ): ?>
 
@@ -88,8 +86,6 @@
           <? endif ?>
 
           <?
-            //wp_reset_query();
-            
             $args = array(
               'post_type' => 'project',
               'posts_per_page' => 3,
@@ -100,10 +96,10 @@
                   'terms' => 'anteriores'
                 )
               )
-            ); 
-          ?>
+            );
 
-          <? $loop = new WP_Query( $args ) ?>
+            $loop = new WP_Query( $args );
+          ?>
   
           <? if( $loop->have_posts() ): ?>
 
