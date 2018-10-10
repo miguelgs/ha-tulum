@@ -8,7 +8,7 @@ $( '#main-navigation > ul > li > a').click( function( e ) {
   console.log($( this ).attr( 'rel' ));
   if( $( this ).attr( 'rel' ) ) {
     e.preventDefault();
-      $( 'body' ).animate({ scrollTop: $('#' + $( this ).attr( 'rel' ) ).offset().top }, 1000);
+      $( 'html, body' ).animate({ scrollTop: $('#' + $( this ).attr( 'rel' ) ).offset().top }, 1000);
   }
 });
 
