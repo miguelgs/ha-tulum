@@ -143,6 +143,7 @@
     --------------------------------------------------->
 
     <? if( have_rows('about-us') ):  ?>
+        <div>SI HAY ABOUT</div>
       <? while( have_rows('about-us') ): the_row();  ?>
       
       <section id="about-us" class="screen">
