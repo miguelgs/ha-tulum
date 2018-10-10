@@ -13385,10 +13385,9 @@ var slick = require('slick-carousel');
 // Menu
 
 $( '#main-navigation > ul > li > a').click( function( e ) {
-  console.log($( this ).attr( 'rel' ));
   if( $( this ).attr( 'rel' ) ) {
     e.preventDefault();
-      $( 'html, body' ).animate({ scrollTop: $('#' + $( this ).attr( 'rel' ) ).offset().top }, 1000);
+      $( 'html, body' ).stop().animate({ scrollTop: $('#' + $( this ).attr( 'rel' ) ).offset().top }, 500);
   }
 });
 
