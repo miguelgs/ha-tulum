@@ -33,14 +33,12 @@
             <p class="head">
               <?= pll_e( 'Desarrollos en Preventa' ) ?>
             </p>
-            <div class="projects-container current-projects row no-gutters">
-              <ul>
-                <? while( $loop->have_posts() ) : $loop->the_post() ?>
-                  <li><a href="<? the_permalink() ?>"><? the_title() ?></a></li>
-                <? endwhile ?>
-              <? wp_reset_postdata() ?>
-              </ul>
-            </div>
+            <ul>
+              <? while( $loop->have_posts() ) : $loop->the_post() ?>
+                <li><a href="<? the_permalink() ?>"><? the_title() ?></a></li>
+              <? endwhile ?>
+            </ul>
+            <? wp_reset_postdata() ?>
             <? endif ?>
             <?
               $args = array(
@@ -61,14 +59,12 @@
             <p class="head">
               <?= pll_e( 'Desarrollos anteriores' ) ?>
             </p>
-            <div class="projects-container current-projects row no-gutters">
-              <ul>
-                <? while( $loop->have_posts() ) : $loop->the_post() ?>
-                  <li><a href="<? the_permalink() ?>"><? the_title() ?></a></li>
-                <? endwhile ?>
-              <? wp_reset_postdata() ?>
-              </ul>
-            </div>
+            <ul>
+              <? while( $loop->have_posts() ) : $loop->the_post() ?>
+                <li><a href="<? the_permalink() ?>"><? the_title() ?></a></li>
+              <? endwhile ?>
+            </ul>
+            <? wp_reset_postdata() ?>
             <? endif ?>
           </div>
         </li>
