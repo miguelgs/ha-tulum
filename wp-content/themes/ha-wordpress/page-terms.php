@@ -8,7 +8,7 @@
 </head>
 
 <body>
-  <div id="terms-and-privacy" class="content-area">
+  <div id="terms-and-privacy">
     <div class="screen-container">
       <div class="content">
         <p class="screen-title">
