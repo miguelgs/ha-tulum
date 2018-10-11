@@ -29,8 +29,6 @@ $('#main-footer a').click( function( e ) {
   }
 });
 
-$( '.privacy' )
-
 // Carousels
 
 $('#slider .slider-container').slick({
