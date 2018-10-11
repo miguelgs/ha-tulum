@@ -1,8 +1,8 @@
-#project-galery {
+#project-gallery {
 
   .gallery-item {
     &:not(:last-child) {
-      margin-bottom: 15px;
+      margin-bottom: 10px;
     }
   }
 }
