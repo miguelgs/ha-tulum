@@ -22,7 +22,7 @@ $('#project-navigation a').click( function( e ) {
 
 // Modals
 
-$('#footer a').click( function( e ) {
+$('#main-footer a').click( function( e ) {
   if( $( this ).attr( 'rel' ) ) {
     e.preventDefault();
       $('#' . $( this ).attr('rel') ).modal('show');
