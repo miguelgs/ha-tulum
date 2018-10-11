@@ -14,7 +14,9 @@
         <p class="screen-title">
           <? the_title() ?>
         </p>
-        <? the_content() ?>
+        <? if (have_posts()) : while (have_posts()) : the_post(); ?>
+          <? the_content() ?>
+        <? endif ?>
       </div>
     </div>
   </div>
