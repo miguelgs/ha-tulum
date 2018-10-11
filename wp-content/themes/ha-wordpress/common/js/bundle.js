@@ -13382,19 +13382,30 @@ var $ = require('jquery');
 
 var slick = require('slick-carousel');
 
+//require('bootstrap');
+
 // Menu
 
-$( '#main-navigation > ul > li > a').click( function( e ) {
+$('#main-navigation > ul > li > a').click( function( e ) {
   if( $( this ).attr( 'rel' ) ) {
     e.preventDefault();
-      $( 'html, body' ).stop().animate({ scrollTop: $('#' + $( this ).attr( 'rel' ) ).offset().top }, 500);
+      $('html, body').stop().animate({ scrollTop: $('#' + $(this).attr('rel')).offset().top }, 500);
   }
 });
 
-$( '#project-navigation a').click( function( e ) {
+$('#project-navigation a').click( function( e ) {
   if( $( this ).attr( 'rel' ) ) {
     e.preventDefault();
-      $( 'html, body' ).stop().animate({ scrollTop: $('#' + $( this ).attr( 'rel' ) ).offset().top }, 500);
+      $( 'html, body' ).stop().animate({ scrollTop: $('#' + $(this).attr('rel')).offset().top }, 500);
+  }
+});
+
+// Modals
+
+$('#main-footer a').click( function( e ) {
+  if( $( this ).attr( 'rel' ) ) {
+    e.preventDefault();
+      $('#' . $( this ).attr('rel') ).modal('show');
   }
 });
 

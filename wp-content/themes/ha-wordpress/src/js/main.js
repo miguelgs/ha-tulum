@@ -2,7 +2,7 @@ var $ = require('jquery');
 
 var slick = require('slick-carousel');
 
-require('bootstrap');
+var bootstrap = require('bootstrap');
 
 // Menu
 
