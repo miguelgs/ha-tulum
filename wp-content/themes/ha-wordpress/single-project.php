@@ -54,7 +54,7 @@
     <? if (have_rows('features')): ?>
     <? while (have_rows('features')) : the_row(); ?>
     <? $file = wp_get_attachment_image_src( get_sub_field( 'image' ), 'full' ) ?>
-    <section id="project-about" class="screen" style="background-image(<?= $file[0] ?>)">
+    <section id="project-about" class="screen" style="background-image:url(<?= $file[0] ?>)">
       <div class="screen-container">
         <div class="row no-gutters">
           <div class="col-md-6">
