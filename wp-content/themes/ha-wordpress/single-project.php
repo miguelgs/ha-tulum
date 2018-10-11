@@ -2,10 +2,10 @@
 
     <div id="project-navigation">
       <ul>
-        <li><a href="#">Descripción</a></li>
-        <li><a href="#">Galería</a></li>
-        <li><a href="#">Ficha Técnica</a></li>
-        <li><a href="#">Ubicación</a></li>
+        <li><a href="#" rel="project-description">Descripción</a></li>
+        <li><a href="#" rel="project-gallery">Galería</a></li>
+        <li><a href="#" rel="project-about">Ficha Técnica</a></li>
+        <li><a href="#" rel="project-map">Ubicación</a></li>
       </ul>
       <a href="#" class="cta">Solicita información</a>
     </div>
@@ -39,18 +39,16 @@
 
     <? $images = get_field('gallery') ?>
     <? if($images): ?>
+    <section id="project-gallery">
     <? foreach($images as $image): ?>
-    <section id="slider" class="screen">
-      <div class="slider-container">
-        <? $file = wp_get_attachment_image_src( $image['ID'], 'full' ) ?>
-        <div class="slide image-display" style="background-image:url(<?= $file[0] ?>)">
-          <p class="caption">
-            <?= $image['caption'] ?>
-          </p>
-        </div>
+      <? $file = wp_get_attachment_image_src( $image['ID'], 'full' ) ?>
+      <div class="screen image-display" style="background-image:url(<?= $file[0] ?>)">
+        <p class="caption">
+          <?= $image['caption'] ?>
+        </p>
       </div>
-    </section>
     <? endforeach ?>
+    </section>
     <? endif ?>
 
     <? if (have_rows('features')): ?>
