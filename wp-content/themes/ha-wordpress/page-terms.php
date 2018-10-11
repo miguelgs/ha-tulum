@@ -15,8 +15,8 @@
           <? the_title() ?>
         </p>
         <? if (have_posts()) : while (have_posts()) : the_post(); ?>
-          <? the_content() ?>
-        <? endif ?>
+          <? the_content(); ?>
+        <? endwhile; endif ?>
       </div>
     </div>
   </div>
