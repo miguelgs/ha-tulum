@@ -7,7 +7,7 @@
         <li><a href="#" rel="project-about">Ficha Técnica</a></li>
         <li><a href="#" rel="project-map">Ubicación</a></li>
       </ul>
-      <a href="#" class="cta">Solicita información</a>
+      <a href="#" rel="project-contact-us" class="cta">Solicita información</a>
     </div>
 
     <? if (have_rows('description')): ?>

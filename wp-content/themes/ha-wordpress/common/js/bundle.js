@@ -13391,7 +13391,7 @@ $( '#main-navigation > ul > li > a').click( function( e ) {
   }
 });
 
-$( '#project-navigation > ul > li > a').click( function( e ) {
+$( '#project-navigation a').click( function( e ) {
   if( $( this ).attr( 'rel' ) ) {
     e.preventDefault();
       $( 'html, body' ).stop().animate({ scrollTop: $('#' + $( this ).attr( 'rel' ) ).offset().top }, 500);
