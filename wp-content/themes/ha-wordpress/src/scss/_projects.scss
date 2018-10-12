@@ -16,12 +16,27 @@
   .content {
     padding: 100px 0;
 
+    @include media-breakpoint-down(md) {
+      padding: 50px 0;
+    }
+  
+    @include media-breakpoint-down(sm) {
+      padding: 25px 0;
+    }
+
     .current-projects {
       margin-bottom: 50px;
     }
 
     .project {
       padding: 0 5px;
+
+      &:not(:last-child){
+        
+        @include media-breakpoint-down(md) {
+          margin-bottom: 10px;
+        }
+      }
       
       .project-image {
         align-items: center;
