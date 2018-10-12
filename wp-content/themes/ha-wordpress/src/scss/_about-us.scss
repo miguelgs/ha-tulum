@@ -3,6 +3,14 @@
   .content {
     padding-top: 100px;
 
+    @include media-breakpoint-down(md) {
+      padding: 50px 0;
+    }
+  
+    @include media-breakpoint-down(sm) {
+      padding: 25px 0;
+    }
+
     p {
       &:not(.screen-title){
         padding: 0 25px;
@@ -12,9 +20,19 @@
 
   .collaborators {
     padding-top: 50px;
+  
+    @include media-breakpoint-down(sm) {
+      padding-top: 25px;
+    }
 
     .content {
       padding: 0;
+
+      p {
+        &:last-child {
+          margin: 0;
+        }
+      }
 
       .carousel {
         .item {
