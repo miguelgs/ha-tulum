@@ -13,8 +13,20 @@
     .content {
       padding: 100px 75px 0;
 
+      @include media-breakpoint-down(md) {
+        padding: 50px;
+      }
+    
+      @include media-breakpoint-down(sm) {
+        padding: 25px;
+      }
+
       p {
         color: getAppColorAlpha('white',0.75);
+
+        &:last-child {
+          margin: 0;
+        }
 
         &:not(.screen-title){
           padding-left: 25px;
