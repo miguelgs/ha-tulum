@@ -34,9 +34,25 @@
   @extend %title;
   color: getAppColorAlpha('mirage',0.9);
   font-size: 36px;
+
+  @include media-breakpoint-down(md) {
+    padding: 24px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    padding: 18px;
+  }
   
   &-border {
     margin-bottom: 75px;
+
+    @include media-breakpoint-down(md) {
+      padding: 50px;
+    }
+  
+    @include media-breakpoint-down(sm) {
+      padding: 25px;
+    }
 
     &:after {
       background: getAppColor('bismark');
