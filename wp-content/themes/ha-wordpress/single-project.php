@@ -2,12 +2,12 @@
 
     <div id="project-navigation">
       <ul>
-        <li><a href="#" rel="project-description">Descripción</a></li>
-        <li><a href="#" rel="project-gallery">Galería</a></li>
-        <li><a href="#" rel="project-about">Ficha Técnica</a></li>
-        <li><a href="#" rel="project-map">Ubicación</a></li>
+        <li><a href="#" rel="project-description"><?= pll_e( 'Descripción' ) ?></a></li>
+        <li><a href="#" rel="project-gallery"><?= pll_e( 'Galería' ) ?></a></li>
+        <li><a href="#" rel="project-about"><?= pll_e( 'Ficha Técnica' ) ?></a></li>
+        <li><a href="#" rel="project-map"><?= pll_e( 'Ubicación' ) ?></a></li>
       </ul>
-      <a href="#" rel="project-contact-us" class="cta">Solicita información</a>
+      <a href="#" rel="project-contact-us" class="cta"><?= pll_e( 'Solicita información' ) ?></a>
     </div>
 
     <? if (have_rows('description')): ?>
@@ -62,19 +62,19 @@
               <div class="col-md-6">
                 <div class="content">
                   <p>
-                    <span class="option">Arquitectura</span>
+                    <span class="option"><?= pll_e( 'Arquitectura' ) ?></span>
                     <br><span class="value"><?= get_sub_field( 'architecture' ) ?></span>
                   </p>
                   <p>
-                    <span class="option">Constructora</span>
+                    <span class="option"><?= pll_e( 'Constructora' ) ?></span>
                     <br><span class="value"><?= get_sub_field( 'construction' ) ?></span>
                   </p>
                   <p>
-                    <span class="option">Uso</span>
+                    <span class="option"><?= pll_e( 'Uso' ) ?></span>
                     <br><span class="value"><?= get_sub_field( 'use' ) ?></span>
                   </p>
                   <p>
-                    <span class="option">No. Unidades</span>
+                    <span class="option"><?= pll_e( 'No. Unidades' ) ?></span>
                     <br><span class="value"><?= get_sub_field( 'units' ) ?></span>
                   </p>
                 </div>
@@ -82,19 +82,19 @@
               <div class="col-md-6">
                 <div class="content">
                   <p>
-                    <span class="option">Niveles</span>
+                    <span class="option"><?= pll_e( 'Niveles' ) ?></span>
                     <br><span class="value"><?= get_sub_field( 'levels' ) ?></span>
                   </p>
                   <p>
-                    <span class="option">Estatus</span>
+                    <span class="option"><?= pll_e( 'Estatus' ) ?></span>
                     <br><span class="value"><?= get_sub_field( 'status' ) ?></span>
                   </p>
                   <p>
-                    <span class="option">Ubicación</span>
+                    <span class="option"><?= pll_e( 'Ubicación' ) ?></span>
                     <br><span class="value"><?= get_sub_field( 'location' ) ?></span>
                   </p>
                   <p>
-                    <span class="option">M2 por unidad</span>
+                    <span class="option"><?= pll_e( 'M2 por unidad' ) ?></span>
                     <br><span class="value"><?= get_sub_field( 'area' ) ?></span>
                   </p>
                 </div>
