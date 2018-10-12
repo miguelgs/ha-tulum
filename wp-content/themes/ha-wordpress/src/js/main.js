@@ -46,6 +46,7 @@ $('#about-us .collaborators .carousel').slick({
   arrows: false,
   autoplay: true,
   autoplaySpeed: 5000,
+  dots: false,
   infinite: true,
   slidesToShow: 4,
   responsive: [

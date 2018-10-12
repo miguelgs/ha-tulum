@@ -21,7 +21,7 @@
   .collaborators {
     padding-top: 50px;
   
-    @include media-breakpoint-down(sm) {
+    @include media-breakpoint-down(md) {
       padding-top: 0;
     }
 
