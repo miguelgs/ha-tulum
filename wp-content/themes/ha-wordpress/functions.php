@@ -7,6 +7,12 @@ function custom_scripts() {
   wp_enqueue_script('main-script', get_template_directory_uri() . '/common/js/bundle.js', array (), date('Y-m-d H:i:s'), true);
 }
 
+function add_viewport_meta_tag() {
+  echo '<meta name="viewport" content="width=device-width, initial-scale=1.0"/>';
+}
+
+add_action( 'genesis_meta', 'add_viewport_meta_tag' );
+
 add_action( 'wp_enqueue_scripts', 'custom_scripts' );
 
 if ( function_exists( 'pll_register_string' ) ) {
