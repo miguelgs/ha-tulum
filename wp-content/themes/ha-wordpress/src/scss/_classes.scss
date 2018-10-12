@@ -36,11 +36,11 @@
   font-size: 36px;
 
   @include media-breakpoint-down(md) {
-    padding: 24px;
+    font-size: 24px;
   }
 
   @include media-breakpoint-down(sm) {
-    padding: 18px;
+    font-size: 18px;
   }
   
   &-border {
