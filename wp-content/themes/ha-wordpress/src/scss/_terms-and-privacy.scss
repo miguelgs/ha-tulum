@@ -1,6 +1,9 @@
 #terms-and-privacy {
 
   .content {
-    color: getAppColor('white');
+    
+    p {
+      color: getAppColor('white');
+    }
   }
 }

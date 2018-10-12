@@ -7,7 +7,7 @@
   <? wp_head() ?>
 </head>
 
-<body>
+<body class="modal-body">
   <div id="terms-and-privacy">
     <div class="container">
       <div class="content">
