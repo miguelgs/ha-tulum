@@ -55,8 +55,16 @@ if ( function_exists( 'pll_register_string' ) ) {
   pll_register_string('status',       'Estatus',                                         'Features', false);
   pll_register_string('map',          'Ubicación',                                       'Features', false);
   pll_register_string('area',         'M2 por unidad',                                   'Features', false);
+  pll_register_string('additional',   'Información adicional',                           'Features', false);
   pll_register_string('information',  'Si deseas más información sobre este desarrollo', 'Features', false);
   pll_register_string('download',     'Descarga el documento',                           'Features', false);
+
+  // Project
+
+  
+  pll_register_string('nearby',           'Atracciones y desarrollos cerca',              'Project', false);
+  pll_register_string('another-projects', 'Otros desarrollos en preventa',                'Project', false);
+  pll_register_string('want-more-info',   'Quiero más información sobre este desarrollo', 'Project', false);
 
   // Footer
 

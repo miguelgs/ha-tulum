@@ -18,7 +18,7 @@
           <div class="col-md-6">
             <div class="content">
               <p class="screen-title screen-title-border">
-                HÁ Tulúm La Veleta
+                <? the_title() ?>
               </p>
               <?= get_sub_field( 'text' ) ?>
             </div>
@@ -102,7 +102,7 @@
               <div class="col-md-12">
                 <div class="content no-padding">
                   <p>
-                    <span class="option">Información adicional</span>
+                    <span class="option"><?= pll_e( 'Información adicional' ) ?></span>
                     <br><span class="value"><?= get_sub_field( 'aditional-information' ) ?></span>
                   </p>
                 </div>
@@ -112,8 +112,8 @@
           <div class="col-md-6">
             <div class="content">
               <p class="text-right">
-                Si deseas más información sobre este desarrollo
-                <br><a href="<?= get_sub_field( 'pdf' ) ?>" class="ha-btn ha-btn-submit">Descarga el documento</a>
+                <?= pll_e( 'Si deseas más información sobre este desarrollo' ) ?>
+                <br><a href="<?= get_sub_field( 'pdf' ) ?>" class="ha-btn ha-btn-submit"><?= pll_e( 'Descarga el documento' ) ?></a>
               </p>
             </div>
           </div>
@@ -121,7 +121,7 @@
           <div class="collaborators col-md-6">
             <div class="content">
               <p class="title">
-                Nuestros colaboradores
+                <?= pll_e( 'Nuestros colaboradores' ) ?>
               </p>
               <div class="carousel">
                 <? while (have_rows('collaborators')) : the_row(); ?>
@@ -148,11 +148,11 @@
           <div class="col-md-4">
             <div class="content">
               <p class="screen-title screen-title-border">
-                HÁ Tulúm La Veleta
+                <? the_title() ?>
               </p>
               <?= get_sub_field( 'address' ) ?>
               <p class="subtitle">
-                Atracciones y desarrollos cerca
+                <?= pll_e( 'Atracciones y desarrollos cerca' ) ?>
               </p>
               <?= get_sub_field( 'nearby' ) ?>
             </div>
@@ -169,41 +169,55 @@
     <section id="projects" class="screen">
       <div class="screen-container">
         <div class="content">
-          <p class="screen-title">
-            Otros desarrollos en preventa
-          </p>
-          <div class="projects-container current-projects row no-gutters">
-            <div class="col-lg-4">
-              <div class="project">
-                <div class="project-image">
-                  <a href="#" class="ha-btn ha-btn-white">Ver más</a>
-                </div>
-                <p class="project-name">
-                  HÁ Tulúm La Veleta
-                </p>
-              </div>
+
+          <?
+            $args = array(
+              'post_type' => 'project',
+              'posts_per_page' => 3,
+              'tax_query' => array(
+                array(
+                  'taxonomy' => 'project_type',
+                  'field' => 'slug',
+                  'terms' => 'preventa'
+                )
+              )
+            );
+
+            $loop = new WP_Query( $args );
+          ?>
+
+          <? if( $loop->have_posts() ): ?>
+
+            <p class="screen-title">
+              <?= pll_e( 'Otros desarrollos en preventa' ) ?>
+            </p>
+            <div class="projects-container current-projects row no-gutters">
+
+              <? while( $loop->have_posts() ) : $loop->the_post() ?>
+                <? if (have_rows('description')): ?>
+                  <? while (have_rows('description')) : the_row(); ?>
+
+                    <div class="col-lg-4">
+                      <div class="project">
+                        <? $image = wp_get_attachment_image_src(get_sub_field('image'), 'full') ?>
+                        <div class="project-image" style="background-image:url(<?= $image[0] ?>)">
+                          <a href="<? the_permalink() ?>" class="ha-btn ha-btn-white"><?= pll_e( 'Ver más' ) ?></a>
+                        </div>
+                        <p class="project-name">
+                          <? the_title() ?>
+                        </p>
+                      </div>
+                    </div>
+
+                  <? endwhile ?>
+                <? endif ?>
+              <? endwhile ?>
+
+              <? wp_reset_postdata() ?>
+
             </div>
-            <div class="col-lg-4">
-              <div class="project">
-                <div class="project-image">
-                  <a href="#" class="ha-btn ha-btn-white">Ver más</a>
-                </div>
-                <p class="project-name">
-                  HÁ Tulúm La Veleta
-                </p>
-              </div>
-            </div>
-            <div class="col-lg-4">
-              <div class="project">
-                <div class="project-image">
-                  <a href="#" class="ha-btn ha-btn-white">Ver más</a>
-                </div>
-                <p class="project-name">
-                  HÁ Tulúm La Veleta
-                </p>
-              </div>
-            </div>
-          </div>
+
+          <? endif ?>
         </div>
       </div>
     </section>
@@ -212,7 +226,7 @@
       <div class="screen-container">
         <div class="content">
           <p class="screen-title screen-title-border">
-            Quiero más información sobre este desarrollo
+            <?= pll_e( 'Quiero más información sobre este desarrollo' ) ?>
           </p>
           <div class="form">
             <div class="row no-gutters">
