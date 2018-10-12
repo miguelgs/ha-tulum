@@ -248,7 +248,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-6 d-flex align-items-end">
+              <div class="col-lg-6 d-flex align-items-end">
                 <a href="#" class="ha-btn ha-btn-submit"><?= pll_e( 'Enviar' ) ?></a>
               </div>
             </div>

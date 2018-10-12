@@ -40,9 +40,12 @@
         .ha-btn-submit {
           margin-left: 10px;
 
-          @include media-breakpoint-down(sm) {
+          @include media-breakpoint-down(md) {
+            display: block;
             margin-left: 0;
             margin-top: 10px;
+            text-align: center;
+            width: 100%;
           }
         }
       }
