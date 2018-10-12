@@ -24,19 +24,25 @@
       padding: 25px 0;
     }
 
+    .projects-container {
+
+      div {
+        
+        &:not(:last-child){
+        
+          @include media-breakpoint-down(md) {
+            margin-bottom: 10px;
+          }
+        }
+      }
+    }
+
     .current-projects {
       margin-bottom: 50px;
     }
 
     .project {
       padding: 0 5px;
-
-      &:not(:last-child){
-        
-        @include media-breakpoint-down(md) {
-          margin-bottom: 10px;
-        }
-      }
       
       .project-image {
         align-items: center;
