@@ -112,7 +112,7 @@
                 <? if (have_rows('description')): ?>
                   <? while (have_rows('description')) : the_row(); ?>
 
-                    <div class="col-lg-4">
+                    <div class="col-md-4">
                       <div class="project">
                         <? $image = wp_get_attachment_image_src(get_sub_field('image'), 'full') ?>
                         <div class="project-image" style="background-image:url(<?= $image[0] ?>)">
