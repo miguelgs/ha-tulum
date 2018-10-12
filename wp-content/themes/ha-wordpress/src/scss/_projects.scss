@@ -5,7 +5,11 @@
     padding: 0 70px 0 280px;
 
     @include media-breakpoint-down(md) {
-      padding-left: 0;
+      padding: 0 45px;
+    }
+  
+    @include media-breakpoint-down(sm) {
+      padding: 0 20px;
     }
   }
 
