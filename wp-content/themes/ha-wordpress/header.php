@@ -72,5 +72,6 @@
         <li><a href="#" rel="feature"><?= pll_e( 'Feature' ) ?></a></li>
         <li><a href="#" rel="contact-us"><?= pll_e( 'Contacto' ) ?></a></li>
         <li class="language"><a href="#"><?= pll_e( 'English' ) ?></a></li>
+        <li><? pll_the_languages() ?></li>
       </ul>
     </div>
