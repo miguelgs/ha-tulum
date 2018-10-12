@@ -94,8 +94,17 @@
     max-width: unset;
 
     .modal-content {
+      background: getAppColor('mirage');
       border: none;
       border-radius: 0;
+
+      iframe {
+        width: 100%;
+
+        body {
+          background: transparent;
+        }
+      }
     }
   }
 }

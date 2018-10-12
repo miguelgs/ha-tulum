@@ -9,7 +9,7 @@
 
 <body>
   <div id="terms-and-privacy">
-    <div class="modal-container">
+    <div class="container">
       <div class="content">
         <p class="screen-title">
           <? the_title() ?>
