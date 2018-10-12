@@ -4,6 +4,10 @@
     
     p {
       color: getAppColor('white');
+
+      &:last-child {
+        margin: 0;
+      }
     }
   }
 }
