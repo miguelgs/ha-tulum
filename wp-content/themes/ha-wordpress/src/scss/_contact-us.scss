@@ -2,6 +2,10 @@
   background: url(../../assets/images/bg-leaf.png) right center no-repeat;
   background-size: 280px;
 
+  @include media-breakpoint-down(md) {
+    background: none;
+  }
+
   .screen-container {
 
     .content {

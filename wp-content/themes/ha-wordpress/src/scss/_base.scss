@@ -145,6 +145,10 @@ b {
   position: relative;
   z-index: 25;
 
+  @include media-breakpoint-down(sm) {
+    padding: 50px 0;
+  }
+
   nav {
     color: getAppColorAlpha('white',0.5);
     font-size: 12px;
@@ -158,6 +162,10 @@ b {
       margin: 0 50px;
       text-decoration: none;
       transition: all 0.25s ease-in-out;
+
+      @include media-breakpoint-down(sm) {
+        margin: 0 10px;
+      }
 
       &:hover {
         color: getAppColorAlpha('white',1);
