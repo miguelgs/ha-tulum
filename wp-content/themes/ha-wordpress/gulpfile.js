@@ -24,6 +24,9 @@ gulp.task('styles', function(){
 
 function createBundle() {
   return bundler.bundle()
+    .on('error', function(err){
+      console.log(err.message);
+    })
     .pipe(source('bundle.js'))
     .pipe(gulp.dest(paths.build + 'js'));
 }
