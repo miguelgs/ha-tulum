@@ -13382,7 +13382,9 @@ var $ = require('jquery');
 
 var slick = require('slick-carousel');
 
-//require('bootstrap');
+//var popper = require('popper.js');
+
+//var bootstrap = require('bootstrap');
 
 // Menu
 
@@ -13405,7 +13407,7 @@ $('#project-navigation a').click( function( e ) {
 $('#main-footer a').click( function( e ) {
   if( $( this ).attr( 'rel' ) ) {
     e.preventDefault();
-      $('#' . $( this ).attr('rel') ).modal('show');
+    console.log( $( this ).attr( 'rel' ) )
   }
 });
 

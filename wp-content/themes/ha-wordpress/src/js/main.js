@@ -2,7 +2,9 @@ var $ = require('jquery');
 
 var slick = require('slick-carousel');
 
-var bootstrap = require('bootstrap');
+//var popper = require('popper.js');
+
+var bootstrap = require('bootstrap/dist/js/bootstrap');
 
 // Menu
 
@@ -25,7 +27,7 @@ $('#project-navigation a').click( function( e ) {
 $('#main-footer a').click( function( e ) {
   if( $( this ).attr( 'rel' ) ) {
     e.preventDefault();
-      $('#' . $( this ).attr('rel') ).modal('show');
+    console.log( $( this ).attr( 'rel' ) )
   }
 });
 
