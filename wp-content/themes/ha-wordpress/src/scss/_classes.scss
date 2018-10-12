@@ -4,6 +4,10 @@
 
 .screen-container {
   padding-left: 285px;
+
+  @include media-breakpoint-down(md) {
+    padding-left: 0;
+  }
 }
 
 %title {

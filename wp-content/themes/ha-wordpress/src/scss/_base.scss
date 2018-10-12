@@ -31,6 +31,14 @@ b {
   width: 210px;
   z-index: 50;
 
+  @include media-breakpoint-down(lg) {
+    height: 480px;
+  }
+
+  @include media-breakpoint-down(md) {
+    display: none;
+  }
+
   > ul {
     list-style: none;
     margin: 0;
@@ -158,7 +166,7 @@ b {
   }
 }
 
-//
+// Single project
 
 #project-navigation {
   align-items: center;
