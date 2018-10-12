@@ -13,7 +13,7 @@
 
     p {
       &:not(.screen-title){
-        padding: 0 25px;
+        padding-left: 25px;
       }
     }
   }
@@ -22,7 +22,7 @@
     padding-top: 50px;
   
     @include media-breakpoint-down(sm) {
-      padding-top: 25px;
+      padding-top: 0;
     }
 
     .content {
