@@ -39,7 +39,8 @@ $('#slider .slider-container').slick({
   autoplay: false,
   autoplaySpeed: 5000,
   infinite: true,
-  slidesToShow: 1
+  slidesToShow: 1,
+  rows: 0
 });
 
 $('#about-us .collaborators .carousel').slick({
@@ -49,6 +50,7 @@ $('#about-us .collaborators .carousel').slick({
   dots: false,
   infinite: true,
   slidesToShow: 4,
+  rows: 0,
   responsive: [
     {
       breakpoint: 1200,
@@ -80,6 +82,7 @@ $('#project-about .collaborators .carousel').slick({
   autoplaySpeed: 5000,
   infinite: true,
   slidesToShow: 3,
+  rows: 0,
   responsive: [
     {
       breakpoint: 1200,
