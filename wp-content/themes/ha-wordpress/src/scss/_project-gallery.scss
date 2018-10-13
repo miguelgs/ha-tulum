@@ -1,6 +1,8 @@
 #project-gallery {
 
   .gallery-item {
+    background: center center no-repeat;
+    background-size: cover;
     margin-top: 10px;
 
     &.screen {
