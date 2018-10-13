@@ -19,7 +19,11 @@
 
     p {
       &:not(.screen-title){
-        padding-left: 25px;
+        //padding-left: 25px;
+      }
+
+      &:last-child {
+        margin: 0;
       }
 
       &.text-right {

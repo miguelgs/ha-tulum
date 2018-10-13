@@ -62,7 +62,7 @@
     <section id="project-about" class="screen" style="background-image:url(<?= $file[0] ?>)">
       <div class="screen-container">
         <div class="row no-gutters">
-          <div class="col-md-6">
+          <div class="col-lg-8">
             <div class="row no-gutters">
               <div class="col-md-6">
                 <div class="content">
@@ -104,7 +104,7 @@
                   </p>
                 </div>
               </div>
-              <div class="col-md-12">
+              <div class="col-12">
                 <div class="content no-padding">
                   <p>
                     <span class="option"><?= pll_e( 'Información adicional' ) ?></span>
@@ -114,7 +114,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-6">
+          <div class="col-lg-4">
             <div class="content">
               <p class="text-right">
                 <?= pll_e( 'Si deseas más información sobre este desarrollo' ) ?>
