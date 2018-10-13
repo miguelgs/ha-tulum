@@ -56,13 +56,18 @@ b {
         margin-bottom: 10px;
       }
 
-      &.language {
+      &.lang-item {
         
-        /*a {
-          border-top: 1px solid getAppColorAlpha('white',0.3);
+        &:before {
+          background: getAppColorAlpha('white',0.3);
+          content: '';
+          height: 1px;
           margin-top: 20px;
           padding-top: 20px;
-        }*/
+          position: absolute;
+          top: 0;
+          width: 100%;
+        }
       }
 
       > a {
