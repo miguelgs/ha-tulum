@@ -24,10 +24,14 @@
             </div>
           </div>
           <div class="col-xl-6 col-lg-4">
-            <? $image = wp_get_attachment_image_src(get_sub_field('image'), 'full') ?>
-            <div class="image image-display" style="background-image:url(<?= $image[0] ?>)">
+            <?
+              $image = get_post( get_sub_field('image') );
+              $image_caption = $image->post_excerpt;
+            ?>
+            <? $file = wp_get_attachment_image_src($image, 'full') ?>
+            <div class="image image-display" style="background-image:url(<?= $file[0] ?>)">
               <p class="caption">
-                Lorem ipsum
+                <?= $image_caption ?>
               </p>
             </div>
           </div>
