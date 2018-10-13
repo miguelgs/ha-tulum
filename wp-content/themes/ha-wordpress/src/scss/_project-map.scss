@@ -3,6 +3,10 @@
   .screen-container {
     padding: 0 0 0 280px;
 
+    @include media-breakpoint-down(md) {
+      padding: 0px;
+    }
+
     /*@include media-breakpoint-down(md) {
       padding: 0 45px;
     }
@@ -16,11 +20,11 @@
     padding-top: 100px;
 
     @include media-breakpoint-down(md) {
-      padding: 50px 0;
+      padding: 50px;
     }
   
     @include media-breakpoint-down(sm) {
-      padding: 25px 0;
+      padding: 25px;
     }
 
     p {
