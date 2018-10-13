@@ -55,7 +55,6 @@
         display: flex;
         height: 240px;
         justify-content: center;
-        margin-bottom: 10px;
 
         @include media-breakpoint-down(md) {
           height: 200px;
@@ -63,6 +62,7 @@
       
         @include media-breakpoint-down(sm) {
           height: 160px;
+          margin-bottom: 10px;
         }
       }
 
