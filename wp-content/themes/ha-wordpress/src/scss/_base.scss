@@ -57,13 +57,12 @@ b {
       }
 
       &.lang-item {
+        position: relative;
         
         &:before {
           background: getAppColorAlpha('white',0.3);
           content: '';
           height: 1px;
-          margin-top: 20px;
-          padding-top: 20px;
           position: absolute;
           top: 0;
           width: 100%;
