@@ -123,7 +123,7 @@
             </div>
           </div>
           <? if (have_rows('collaborators')): ?>
-          <div class="collaborators col-md-6">
+          <div class="collaborators col-lg-6">
             <div class="content">
               <p class="title">
                 <?= pll_e( 'Nuestros colaboradores' ) ?>
