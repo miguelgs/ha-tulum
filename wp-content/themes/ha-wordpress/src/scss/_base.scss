@@ -57,15 +57,18 @@ b {
       }
 
       &.lang-item {
+        padding-top: 20px;
         position: relative;
+        margin-top: 10px;
         
         &:before {
           background: getAppColorAlpha('white',0.3);
           content: '';
           height: 1px;
+          margin-left: 50px;
           position: absolute;
           top: 0;
-          width: 100%;
+          width: 110px;
         }
       }
 
