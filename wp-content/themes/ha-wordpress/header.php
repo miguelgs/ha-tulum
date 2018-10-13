@@ -12,9 +12,9 @@
 
     <div id="main-navigation">
       <ul>
-        <li><a href="<? bloginfo('url') ?>#slider" rel="slider"><?= pll_e( 'Inicio' ) ?></a></li>
+        <li><a href="<? bloginfo('url') ?>#slider" <? if(is_home()) ?>rel="slider"<? endif ?>><?= pll_e( 'Inicio' ) ?></a></li>
         <li>
-          <a href="<? bloginfo('url') ?>#projects" rel="projects"><?= pll_e( 'Desarrollos' ) ?></a>
+          <a href="<? bloginfo('url') ?>#projects" <? if(is_home()) ?>rel="projects"<? endif ?>><?= pll_e( 'Desarrollos' ) ?></a>
           <div class="sub-navigation">
             <?
               $args = array(
@@ -70,9 +70,9 @@
             <? endif ?>
           </div>
         </li>
-        <li><a href="<? bloginfo('url') ?>#about-us" rel="about-us"><?= pll_e( 'Nosotros' ) ?></a></li>
-        <li><a href="<? bloginfo('url') ?>#feature" rel="feature"><?= pll_e( 'Feature' ) ?></a></li>
-        <li><a href="<? bloginfo('url') ?>#contact-us" rel="contact-us"><?= pll_e( 'Contacto' ) ?></a></li>
+        <li><a href="<? bloginfo('url') ?>#about-us" <? if(is_home()) ?>rel="about-us"<? endif ?>><?= pll_e( 'Nosotros' ) ?></a></li>
+        <li><a href="<? bloginfo('url') ?>#feature" <? if(is_home()) ?>rel="feature"<? endif ?>><?= pll_e( 'Feature' ) ?></a></li>
+        <li><a href="<? bloginfo('url') ?>#contact-us" <? if(is_home()) ?>rel="contact-us"<? endif ?>><?= pll_e( 'Contacto' ) ?></a></li>
         <? pll_the_languages( array( 'hide_current' => 1 ) ) ?>
       </ul>
     </div>
