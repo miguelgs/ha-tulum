@@ -57,7 +57,7 @@
             <p class="screen-title">
               <?= pll_e( 'Desarrollos en preventa' ) ?>
             </p>
-            <div class="projects-container current-projects row no-gutters">
+            <div class="projects-container projects-top row no-gutters">
 
               <? while( $loop->have_posts() ) : $loop->the_post() ?>
                 <? if (have_rows('description')): ?>
@@ -106,7 +106,7 @@
             <p class="screen-title">
               <?= pll_e( 'Desarrollos anteriores' ) ?>
             </p>
-            <div class="projects-container previews-projects row no-gutters">
+            <div class="projects-container projects-bottom row no-gutters">
 
               <? while( $loop->have_posts() ) : $loop->the_post() ?>
                 <? if (have_rows('description')): ?>
