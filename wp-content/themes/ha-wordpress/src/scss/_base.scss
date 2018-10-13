@@ -156,7 +156,7 @@ b {
   width: 100%;
   z-index: 50;
 
-  @include media-breakpoint-down(sm) {
+  @include media-breakpoint-up(lg) {
     display: none;
   }
 
@@ -185,18 +185,6 @@ b {
         text-decoration: none;
       }
     }
-  }
-
-  .cta {
-    background: getAppColor('mirage');
-    color: getAppColor('white');
-    font-size: 12px;
-    font-weight: 800;
-    letter-spacing: 2px;
-    margin-left: auto;
-    padding: 10px 25px;
-    text-decoration: none;
-    text-transform: uppercase;
   }
 }
 
