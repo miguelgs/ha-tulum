@@ -1,9 +1,7 @@
 #project-gallery {
 
   .gallery-item {
-    &:not(:last-child) {
-      margin-bottom: 10px;
-    }
+    margin-top: 10px;
 
     &.screen {
 
