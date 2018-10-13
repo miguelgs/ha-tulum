@@ -4,5 +4,12 @@
     &:not(:last-child) {
       margin-bottom: 10px;
     }
+
+    &.screen {
+
+      @include media-breakpoint-down(md) {
+        padding: 50vh;
+      }
+    }
   }
 }
