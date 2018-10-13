@@ -29,7 +29,7 @@
               $image = get_post( $image_id );
               $image_caption = $image->post_excerpt;
             ?>
-            <? $file = wp_get_attachment_image_src($image, 'full') ?>
+            <? $file = wp_get_attachment_image_src($image_id, 'full') ?>
             <div class="image image-display" style="background-image:url(<?= $file[0] ?>)">
               <p class="caption">
                 <?= $image_caption ?>
