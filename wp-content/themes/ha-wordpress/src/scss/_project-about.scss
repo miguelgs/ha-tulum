@@ -7,7 +7,7 @@
   }
 
   @include media-breakpoint-down(sm) {
-    background: none;
+    background: none !important;
   }
 
   .content {
