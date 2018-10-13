@@ -181,7 +181,7 @@ b {
       letter-spacing: 2px;
       text-transform: uppercase;
 
-      @include media-breakpoint-down(md) {
+      @include media-breakpoint-down(sm) {
         display: block;
       }
 
