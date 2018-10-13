@@ -33,6 +33,10 @@
       padding-top: 0;
     }
 
+    @include media-breakpoint-down(sm) {
+      padding-bottom: 25px;
+    }
+
     .content {
       padding: 0;
 

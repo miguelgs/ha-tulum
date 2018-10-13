@@ -82,9 +82,11 @@
   }
 
   .collaborators {
+    @include media-breakpoint-down(sm) {
+      padding-bottom: 25px;
+    }
 
     .content {
-      //padding-top: 50px;
 
       .carousel {
         .item {
