@@ -8,7 +8,7 @@
     &.screen {
 
       @include media-breakpoint-down(md) {
-        padding: 50vh;
+        height: 50vh;
       }
     }
   }
