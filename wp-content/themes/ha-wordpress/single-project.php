@@ -11,164 +11,164 @@
     </div>
 
     <? if (have_rows('description')): ?>
-    <? while (have_rows('description')) : the_row(); ?>
-    <section id="project-description" class="screen">
-      <div class="screen-container">
-        <div class="row no-gutters">
-          <div class="col-xl-6 col-lg-8">
-            <div class="content">
-              <p class="screen-title screen-title-border">
-                <? the_title() ?>
-              </p>
-              <?= get_sub_field( 'text' ) ?>
+      <? while (have_rows('description')) : the_row(); ?>
+        <section id="project-description" class="screen">
+          <div class="screen-container">
+            <div class="row no-gutters">
+              <div class="col-xl-6 col-lg-8">
+                <div class="content">
+                  <p class="screen-title screen-title-border">
+                    <? the_title() ?>
+                  </p>
+                  <?= get_sub_field( 'text' ) ?>
+                </div>
+              </div>
+              <div class="col-xl-6 col-lg-4">
+                <?
+                  $image_id = get_sub_field('image');
+                  $image = get_post( $image_id );
+                  $image_caption = $image->post_excerpt;
+                ?>
+                <? $file = wp_get_attachment_image_src($image_id, 'full') ?>
+                <div class="image image-display" style="background-image:url(<?= $file[0] ?>)">
+                  <p class="caption">
+                    <?= $image_caption ?>
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="col-xl-6 col-lg-4">
-            <?
-              $image_id = get_sub_field('image');
-              $image = get_post( $image_id );
-              $image_caption = $image->post_excerpt;
-            ?>
-            <? $file = wp_get_attachment_image_src($image_id, 'full') ?>
-            <div class="image image-display" style="background-image:url(<?= $file[0] ?>)">
-              <p class="caption">
-                <?= $image_caption ?>
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <? endwhile ?>
+        </section>
+      <? endwhile ?>
     <? endif ?>
 
     <? $images = get_field('gallery') ?>
     <? if($images): ?>
-    <section id="project-gallery">
-    <? foreach($images as $image): ?>
-      <? $file = wp_get_attachment_image_src( $image['ID'], 'full' ) ?>
-      <div class="gallery-item screen image-display" style="background-image:url(<?= $file[0] ?>)">
-        <p class="caption">
-          <?= $image['caption'] ?>
-        </p>
-      </div>
-    <? endforeach ?>
-    </section>
+      <section id="project-gallery">
+        <? foreach($images as $image): ?>
+          <? $file = wp_get_attachment_image_src( $image['ID'], 'full' ) ?>
+          <div class="gallery-item screen image-display" style="background-image:url(<?= $file[0] ?>)">
+            <p class="caption">
+              <?= $image['caption'] ?>
+            </p>
+          </div>
+        <? endforeach ?>
+      </section>
     <? endif ?>
 
     <? if (have_rows('features')): ?>
-    <? while (have_rows('features')) : the_row(); ?>
-    <? $file = wp_get_attachment_image_src( get_sub_field( 'image' ), 'full' ) ?>
-    <section id="project-about" class="screen" style="background-image:url(<?= $file[0] ?>)">
-      <div class="screen-container">
-        <div class="row no-gutters">
-          <div class="col-lg-8">
+      <? while (have_rows('features')) : the_row(); ?>
+        <? $file = wp_get_attachment_image_src( get_sub_field( 'image' ), 'full' ) ?>
+        <section id="project-about" class="screen" style="background-image:url(<?= $file[0] ?>)">
+          <div class="screen-container">
             <div class="row no-gutters">
-              <div class="col-md-6">
+              <div class="col-lg-8">
+                <div class="row no-gutters">
+                  <div class="col-md-6">
+                    <div class="content">
+                      <p>
+                        <span class="option"><?= pll_e( 'Arquitectura' ) ?></span>
+                        <br><span class="value"><?= get_sub_field( 'architecture' ) ?></span>
+                      </p>
+                      <p>
+                        <span class="option"><?= pll_e( 'Constructora' ) ?></span>
+                        <br><span class="value"><?= get_sub_field( 'construction' ) ?></span>
+                      </p>
+                      <p>
+                        <span class="option"><?= pll_e( 'Uso' ) ?></span>
+                        <br><span class="value"><?= get_sub_field( 'use' ) ?></span>
+                      </p>
+                      <p>
+                        <span class="option"><?= pll_e( 'No. Unidades' ) ?></span>
+                        <br><span class="value"><?= get_sub_field( 'units' ) ?></span>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="content">
+                      <p>
+                        <span class="option"><?= pll_e( 'Niveles' ) ?></span>
+                        <br><span class="value"><?= get_sub_field( 'levels' ) ?></span>
+                      </p>
+                      <p>
+                        <span class="option"><?= pll_e( 'Estatus' ) ?></span>
+                        <br><span class="value"><?= get_sub_field( 'status' ) ?></span>
+                      </p>
+                      <p>
+                        <span class="option"><?= pll_e( 'Ubicación' ) ?></span>
+                        <br><span class="value"><?= get_sub_field( 'location' ) ?></span>
+                      </p>
+                      <p>
+                        <span class="option"><?= pll_e( 'M2 por unidad' ) ?></span>
+                        <br><span class="value"><?= get_sub_field( 'area' ) ?></span>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="content no-padding">
+                      <p>
+                        <span class="option"><?= pll_e( 'Información adicional' ) ?></span>
+                        <br><span class="value"><?= get_sub_field( 'aditional-information' ) ?></span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4">
                 <div class="content">
-                  <p>
-                    <span class="option"><?= pll_e( 'Arquitectura' ) ?></span>
-                    <br><span class="value"><?= get_sub_field( 'architecture' ) ?></span>
-                  </p>
-                  <p>
-                    <span class="option"><?= pll_e( 'Constructora' ) ?></span>
-                    <br><span class="value"><?= get_sub_field( 'construction' ) ?></span>
-                  </p>
-                  <p>
-                    <span class="option"><?= pll_e( 'Uso' ) ?></span>
-                    <br><span class="value"><?= get_sub_field( 'use' ) ?></span>
-                  </p>
-                  <p>
-                    <span class="option"><?= pll_e( 'No. Unidades' ) ?></span>
-                    <br><span class="value"><?= get_sub_field( 'units' ) ?></span>
+                  <p class="text-right">
+                    <?= pll_e( 'Si deseas más información sobre este desarrollo' ) ?>
+                    <br><a href="<?= get_sub_field( 'pdf' ) ?>" class="ha-btn ha-btn-submit"><?= pll_e( 'Descarga el documento' ) ?></a>
                   </p>
                 </div>
               </div>
-              <div class="col-md-6">
+              <? if (have_rows('collaborators')): ?>
+              <div class="collaborators col-lg-8">
                 <div class="content">
-                  <p>
-                    <span class="option"><?= pll_e( 'Niveles' ) ?></span>
-                    <br><span class="value"><?= get_sub_field( 'levels' ) ?></span>
+                  <p class="title">
+                    <?= pll_e( 'Nuestros colaboradores' ) ?>
                   </p>
-                  <p>
-                    <span class="option"><?= pll_e( 'Estatus' ) ?></span>
-                    <br><span class="value"><?= get_sub_field( 'status' ) ?></span>
-                  </p>
-                  <p>
-                    <span class="option"><?= pll_e( 'Ubicación' ) ?></span>
-                    <br><span class="value"><?= get_sub_field( 'location' ) ?></span>
-                  </p>
-                  <p>
-                    <span class="option"><?= pll_e( 'M2 por unidad' ) ?></span>
-                    <br><span class="value"><?= get_sub_field( 'area' ) ?></span>
-                  </p>
+                  <div class="carousel">
+                    <? while (have_rows('collaborators')) : the_row(); ?>
+                    <div class="item">
+                      <? $file = wp_get_attachment_image_src( get_sub_field( 'image' ), 'full' ) ?>
+                      <div class="logo" style="background-image:url(<?= $file[0] ?>)"></div>
+                    </div>
+                    <? endwhile ?>
+                  </div>
                 </div>
               </div>
-              <div class="col-12">
-                <div class="content no-padding">
-                  <p>
-                    <span class="option"><?= pll_e( 'Información adicional' ) ?></span>
-                    <br><span class="value"><?= get_sub_field( 'aditional-information' ) ?></span>
-                  </p>
-                </div>
-              </div>
+              <? endif ?>
             </div>
           </div>
-          <div class="col-lg-4">
-            <div class="content">
-              <p class="text-right">
-                <?= pll_e( 'Si deseas más información sobre este desarrollo' ) ?>
-                <br><a href="<?= get_sub_field( 'pdf' ) ?>" class="ha-btn ha-btn-submit"><?= pll_e( 'Descarga el documento' ) ?></a>
-              </p>
-            </div>
-          </div>
-          <? if (have_rows('collaborators')): ?>
-          <div class="collaborators col-lg-8">
-            <div class="content">
-              <p class="title">
-                <?= pll_e( 'Nuestros colaboradores' ) ?>
-              </p>
-              <div class="carousel">
-                <? while (have_rows('collaborators')) : the_row(); ?>
-                <div class="item">
-                  <? $file = wp_get_attachment_image_src( get_sub_field( 'image' ), 'full' ) ?>
-                  <div class="logo" style="background-image:url(<?= $file[0] ?>)"></div>
-                </div>
-                <? endwhile ?>
-              </div>
-            </div>
-          </div>
-          <? endif ?>
-        </div>
-      </div>
-    </section>
-    <? endwhile ?>
+        </section>
+      <? endwhile ?>
     <? endif ?>
 
     <? if (have_rows('location')): ?>
-    <? while (have_rows('location')) : the_row(); ?>
-    <section id="project-map" class="screen">
-      <div class="screen-container">
-        <div class="row no-gutters">
-          <div class="col-xl-6 col-lg-7">
-            <div class="content">
-              <p class="screen-title screen-title-border">
-                <? the_title() ?>
-              </p>
-              <?= get_sub_field( 'address' ) ?>
-              <p class="subtitle">
-                <?= pll_e( 'Atracciones y desarrollos cerca' ) ?>
-              </p>
-              <?= get_sub_field( 'nearby' ) ?>
+      <? while (have_rows('location')) : the_row(); ?>
+        <section id="project-map" class="screen">
+          <div class="screen-container">
+            <div class="row no-gutters">
+              <div class="col-xl-6 col-lg-7">
+                <div class="content">
+                  <p class="screen-title screen-title-border">
+                    <? the_title() ?>
+                  </p>
+                  <?= get_sub_field( 'address' ) ?>
+                  <p class="subtitle">
+                    <?= pll_e( 'Atracciones y desarrollos cerca' ) ?>
+                  </p>
+                  <?= get_sub_field( 'nearby' ) ?>
+                </div>
+              </div>
+              <div class="col-xl-6 col-lg-5">
+                <iframe src="<?= get_sub_field( 'map' ) ?>" frameborder="0" class="map" allowfullscreen></iframe>
+              </div>
             </div>
           </div>
-          <div class="col-xl-6 col-lg-5">
-            <iframe src="<?= get_sub_field( 'map' ) ?>" frameborder="0" class="map" allowfullscreen></iframe>
-          </div>
-        </div>
-      </div>
-    </section>
-    <? endwhile ?>
+        </section>
+      <? endwhile ?>
     <? endif ?>
 
     <section id="projects" class="screen">
