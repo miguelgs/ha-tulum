@@ -2,6 +2,14 @@
   background: right center no-repeat;
   background-size: 280px;
 
+  @include media-breakpoint-down(md) {
+    background-position: right bottom;
+  }
+
+  @include media-breakpoint-down(sm) {
+    background: none;
+  }
+
   .content {
     padding-top: 100px;
 
