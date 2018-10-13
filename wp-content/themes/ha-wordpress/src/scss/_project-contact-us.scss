@@ -5,8 +5,16 @@
     .content {
       padding-top: 100px;
 
+      @include media-breakpoint-down(md) {
+        padding: 50px 0;
+      }
+    
+      @include media-breakpoint-down(sm) {
+        padding: 25px 0;
+      }
+
       .form {
-        //padding-left: 25px;
+        padding-left: 25px;
 
         .form-group {
 
@@ -25,6 +33,14 @@
 
         .ha-btn-submit {
           margin-left: 10px;
+
+          @include media-breakpoint-down(md) {
+            display: block;
+            margin-left: 0;
+            margin-top: 10px;
+            text-align: center;
+            width: 100%;
+          }
         }
       }
     }

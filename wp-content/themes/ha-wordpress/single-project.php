@@ -145,7 +145,7 @@
     <section id="project-map" class="screen">
       <div class="screen-container">
         <div class="row no-gutters">
-          <div class="col-md-4">
+          <div class="col-lg-4 col-md-6">
             <div class="content">
               <p class="screen-title screen-title-border">
                 <? the_title() ?>
@@ -157,7 +157,7 @@
               <?= get_sub_field( 'nearby' ) ?>
             </div>
           </div>
-          <div class="col-md-8">
+          <div class="col-lg-8 col-md-6">
             <iframe src="<?= get_sub_field( 'map' ) ?>" frameborder="0" class="map" allowfullscreen></iframe>
           </div>
         </div>

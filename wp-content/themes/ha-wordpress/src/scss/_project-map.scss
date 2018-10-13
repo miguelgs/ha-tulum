@@ -1,7 +1,27 @@
 #project-map {
 
+  .screen-container {
+    padding: 0 0 0 280px;
+
+    /*@include media-breakpoint-down(md) {
+      padding: 0 45px;
+    }
+  
+    @include media-breakpoint-down(sm) {
+      padding: 0 20px;
+    }*/
+  }
+
   .content {
     padding-top: 100px;
+
+    @include media-breakpoint-down(md) {
+      padding: 50px 0;
+    }
+  
+    @include media-breakpoint-down(sm) {
+      padding: 25px 0;
+    }
 
     p {
       &:not(.screen-title){
@@ -10,6 +30,7 @@
     }
 
     ul {
+      margin: 0;
       padding: 0 75px 0 25px;
     }
   }
