@@ -8,14 +8,14 @@ var bootstrap = require('bootstrap/dist/js/bootstrap');
 
 // Menu
 
-$('#main-navigation > ul > li > a').click( function( e ) {
+$('#main-navigation > ul > li > a, #main-navigation-mobile > ul > li > a').click( function( e ) {
   if( $( this ).attr( 'rel' ) ) {
     e.preventDefault();
       $('html, body').stop().animate({ scrollTop: $('#' + $(this).attr('rel')).offset().top }, 500);
   }
 });
 
-$('#project-navigation a').click( function( e ) {
+$('#project-navigation a, #project-navigation-mobile a').click( function( e ) {
   if( $( this ).attr( 'rel' ) ) {
     e.preventDefault();
       $( 'html, body' ).stop().animate({ scrollTop: $('#' + $(this).attr('rel')).offset().top }, 500);

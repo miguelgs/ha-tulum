@@ -140,6 +140,6 @@
         <li><a href="<? bloginfo('url') ?>#about-us" <? if(is_front_page()): ?>rel="about-us"<? endif ?>><?= pll_e( 'Nosotros' ) ?></a></li>
         <li><a href="<? bloginfo('url') ?>#feature" <? if(is_front_page()): ?>rel="feature"<? endif ?>><?= pll_e( 'Feature' ) ?></a></li>
         <li><a href="<? bloginfo('url') ?>#contact-us" <? if(is_front_page()): ?>rel="contact-us"<? endif ?>><?= pll_e( 'Contacto' ) ?></a></li>
+        <? pll_the_languages( array( 'hide_current' => 1 ) ) ?>
       </ul>
-      <? pll_the_languages( array( 'hide_current' => 1 ) ) ?>
     </div>
