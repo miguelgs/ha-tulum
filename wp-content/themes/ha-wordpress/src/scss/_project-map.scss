@@ -1,23 +1,11 @@
 #project-map {
 
   .screen-container {
-    padding: 0 0 0 280px;
-
-    @include media-breakpoint-down(md) {
-      padding: 0px;
-    }
-
-    /*@include media-breakpoint-down(md) {
-      padding: 0 45px;
-    }
-  
-    @include media-breakpoint-down(sm) {
-      padding: 0 20px;
-    }*/
+    padding: 0;
   }
 
   .content {
-    padding-top: 100px;
+    padding: 100px 75px 100px 285px;
 
     @include media-breakpoint-down(md) {
       padding: 50px;
@@ -29,13 +17,21 @@
 
     p {
       &:not(.screen-title){
-        padding: 0 75px 0 0;
+        padding-left: 25px;
+
+        @include media-breakpoint-down(md) {
+          padding-left: 0;
+        }
       }
     }
 
     ul {
       margin: 0;
-      padding: 0 75px 0 25px;
+      padding-left: 50px;
+
+      @include media-breakpoint-down(md) {
+        padding-left: 25px;
+      }
     }
   }
 
