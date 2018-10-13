@@ -20,7 +20,7 @@
         padding-left: 25px;
 
         @include media-breakpoint-down(md) {
-          padding-left: 25px;
+          padding-left: 0;
         }
       }
     }
