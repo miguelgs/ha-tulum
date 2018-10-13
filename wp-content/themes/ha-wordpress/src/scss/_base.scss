@@ -198,7 +198,7 @@ b {
     padding: 0 0 0 285px;
 
     @include media-breakpoint-down(md) {
-      padding-left: 0;
+      padding-left: 50px;
     }
 
     li {
