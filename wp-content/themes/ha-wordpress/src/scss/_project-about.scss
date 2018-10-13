@@ -23,14 +23,14 @@
       }
 
       &.text-right {
-        padding-right: 100px;
+        //padding-right: 100px;
 
         @include media-breakpoint-down(md) {
-          padding-right: 50px;
+          //padding-right: 50px;
         }
       
         @include media-breakpoint-down(sm) {
-          padding-right: 25px;
+          //padding-right: 25px;
         }
 
         .ha-btn {
