@@ -23617,13 +23617,25 @@ var fontawesome = require('@fortawesome/fontawesome-free/js/all');
 
 // Menu
 
+function getScreenOffset() {
+
+  var screenSize = $(window).width();
+  var offset = 0;
+
+  if (screenSize < 992) {
+    offset = 50;
+  }
+
+  return offset;
+}
+
 $('#main-navigation > ul > li > a, #main-navigation-mobile > ul > li > a').click(function (e) {
   if ($(this).attr('rel')) {
     e.preventDefault();
-    if($('#main-navigation-mobile').hasClass('opened')){
+    if ($('#main-navigation-mobile').hasClass('opened')) {
       $('#main-navigation-mobile').removeClass('opened');
     }
-    $('html, body').stop().animate({ scrollTop: $('#' + $(this).attr('rel')).offset().top }, 500);
+    $('html, body').stop().animate({ scrollTop: $('#' + $(this).attr('rel')).offset().top + getScreenOffset() }, 500);
   }
 });
 
