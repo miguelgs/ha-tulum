@@ -23624,6 +23624,15 @@ $('#main-navigation > ul > li > a, #main-navigation-mobile > ul > li > a').click
   }
 });
 
+$('#main-navigation-mobile .option').click( function( e ) {
+  e.preventDefault();
+  if( $(this).hasClass('open') ) {
+    $('#main-navigation-mobile').addClass('opened');
+  } else {
+    $('#main-navigation-mobile').removeClass('opened');
+  }
+});
+
 $('#project-navigation a, #project-navigation-mobile a').click( function( e ) {
   if( $( this ).attr( 'rel' ) ) {
     e.preventDefault();
