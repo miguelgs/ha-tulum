@@ -23626,7 +23626,7 @@ $('#main-navigation > ul > li > a, #main-navigation-mobile > ul > li > a').click
 
 $('#main-navigation-mobile .option').click( function( e ) {
   e.preventDefault();
-  if( $(this).hasClass('open') ) {
+  if( $(this).hasClass('option-open') ) {
     $('#main-navigation-mobile').addClass('opened');
   } else {
     $('#main-navigation-mobile').removeClass('opened');
