@@ -227,12 +227,12 @@ b {
 
     .option {
       
-      &.open {
+      &-open {
         display: none;
       }
 
-      &.close {
-        display: none;
+      &-close {
+        display: block;
       }
     }
 
