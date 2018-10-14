@@ -148,7 +148,7 @@ b {
 
 #main-navigation-mobile {
   align-items: center;
-  background: getAppColor('white');
+  background: getAppColor('mirage');
   display: flex;
   min-height: 50px;
   position: fixed;
@@ -221,7 +221,7 @@ b {
       }
 
       a {
-        color: getAppColor('mirage');
+        color: getAppColor('white');
         text-decoration: none;
       }
     }
