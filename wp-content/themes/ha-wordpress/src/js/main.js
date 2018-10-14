@@ -28,7 +28,7 @@ $('#main-navigation > ul > li > a, #main-navigation-mobile > ul > li > a').click
     if ($('#main-navigation-mobile').hasClass('opened')) {
       $('#main-navigation-mobile').removeClass('opened');
     }
-    $('html, body').stop().animate({ scrollTop: $('#' + $(this).attr('rel')).offset().top + getScreenOffset() }, 500);
+    $('html, body').stop().animate({ scrollTop: $('#' + $(this).attr('rel')).offset().top - getScreenOffset() }, 500);
   }
 });
 
