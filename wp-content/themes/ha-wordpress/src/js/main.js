@@ -10,35 +10,38 @@ var fontawesome = require('@fortawesome/fontawesome-free/js/all');
 
 // Menu
 
-$('#main-navigation > ul > li > a, #main-navigation-mobile > ul > li > a').click( function( e ) {
-  if( $( this ).attr( 'rel' ) ) {
+$('#main-navigation > ul > li > a, #main-navigation-mobile > ul > li > a').click(function (e) {
+  if ($(this).attr('rel')) {
     e.preventDefault();
-      $('html, body').stop().animate({ scrollTop: $('#' + $(this).attr('rel')).offset().top }, 500);
+    if($('#main-navigation-mobile').hasClass('opened')){
+      $('#main-navigation-mobile').removeClass('opened');
+    }
+    $('html, body').stop().animate({ scrollTop: $('#' + $(this).attr('rel')).offset().top }, 500);
   }
 });
 
-$('#main-navigation-mobile .option').click( function( e ) {
+$('#main-navigation-mobile .option').click(function (e) {
   e.preventDefault();
-  if( $(this).hasClass('option-open') ) {
+  if ($(this).hasClass('option-open')) {
     $('#main-navigation-mobile').addClass('opened');
   } else {
     $('#main-navigation-mobile').removeClass('opened');
   }
 });
 
-$('#project-navigation a, #project-navigation-mobile a').click( function( e ) {
-  if( $( this ).attr( 'rel' ) ) {
+$('#project-navigation a, #project-navigation-mobile a').click(function (e) {
+  if ($(this).attr('rel')) {
     e.preventDefault();
-      $( 'html, body' ).stop().animate({ scrollTop: $('#' + $(this).attr('rel')).offset().top }, 500);
+    $('html, body').stop().animate({ scrollTop: $('#' + $(this).attr('rel')).offset().top }, 500);
   }
 });
 
 // Modals
 
-$('#main-footer a').click( function( e ) {
-  if( $( this ).attr( 'rel' ) ) {
+$('#main-footer a').click(function (e) {
+  if ($(this).attr('rel')) {
     e.preventDefault();
-    console.log( $( this ).attr( 'rel' ) );
+    console.log($(this).attr('rel'));
     $('#' + $(this).attr('rel')).modal('show');
   }
 });

@@ -172,6 +172,10 @@ b {
     top: 50%;
     transform: translateY(-50%);
 
+    @include media-breakpoint-up(md) {
+      display: none;
+    }
+
     &-close {
       display: none;
     }
