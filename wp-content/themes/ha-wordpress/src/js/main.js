@@ -6,6 +6,8 @@ var popper = require('popper.js');
 
 var bootstrap = require('bootstrap/dist/js/bootstrap');
 
+var fontawesome = require('@fortawesome/fontawesome-free/js/all');
+
 // Menu
 
 $('#main-navigation > ul > li > a, #main-navigation-mobile > ul > li > a').click( function( e ) {

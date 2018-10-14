@@ -78,6 +78,8 @@
     </div>
 
     <div id="main-navigation-mobile">
+      <a href="#" class="menu open"><i class="fas fa-bars"></i></a>
+      <a href="#" class="menu close"><i class="fas fa-times"></i></i></a>
       <ul>
         <li><a href="<? bloginfo('url') ?>#slider" <? if(is_front_page()): ?>rel="slider"<? endif ?>><?= pll_e( 'Inicio' ) ?></a></li>
         <li><a href="<? bloginfo('url') ?>#projects" <? if(is_front_page()): ?>rel="projects"<? endif ?>><?= pll_e( 'Desarrollos' ) ?></a></li>
