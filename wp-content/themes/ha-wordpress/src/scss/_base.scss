@@ -150,7 +150,7 @@ b {
   align-items: center;
   background: getAppColor('white');
   display: flex;
-  height: 50px;
+  min-height: 50px;
   position: fixed;
   top: 0;
   width: 100%;
@@ -162,7 +162,23 @@ b {
 
   @include media-breakpoint-down(sm) {
     display: block;
-    height: auto;
+  }
+
+  .option {
+    color: getAppColor('bismark');
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    &-close {
+      display: none;
+    }
+
+    svg {
+      height: 20px;
+      width: 20px;
+    }
   }
 
   ul {
