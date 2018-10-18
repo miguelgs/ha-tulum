@@ -21,7 +21,8 @@
     }
 
     .arrow {
-      background: red;
+      background: red center center no-repeat;
+      background-size: 20px;
       height: 30px;
       position: absolute;
       top: 50%;
@@ -33,7 +34,7 @@
       }
 
       &-next {
-        right: 0;
+        left: 100%;
       }
     }
 
