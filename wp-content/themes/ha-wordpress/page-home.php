@@ -226,16 +226,16 @@
               <div class="col-lg-6">
                 <div>
                   <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Nombre">
+                    <input type="text" class="form-control" placeholder="<?= pll_e( 'Nombre' ) ?>">
                   </div>
                   <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Apellido">
+                    <input type="text" class="form-control" placeholder="<?= pll_e( 'Apellido' ) ?>">
                   </div>
                   <div class="form-group">
-                    <input type="text" class="form-control" placeholder="E-mail">
+                    <input type="text" class="form-control" placeholder="<?= pll_e( 'Correo electrónico' ) ?>">
                   </div>
                   <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Teléfono">
+                    <input type="text" class="form-control" placeholder="<?= pll_e( 'Teléfono' ) ?>">
                   </div>
                 </div>
               </div>
@@ -244,7 +244,7 @@
               <div class="col-lg-6">
                 <div>
                   <div class="form-group mb-0">
-                    <textarea class="form-control" placeholder="Mensaje" rows="5"></textarea>
+                    <textarea class="form-control" placeholder="<?= pll_e( 'Mensaje' ) ?>" rows="5"></textarea>
                   </div>
                 </div>
               </div>

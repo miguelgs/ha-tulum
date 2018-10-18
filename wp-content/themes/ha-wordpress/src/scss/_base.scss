@@ -52,6 +52,10 @@ b {
       //padding-left: 50px;
       text-transform: uppercase;
 
+      //@temp
+      position: relative;
+      //@temp
+
       &:not(:last-child){
         margin-bottom: 10px;
       }
@@ -86,7 +90,7 @@ b {
 
       .sub-navigation {
         background: getAppColor('gallery');
-        bottom: 0;
+        //bottom: 0;
         //display: none;
         left: 100%;
         opacity: 0;
@@ -95,6 +99,11 @@ b {
         transition: all 0.25s ease-in-out;
         visibility: hidden;
         width: 350px;
+
+        //@temp
+        top: 50%;
+        transform: translateY(-50%);
+        //@temp
 
         p, ul {
           list-style: none;

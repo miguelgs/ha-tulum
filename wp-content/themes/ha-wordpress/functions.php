@@ -59,8 +59,16 @@ if ( function_exists( 'pll_register_string' ) ) {
   pll_register_string('information',  'Si deseas más información sobre este desarrollo', 'Features', false);
   pll_register_string('download',     'Descarga el documento',                           'Features', false);
 
-  // Project
+  // Contact us
 
+  pll_register_string('firstname', 'Nombre',             'Contact us', false);
+  pll_register_string('lastname',  'Apellido',           'Contact us', false);
+  pll_register_string('email',     'Correo electrónico', 'Contact us', false);
+  pll_register_string('phone',     'Teléfono',           'Contact us', false);
+  pll_register_string('message',   'Mensaje',            'Contact us', false);
+  pll_register_string('submit',    'Enviar',             'Contact us', false);
+
+  // Project
   
   pll_register_string('nearby',           'Atracciones y desarrollos cerca',              'Project', false);
   pll_register_string('another-projects', 'Otros desarrollos en preventa',                'Project', false);
