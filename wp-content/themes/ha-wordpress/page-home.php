@@ -8,7 +8,7 @@
 
     <? if( have_rows('slider') ): ?>
     <section id="slider" class="screen">
-      <div class="slide-counter">
+      <div class="slides-counter">
         <span class="number number-current">100</span>
         <span class="number number-total">100</span>
       </div>
