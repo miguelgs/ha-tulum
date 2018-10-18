@@ -23670,6 +23670,7 @@ $('#main-footer a').click(function (e) {
 $('#slider .slider-container').slick({
   arrows: true,
   autoplay: true,
+  dots: true,
   autoplaySpeed: 5000,
   infinite: true,
   slidesToShow: 1,
