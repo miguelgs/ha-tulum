@@ -43,7 +43,6 @@
     <? endif ?>
 
     <? if (have_rows('gallery')): ?>
-    <? if($images): ?>
       <section id="project-gallery">
         <? while (have_rows('gallery')) : the_row(); ?>
           <? $file = wp_get_attachment_image_src( get_sub_field( 'image' ), 'full' ) ?>
