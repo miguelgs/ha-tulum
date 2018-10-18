@@ -17,7 +17,7 @@
           </button>
         </div>-->
         <div class="modal-body">
-          <iframe src="http://bochides.com.ar/clientes/voidstudio/ha-tulum/en/privacy-policy/" frameborder="0" allowtransparency="true"></iframe>
+          <iframe src="<?= get_post_permalink( pll_get_post( 3 ) ) ?>" frameborder="0" allowtransparency="true"></iframe>
         </div>
         <!--<div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -37,7 +37,7 @@
           </button>
         </div>-->
         <div class="modal-body">
-          <iframe src="http://bochides.com.ar/clientes/voidstudio/ha-tulum/en/terms/" frameborder="0" allowtransparency="true"></iframe>
+          <iframe src="<?= get_post_permalink( pll_get_post( 100 ) ) ?>" frameborder="0" allowtransparency="true"></iframe>
         </div>
         <!--<div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
