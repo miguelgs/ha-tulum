@@ -52,6 +52,11 @@
       }
 
       .carousel {
+
+        & > .slick-list > .slick-track {
+          margin-left: 0;
+        }
+
         .item {
           display: block;
           height: 150px;
