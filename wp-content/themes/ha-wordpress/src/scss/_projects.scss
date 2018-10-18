@@ -50,12 +50,30 @@
       
       .project-image {
         align-items: center;
-        background: getAppColor('bismark') center center no-repeat;
-        background-size: cover;
+        background: getAppColor('bismark');
         display: flex;
         height: 240px;
         justify-content: center;
         margin-bottom: 10px;
+        overflow: hidden;
+
+        .image {
+          display: block;
+          background: center center no-repeat;
+          background-size: cover;
+          height: 100%;
+          left: 50%;
+          position: absolute;
+          top: 50%;
+          transform: translate(-50%,-50%);
+          width: 100%;
+          z-index: 5;
+        }
+
+        .ha-btn {
+          position: relative;
+          z-index: 10;
+        }
 
         @include media-breakpoint-down(md) {
           height: 200px;
@@ -76,6 +94,16 @@
         margin: 0;
         padding-left: 15px;
         text-transform: uppercase;
+      }
+
+      &:hover {
+        
+        .project-image {
+          
+          .image {
+            transform: scale(1.2);
+          }
+        }
       }
     }
   }
