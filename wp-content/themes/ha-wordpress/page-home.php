@@ -9,11 +9,14 @@
     <? if( have_rows('slider') ): ?>
     <section id="slider" class="screen">
       <div class="slides-counter">
-        <? $slides_count = ( count(get_field('slider')) < 10 ) ? '0' + count(get_field('slider')) : count(get_field('slider')) ?>
+        <?
+          $slides_count = count(get_field('slider'));
+          $slides_total = ( $slides_count < 10 ) ? '0' . $slides_count : $slides_count;
+        ?>
         <a href="#" class="arrow arrow-prev"></a>
         <a href="#" class="arrow arrow-next"></a>
         <span class="number number-current">01</span>
-        <span class="number number-total"><?= $slides_count ?></span>
+        <span class="number number-total"><?= $slides_total ?></span>
       </div>
       <div class="slider-container">
         <? while ( have_rows('slider') ) : the_row(); ?>
