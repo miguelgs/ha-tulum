@@ -23684,9 +23684,8 @@ $('#slider .slider-container').slick({
 });
 
 $('#slider .slider-container').on('init reInit afterChange', function(event, slick, currentSlide, nextSlide){
-  var i = (currentSlide ? currentSlide : 0) + 1;
-  $('#slider .slides-counter .number-current').text(i);
-  $('#slider .slides-counter .number-total').text(slick.slideCount);
+  var slide_index = ((currentSlide + 1) < 10) ? '0' + (currentSlide + 1) : (currentSlide + 1);
+  $('#slider .slides-counter .number-current').text(slide_index);
 });
 
 $('#about-us .collaborators .carousel').slick({
