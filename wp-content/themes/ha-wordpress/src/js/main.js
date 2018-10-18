@@ -53,8 +53,14 @@ $('#project-navigation a, #project-navigation-mobile a').click(function (e) {
 $('#main-footer a').click(function (e) {
   if ($(this).attr('rel')) {
     e.preventDefault();
-    console.log($(this).attr('rel'));
     $('#' + $(this).attr('rel')).modal('show');
+  }
+});
+
+$('.modal .modal-content .close').click(function (e) {
+  if ($(this).attr('rel')) {
+    e.preventDefault();
+    $('#' + $(this).attr('rel')).modal('hide');
   }
 });
 
