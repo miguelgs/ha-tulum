@@ -1,31 +1,76 @@
 #slider {
+  position: relative;
 
-  .slide {
-    background: getAppColor('bismark') center center no-repeat;
-    background-size: cover;
-    height: 100vh;
-    position: relative;
+  .slides-counter {
+    background: red;
+    bottom: 0;
+    height: 100px;
+    position: absolute;
+    right: 0;
+    width: 200px;
 
-    header {
-      bottom: 100px;
+    &:after {
+      background: getAppColor('white');
+      content: '';
+      height: 100%;
+      left: 50%;
       position: absolute;
-      width: 100%;
+      top: 0;
+      width: 2px;
+    }
 
-      p {
-        text-align: center;
+    .number {
+      color: getAppColor('white');
+      font-size: 120%;
+      font-weight: 900;
+      position: absolute;
+      transform: translateY(-50%);
+      top: 50%;
+      width: 50%;
+      
+      &-current {
+        left: 0;
+        text-align: left;
+      }
+  
+      &-total {
+        right: 0;
+        text-align: right;
+      }
+    }
+  }
 
-        &.title {
-          color: getAppColor('white');
-          font-size: 45px;
-          font-weight: 900;
-          letter-spacing: 4px;
+  .slider-container {
+    position: relative;
+    z-index: 5;
 
-          @include media-breakpoint-down(md) {
-            font-size: 32px;
-          }
-        
-          @include media-breakpoint-down(sm) {
-            font-size: 28px;
+    .slide {
+      background: getAppColor('bismark') center center no-repeat;
+      background-size: cover;
+      height: 100vh;
+      position: relative;
+
+      header {
+        bottom: 100px;
+        position: absolute;
+        width: 100%;
+
+        p {
+          text-align: center;
+
+          &.title {
+            color: getAppColor('white');
+            font-size: 45px;
+            font-weight: 900;
+            letter-spacing: 4px;
+
+            @include media-breakpoint-down(md) {
+              font-size: 32px;
+            }
+          
+            @include media-breakpoint-down(sm) {
+              font-size: 28px;
+            }
           }
         }
       }

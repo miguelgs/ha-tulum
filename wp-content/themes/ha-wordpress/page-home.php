@@ -8,6 +8,10 @@
 
     <? if( have_rows('slider') ): ?>
     <section id="slider" class="screen">
+      <div class="slide-counter">
+        <span class="number number-current">100</span>
+        <span class="number number-total">100</span>
+      </div>
       <div class="slider-container">
         <? while ( have_rows('slider') ) : the_row(); ?>
         <? $image = wp_get_attachment_image_src(get_sub_field('image'), 'full') ?>
