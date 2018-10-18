@@ -12,7 +12,7 @@
         <a href="#" class="arrow arrow-prev"></a>
         <a href="#" class="arrow arrow-next"></a>
         <span class="number number-current">01</span>
-        <span class="number number-total">10</span>
+        <span class="number number-total"><?= count(get_field('slider')) ?></span>
       </div>
       <div class="slider-container">
         <? while ( have_rows('slider') ) : the_row(); ?>
