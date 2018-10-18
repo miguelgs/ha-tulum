@@ -1,9 +1,10 @@
 #project-about {
   background: right center no-repeat;
-  background-size: 280px;
+  background-size: 400px;
 
   @include media-breakpoint-down(md) {
     background-position: right bottom;
+    background-size: 300px;
   }
 
   @include media-breakpoint-down(sm) {
