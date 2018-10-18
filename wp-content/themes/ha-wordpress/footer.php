@@ -10,6 +10,7 @@
   <div class="modal fade" id="privacy">
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">
+        <a href="#" class="close"><a>
         <!--<div class="modal-header">
           <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -30,6 +31,7 @@
   <div class="modal fade" id="terms">
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">
+        <a href="#" class="close"><a>
         <!--<div class="modal-header">
           <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
