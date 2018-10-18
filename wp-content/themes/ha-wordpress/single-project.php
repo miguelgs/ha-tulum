@@ -117,7 +117,7 @@
                 <div class="content">
                   <p class="text-right">
                     <?= pll_e( 'Si deseas más información sobre este desarrollo' ) ?>
-                    <br><a href="<?= get_sub_field( 'pdf' ) ?>" class="ha-btn ha-btn-submit"><?= pll_e( 'Descarga el documento' ) ?></a>
+                    <br><a href="<?= get_sub_field( 'pdf' ) ?>" class="ha-btn ha-btn-pdf"><?= pll_e( 'Descarga el documento' ) ?></a>
                   </p>
                 </div>
               </div>

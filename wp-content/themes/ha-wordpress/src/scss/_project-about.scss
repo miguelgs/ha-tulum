@@ -53,26 +53,22 @@
           //padding-right: 25px;
         }
 
-        .ha-btn {
+        .ha-btn-pdf {
+          background-position: right 10px center;
+          background-repeat: no-repeat;
+          background-image: url(../../assets/images/icons/pdf-mirage.svg);
+          background-size: 24px 24px;
+          content: '';
+          display: inline-block;
+          height: 24px;
+          margin-left: 5px;
           padding-left: 20px;
-          padding-right: 20px;
-
-          &:after {
-            background:  center center no-repeat;
-            background-image: url(../../assets/images/icons/pdf-mirage.svg);
-            background-size: 24px 24px;
-            content: '';
-            display: inline-block;
-            height: 24px;
-            margin-left: 5px;
-            vertical-align: middle;
-            width: 24px;
-          }
+          padding-right: 54px;
+          vertical-align: middle;
+          width: 24px;
 
           &:hover {
-            &:after {
-              background-image: url(../../assets/images/icons/pdf-white.svg);
-            }
+            background-image: url(../../assets/images/icons/pdf-white.svg);
           }
         }
       }
