@@ -76,7 +76,7 @@ $('#slider .slider-container').slick({
   nextArrow: $('#slider .slides-counter .arrow-next')
 });
 
-$('#slider .slider-container').on('init reInit afterChange', function(event, slick, currentSlide, nextSlide){
+$('#slider .slider-container').on('init reInit afterChange', function(slick, currentSlide){
   var i = (currentSlide ? currentSlide : 0) + 1;
   $('#slider .slides-counter .number-current').text(i);
   $('#slider .slides-counter .number-total').text(slick.slideCount);
