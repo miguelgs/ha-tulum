@@ -234,7 +234,7 @@
             <?= pll_e( 'Quiero más información sobre este desarrollo' ) ?>
           </p>
           <div class="form">
-            <div class="row no-gutters">
+            <div class="row no-gutters justify-content-center">
               <div class="col-lg-6">
                 <div>
                   <div class="form-group">
@@ -249,18 +249,12 @@
                   <div class="form-group">
                     <input type="text" class="form-control" placeholder="<?= pll_e( 'Teléfono' ) ?>">
                   </div>
-                </div>
-              </div>
-            </div>
-            <div class="row no-gutters">
-              <div class="col-lg-6">
-                <div>
                   <div class="form-group mb-0">
                     <textarea class="form-control" placeholder="<?= pll_e( 'Mensaje' ) ?>" rows="5"></textarea>
                   </div>
                 </div>
               </div>
-              <div class="col-6 d-flex align-items-end">
+              <div class="col-lg-3 d-flex align-items-end">
                 <a href="#" class="ha-btn ha-btn-submit"><?= pll_e( 'Enviar' ) ?></a>
               </div>
             </div>
