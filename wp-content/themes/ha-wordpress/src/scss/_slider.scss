@@ -1,6 +1,10 @@
 #slider {
   position: relative;
 
+  @include media-breakpoint-up(lg) {
+    min-height: unset;
+  }
+
   .slides-counter {
     bottom: 25px;
     height: 50px;
