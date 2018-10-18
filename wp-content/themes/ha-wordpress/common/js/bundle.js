@@ -23670,20 +23670,23 @@ $('#main-footer a').click(function (e) {
 $('#slider .slider-container').slick({
   arrows: true,
   autoplay: true,
-  dots: true,
+  dots: false,
   autoplaySpeed: 5000,
   infinite: true,
   slidesToShow: 1,
   rows: 0,
-  customPaging: function (slider, i) {
-    console.log(slider);
+  /*customPaging: function (slider, i) {
     var number = ((i + 1) < 0) ? ('0' + i + 1) : (i + 1);
     var total = (slider.slideCount < 0) ? ('0' + slider.slideCount) : slider.slideCount;
-    $('#slider .slides-counter .number-current').text(number);
-    $('#slider .slides-counter .number-total').text(total);
-  },
+  },*/
   prevArrow: $('#slider .slides-counter .arrow-prev'),
   nextArrow: $('#slider .slides-counter .arrow-next')
+});
+
+$('#slider .slider-container').on('init reInit afterChange', function(event, slick, currentSlide, nextSlide){
+  var i = (currentSlide ? currentSlide : 0) + 1;
+  $('#slider .slides-counter .number-current').text(i);
+  $('#slider .slides-counter .number-total').text(slick.slideCount);
 });
 
 $('#about-us .collaborators .carousel').slick({
