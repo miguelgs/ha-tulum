@@ -2,7 +2,7 @@
   background: getAppColor('black-haze');
 
   .screen-container {
-    padding: 0 70px 0 280px;
+    padding: 0 45px 0 255px;
 
     @include media-breakpoint-down(md) {
       padding: 0 45px;
