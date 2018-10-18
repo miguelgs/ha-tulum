@@ -22,7 +22,7 @@
     }
 
     .arrow {
-      background: red center center no-repeat;
+      background: center center no-repeat;
       background-size: 20px;
       height: 30px;
       position: absolute;
@@ -32,10 +32,12 @@
       z-index: 10;
 
       &-prev {
+        background-image: url(../../assets/images/icons/arrow-prev.svg);
         left: 0;
       }
 
       &-next {
+        background-image: url(../../assets/images/icons/arrow-next.svg);
         left: 100%;
       }
     }
