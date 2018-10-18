@@ -66,7 +66,8 @@
                     <div class="col-md-4">
                       <div class="project">
                         <? $image = wp_get_attachment_image_src(get_sub_field('image'), 'full') ?>
-                        <div class="project-image" style="background-image:url(<?= $image[0] ?>)">
+                        <div class="project-image">
+                          <div class="image" style="background-image:url(<?= $image[0] ?>)"></div>
                           <a href="<? the_permalink() ?>" class="ha-btn ha-btn-white"><?= pll_e( 'Ver más' ) ?></a>
                         </div>
                         <p class="project-name">
