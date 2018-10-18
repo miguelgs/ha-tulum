@@ -42,17 +42,17 @@
       <? endwhile ?>
     <? endif ?>
 
-    <? $images = get_field('gallery') ?>
+    <? if (have_rows('gallery')): ?>
     <? if($images): ?>
       <section id="project-gallery">
-        <? foreach($images as $image): ?>
-          <? $file = wp_get_attachment_image_src( $image['ID'], 'full' ) ?>
+        <? while (have_rows('gallery')) : the_row(); ?>
+          <? $file = wp_get_attachment_image_src( get_sub_field( 'image' ), 'full' ) ?>
           <div class="gallery-item screen image-display" style="background-image:url(<?= $file[0] ?>)">
             <p class="caption">
-              <?= $image['caption'] ?>
+              <?= get_sub_field( 'caption' ) ?>
             </p>
           </div>
-        <? endforeach ?>
+        <? endwhile ?>
       </section>
     <? endif ?>
 
