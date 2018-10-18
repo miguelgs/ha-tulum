@@ -1,6 +1,10 @@
 #projects {
   background: getAppColor('black-haze');
 
+  @include media-breakpoint-up(lg) {
+    min-height: unset;
+  }
+
   .screen-container {
     padding: 0 45px 0 255px;
 
