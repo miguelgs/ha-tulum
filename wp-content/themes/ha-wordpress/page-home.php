@@ -9,8 +9,8 @@
     <? if( have_rows('slider') ): ?>
     <section id="slider" class="screen">
       <div class="slides-counter">
-        <span class="number number-current">100</span>
-        <span class="number number-total">100</span>
+        <span class="number number-current">01</span>
+        <span class="number number-total">10</span>
       </div>
       <div class="slider-container">
         <? while ( have_rows('slider') ) : the_row(); ?>
