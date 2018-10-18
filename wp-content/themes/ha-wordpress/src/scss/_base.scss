@@ -113,7 +113,7 @@ b {
 
         p {
           &.head {
-            border-bottom: 1px solid getAppColor('mirage');
+            border-bottom: 1px solid getAppColorAlpha('mirage', 0.8);
             font-size: 120%;
             margin-bottom: 15px;
           }
