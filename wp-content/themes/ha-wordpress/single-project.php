@@ -195,7 +195,7 @@
             <p class="screen-title">
               <?= pll_e( 'Otros desarrollos en preventa' ) ?>
             </p>
-            <div class="projects-container projects-bottom row no-gutters">
+            <div class="projects-container projects-top row no-gutters">
 
               <? while( $loop->have_posts() ) : $loop->the_post() ?>
                 <? if (have_rows('description')): ?>
