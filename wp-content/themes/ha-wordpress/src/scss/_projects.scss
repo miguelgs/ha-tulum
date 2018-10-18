@@ -56,6 +56,7 @@
         justify-content: center;
         margin-bottom: 10px;
         overflow: hidden;
+        position: relative;
 
         .image {
           display: block;
@@ -66,6 +67,7 @@
           position: absolute;
           top: 50%;
           transform: translate(-50%,-50%);
+          transition: all 0.25s ease-in-out;
           width: 100%;
           z-index: 5;
         }
@@ -101,7 +103,7 @@
         .project-image {
           
           .image {
-            transform: scale(1.2);
+            transform: translate(-50%,-50%) scale(1.2);
           }
         }
       }
