@@ -9,6 +9,8 @@
     <? if( have_rows('slider') ): ?>
     <section id="slider" class="screen">
       <div class="slides-counter">
+        <a href="#" class="arrow arrow-prev"></a>
+        <a href="#" class="arrow arrow-next"></a>
         <span class="number number-current">01</span>
         <span class="number number-total">10</span>
       </div>

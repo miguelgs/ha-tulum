@@ -23673,7 +23673,16 @@ $('#slider .slider-container').slick({
   autoplaySpeed: 5000,
   infinite: true,
   slidesToShow: 1,
-  rows: 0
+  rows: 0,
+  customPaging: function (slider, i) {
+    //return  (i + 1) + '/' + slider.slideCount;
+    var number = (i + 1 < 0) ? ('0' + i + 1) : (i + 1);
+    var total = (slider.slideCount < 0) ? ('0' + slider.slideCount) : slider.slideCount;
+    $('#slider .slides-counter .number-current').text(number);
+    $('#slider .slides-counter .number-total').text(total);
+  },
+  prevArrow: $('#slider .slides-counter .arrow-prev'),
+  nextArrow: $('#slider .slides-counter .arrow-next')
 });
 
 $('#about-us .collaborators .carousel').slick({

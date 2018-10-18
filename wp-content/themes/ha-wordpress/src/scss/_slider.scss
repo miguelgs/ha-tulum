@@ -20,6 +20,23 @@
       width: 2px;
     }
 
+    .arrow {
+      background: red;
+      height: 30px;
+      position: absolute;
+      top: 50%;
+      transform: translate(-50%,-50%);
+      width: 30px;
+
+      &-prev {
+        left: 0;
+      }
+
+      &-next {
+        right: 0;
+      }
+    }
+
     .number {
       color: getAppColor('white');
       font-size: 150%;
