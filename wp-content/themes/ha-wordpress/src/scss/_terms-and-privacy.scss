@@ -2,7 +2,7 @@
 
   .content {
     
-    p {
+    p, ul {
       color: getAppColor('white');
 
       &:last-child {
