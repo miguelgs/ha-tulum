@@ -54,18 +54,10 @@
         }
 
         .ha-btn-pdf {
-          background-position: right 10px center;
+          background-position: right 13px center;
           background-repeat: no-repeat;
           background-image: url(../../assets/images/icons/pdf-mirage.svg);
           background-size: 24px 24px;
-          content: '';
-          display: inline-block;
-          height: 24px;
-          margin-left: 5px;
-          padding-left: 20px;
-          padding-right: 54px;
-          vertical-align: middle;
-          width: 24px;
 
           &:hover {
             background-image: url(../../assets/images/icons/pdf-white.svg);
