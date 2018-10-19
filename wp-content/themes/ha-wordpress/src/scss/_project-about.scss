@@ -27,9 +27,9 @@
       padding: 25px 0 0;
     }
 
-    &.no-padding {
-      @include media-breakpoint-up(md) {
-        padding: 0;
+    &.short-padding {
+      @include media-breakpoint-down(md) {
+        padding-top: 50px;
       }
     }
 
