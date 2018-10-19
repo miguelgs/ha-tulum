@@ -161,37 +161,33 @@
       <? endwhile ?>
     <? endif ?>
 
-    <section id="projects" class="screen">
-      <div class="screen-container">
-        <div class="content">
+    <?
+      $args = array(
+        'post_type' => 'project',
+        'posts_per_page' => 3,
+        'post__not_in' => array( $post->ID ),
+        'tax_query' => array(
+          array(
+            'taxonomy' => 'project_type',
+            'field' => 'slug',
+            'terms' => 'preventa'
+          )
+        )
+      );
 
-          <?
-            $args = array(
-              'post_type' => 'project',
-              'posts_per_page' => 3,
-              'tax_query' => array(
-                array(
-                  'taxonomy' => 'project_type',
-                  'field' => 'slug',
-                  'terms' => 'preventa'
-                )
-              )
-            );
-
-            $loop = new WP_Query( $args );
-          ?>
-
-          <? if( $loop->have_posts() ): ?>
-
+      $loop = new WP_Query( $args );
+    ?>
+    <? if( $loop->have_posts() ): ?>
+      <section id="projects" class="screen">
+        <div class="screen-container">
+          <div class="content">
             <p class="screen-title">
               <?= pll_e( 'Otros desarrollos en preventa' ) ?>
             </p>
             <div class="projects-container projects-top row no-gutters">
-
               <? while( $loop->have_posts() ) : $loop->the_post() ?>
                 <? if (have_rows('description')): ?>
                   <? while (have_rows('description')) : the_row(); ?>
-
                     <div class="col-lg-4">
                       <div class="project">
                         <? $image = wp_get_attachment_image_src(get_sub_field('image'), 'full') ?>
@@ -204,19 +200,15 @@
                         </p>
                       </div>
                     </div>
-
                   <? endwhile ?>
                 <? endif ?>
               <? endwhile ?>
-
               <? wp_reset_postdata() ?>
-
             </div>
-
-          <? endif ?>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    <? endif ?>
 
     <section id="project-contact-us" class="screen">
       <div class="screen-container">
