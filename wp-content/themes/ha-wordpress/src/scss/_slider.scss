@@ -100,6 +100,12 @@
               font-size: 28px;
             }
           }
+
+          &.arrow {
+            background: url(../../assets/images/icons/pdf-mirage.svg) bottom center no-repeat;
+            background-size: 24px 24px;
+            padding-bottom: 50px;
+          }
         }
       }
     }

@@ -15,7 +15,7 @@
         <section id="project-description" class="screen">
           <div class="screen-container">
             <div class="row no-gutters">
-              <div class="col-xl-7 col-lg-8">
+              <div class="col-xl-7 col-lg-8 order-last order-lg-first">
                 <div class="content">
                   <p class="screen-title screen-title-border">
                     <? the_title() ?>
@@ -23,18 +23,9 @@
                   <?= get_sub_field( 'text' ) ?>
                 </div>
               </div>
-              <div class="col-xl-5 col-lg-4">
-                <?
-                  $image_id = get_sub_field('image');
-                  $image = get_post( $image_id );
-                  $image_caption = $image->post_excerpt;
-                ?>
-                <? $file = wp_get_attachment_image_src($image_id, 'full') ?>
-                <div class="image image-display" style="background-image:url(<?= $file[0] ?>)">
-                  <p class="caption">
-                    <?= $image_caption ?>
-                  </p>
-                </div>
+              <div class="col-xl-5 col-lg-4 order-first order-lg-last">
+                <? $file = wp_get_attachment_image_src(get_sub_field('image'), 'full') ?>
+                <div class="image image-display" style="background-image:url(<?= $file[0] ?>)"></div>
               </div>
             </div>
           </div>
