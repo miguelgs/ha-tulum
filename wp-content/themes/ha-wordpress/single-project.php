@@ -95,7 +95,7 @@
                     </div>
                   </div>
                   <div class="col-12">
-                    <div class="content short-padding">
+                    <div class="content no-padding">
                       <p>
                         <span class="option"><?= pll_e( 'Información adicional' ) ?></span>
                         <br><span class="value"><?= get_sub_field( 'aditional-information' ) ?></span>
