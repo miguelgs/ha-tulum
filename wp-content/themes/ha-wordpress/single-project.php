@@ -165,7 +165,7 @@
       $args = array(
         'post_type' => 'project',
         'posts_per_page' => 3,
-        'post__not_in' => array( $post->ID ),
+        //'post__not_in' => array( $post->ID ),
         'tax_query' => array(
           array(
             'taxonomy' => 'project_type',
