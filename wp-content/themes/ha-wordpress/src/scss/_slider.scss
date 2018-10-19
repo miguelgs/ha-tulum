@@ -113,6 +113,11 @@
             background: url(../../assets/images/icons/arrow-down.svg) bottom center no-repeat;
             background-size: 24px 24px;
             padding-bottom: 50px;
+
+            @include media-breakpoint-down(sm) {
+              background: none;
+              padding: 0;
+            }
           }
         }
       }
