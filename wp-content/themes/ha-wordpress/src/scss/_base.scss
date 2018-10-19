@@ -216,6 +216,15 @@ b {
       letter-spacing: 2px;
       text-transform: uppercase;
 
+      &.head {
+        color: getAppColorAlpha('white',0.5);
+        padding-left: 5px;
+      }
+
+      &.sub {
+        padding-left: 10px;
+      }
+
       @include media-breakpoint-down(sm) {
         display: block;
       }

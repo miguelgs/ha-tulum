@@ -121,7 +121,7 @@
           $loop = new WP_Query( $args );
         ?>
         <? if( $loop->have_posts() ): ?>
-          <li><?= pll_e( 'Desarrollos anteriores' ) ?></li>
+          <li class="head"><?= pll_e( 'Desarrollos anteriores' ) ?></li>
           <? while( $loop->have_posts() ) : $loop->the_post() ?>
             <li class="sub"><a href="<? the_permalink() ?>"><? the_title() ?></a></li>
           <? endwhile ?>
