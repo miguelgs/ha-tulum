@@ -158,40 +158,41 @@ b {
 #main-navigation-mobile {
   align-items: center;
   background: getAppColor('black-haze');
-  display: flex;
   min-height: 50px;
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 50;
 
-  @include media-breakpoint-up(lg) {
+  @include media-breakpoint-up(md) {
     display: none;
   }
 
-  @include media-breakpoint-down(sm) {
-    display: block;
-  }
+  .bar {
+    background: getAppColor('mirage');
+    height: 50px;
+    position: relative;
 
-  .option {
-    color: getAppColor('bismark');
-    line-height: 1em;
-    position: absolute;
-    right: 25px;
-    top: 25px;
-    transform: translateY(-50%);
-
-    @include media-breakpoint-up(md) {
-      display: none;
-    }
-
-    &-close {
-      display: none;
-    }
-
-    svg {
-      height: 20px;
-      width: 20px;
+    .option {
+      color: getAppColor('bismark');
+      line-height: 1em;
+      position: absolute;
+      right: 25px;
+      top: 25px;
+      transform: translateY(-50%);
+  
+      @include media-breakpoint-up(md) {
+        display: none;
+      }
+  
+      &-close {
+        display: none;
+      }
+  
+      svg {
+        height: 20px;
+        width: 20px;
+      }
     }
   }
 
@@ -247,14 +248,17 @@ b {
 
   &.opened {
 
-    .option {
-      
-      &-open {
-        display: none;
-      }
+    .bar {
 
-      &-close {
-        display: block;
+      .option {
+        
+        &-open {
+          display: none;
+        }
+
+        &-close {
+          display: block;
+        }
       }
     }
 
