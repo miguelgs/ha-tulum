@@ -1,8 +1,8 @@
 #slider {
   position: relative;
 
-  @include media-breakpoint-up(lg) {
-    min-height: unset;
+  @include media-breakpoint-down(md) {
+    height: 50vh;
   }
 
   .slides-counter {
