@@ -157,7 +157,7 @@ b {
 
 #main-navigation-mobile {
   align-items: center;
-  background: getAppColorAlpha('black-haze',0.85);
+  background: getAppColorAlpha('black-haze',0.95);
   min-height: 50px;
   position: fixed;
   top: 0;
@@ -218,7 +218,7 @@ b {
       text-transform: uppercase;
 
       &.head {
-        color: getAppColorAlpha('mirage',0.5);
+        color: getAppColorAlpha('mirage',0.75);
         padding-left: 10px;
       }
 
@@ -232,7 +232,7 @@ b {
         margin-top: 20px;
         
         &:before {
-          background: getAppColorAlpha('mirage',0.3);
+          background: getAppColorAlpha('mirage',0.5);
           content: '';
           height: 1px;
           position: absolute;
@@ -255,7 +255,7 @@ b {
       }
 
       a {
-        color: getAppColorAlpha('mirage',0.3);
+        color: getAppColorAlpha('mirage',0.5);
         text-decoration: none;
       }
     }
