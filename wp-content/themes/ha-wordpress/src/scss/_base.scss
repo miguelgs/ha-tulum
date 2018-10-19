@@ -218,11 +218,11 @@ b {
 
       &.head {
         color: getAppColorAlpha('white',0.5);
-        padding-left: 5px;
+        padding-left: 10px;
       }
 
       &.sub {
-        padding-left: 10px;
+        padding-left: 20px;
       }
 
       @include media-breakpoint-down(sm) {
