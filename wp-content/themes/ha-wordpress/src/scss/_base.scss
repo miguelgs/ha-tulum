@@ -157,7 +157,7 @@ b {
 
 #main-navigation-mobile {
   align-items: center;
-  background: getAppColor('mirage');
+  background: getAppColor('black-haze');
   display: flex;
   min-height: 50px;
   position: fixed;
@@ -217,7 +217,7 @@ b {
       text-transform: uppercase;
 
       &.head {
-        color: getAppColorAlpha('white',0.5);
+        color: getAppColorAlpha('mirage',0.5);
         padding-left: 10px;
       }
 
@@ -239,7 +239,7 @@ b {
       }
 
       a {
-        color: getAppColorAlpha('white',0.3);
+        color: getAppColorAlpha('mirage',0.3);
         text-decoration: none;
       }
     }
