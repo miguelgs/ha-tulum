@@ -78,6 +78,10 @@
       height: 100vh;
       position: relative;
 
+      @include media-breakpoint-down(md) {
+        min-height: 50vh;
+      }
+
       header {
         bottom: 100px;
         position: absolute;
