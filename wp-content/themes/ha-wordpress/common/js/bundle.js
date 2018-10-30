@@ -29238,6 +29238,8 @@ return Popper;
 },{"jquery":4}],7:[function(require,module,exports){
 var $ = require('jquery');
 
+var fancybox = require('@fancyapps/fancybox')($);
+
 var slick = require('slick-carousel');
 
 var popper = require('popper.js');
@@ -29246,7 +29248,7 @@ var bootstrap = require('bootstrap/dist/js/bootstrap');
 
 var fontawesome = require('@fortawesome/fontawesome-free/js/all');
 
-var fancybox = require('@fancyapps/fancybox');
+//var fancybox = require('@fancyapps/fancybox');
 
 // Menu
 
