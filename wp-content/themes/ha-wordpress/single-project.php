@@ -43,6 +43,10 @@
             </p>
           </div>
         <? endwhile ?>
+        <div class="disclaimer">
+        <p>
+          <?= pll_e('Estas imágenes son ilustrativas y no constituyen compromiso alguno por parte del vendedor, quién podrá realizar modificaciones al proyecto sin previo aviso.') ?></p>
+        </div>
       </section>
     <? endif ?>
 

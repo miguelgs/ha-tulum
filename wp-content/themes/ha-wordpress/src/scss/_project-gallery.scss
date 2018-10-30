@@ -12,4 +12,14 @@
       }
     }
   }
+
+  .disclaimer {
+    background: getAppColor('black-haze');
+    padding: 25px;
+
+    p {
+      text-align: center;
+      margin: 0;
+    }
+  }
 }

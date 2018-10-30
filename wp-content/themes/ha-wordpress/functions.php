@@ -78,6 +78,10 @@ if ( function_exists( 'pll_register_string' ) ) {
 
   pll_register_string('terms',   'Términos y Condiciones', 'Footer', false);
   pll_register_string('privacy', 'Política de Privacidad', 'Footer', false);
+
+  // Disclaimer
+
+  pll_register_string('disclaimer', 'Estas imágenes son ilustrativas y no constituyen compromiso alguno por parte del vendedor, quién podrá realizar modificaciones al proyecto sin previo aviso.' , 'Gallery', false);
 } 
 
 ?>
