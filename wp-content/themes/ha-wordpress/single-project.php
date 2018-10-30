@@ -41,12 +41,15 @@
             <p class="caption">
               <?= get_sub_field( 'caption' ) ?>
             </p>
-            <a href="<?= $file[0] ?>" data-fancybox="gallery" data-caption="<?= get_sub_field( 'caption' ) ?>">View</a>
+            <a href="<?= $file[0] ?>" data-fancybox="gallery" data-caption="<?= get_sub_field( 'caption' ) ?>" class="zoom"></a>
           </div>
         <? endwhile ?>
         <div class="disclaimer">
-        <p>
-          <?= pll_e('Estas imágenes son ilustrativas y no constituyen compromiso alguno por parte del vendedor, quién podrá realizar modificaciones al proyecto sin previo aviso.') ?></p>
+          <div class="screen_container">
+            <p>
+              <?= pll_e('Estas imágenes son ilustrativas y no constituyen compromiso alguno por parte del vendedor, quién podrá realizar modificaciones al proyecto sin previo aviso.') ?>
+            </p>
+          </div>
         </div>
       </section>
     <? endif ?>

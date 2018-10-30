@@ -4,6 +4,7 @@
     background: center center no-repeat;
     background-size: cover;
     margin-top: 10px;
+    position: relative;
 
     &.screen {
 
@@ -11,11 +12,22 @@
         min-height: 50vh;
       }
     }
+
+    .zoom {
+      background: getAppColor('mirage') url(../../assets/images/icons/zoom.svg) center center no-repeat;
+      background-size: 30px 30px;
+      height: 50px;
+      position: absolute;
+      right: 25px;
+      top: 25px;
+      width: 50px;
+    }
   }
 
   .disclaimer {
-    background: getAppColor('black-haze');
-    padding: 25px;
+    //background: getAppColor('black-haze');
+    font-size: 80%;
+    padding: 10px 0;
 
     p {
       text-align: center;
