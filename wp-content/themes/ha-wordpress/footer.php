@@ -1,7 +1,7 @@
     <footer id="main-footer">
       <nav>
-        <a href="#" rel="terms"><?= pll_e( 'Términos y Condiciones' ) ?></a>
-        |
+        <!--<a href="#" rel="terms"><?= pll_e( 'Términos y Condiciones' ) ?></a>
+        |-->
         <a href="#" rel="privacy"><?= pll_e( 'Política de Privacidad' ) ?></a>
       </nav>
     </footer>
