@@ -41,6 +41,7 @@
             <p class="caption">
               <?= get_sub_field( 'caption' ) ?>
             </p>
+            <a href="<?= $file[0] ?>" data-fancybox="gallery" data-caption="<?= get_sub_field( 'caption' ) ?>">View</a>
           </div>
         <? endwhile ?>
         <div class="disclaimer">
