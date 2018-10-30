@@ -45,7 +45,7 @@
           </div>
         <? endwhile ?>
         <div class="disclaimer">
-          <div class="screen_container">
+          <div class="screen-container">
             <p>
               <?= pll_e('Estas imágenes son ilustrativas y no constituyen compromiso alguno por parte del vendedor, quién podrá realizar modificaciones al proyecto sin previo aviso.') ?>
             </p>
