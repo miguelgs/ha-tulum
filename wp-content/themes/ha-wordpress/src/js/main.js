@@ -1,6 +1,8 @@
 var $ = require('jquery');
 
-var fancybox = require('@fancyapps/fancybox')($);
+window.jQuery = $;
+
+require('@fancyapps/fancybox')($);
 
 var slick = require('slick-carousel');
 
