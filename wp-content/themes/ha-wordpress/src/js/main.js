@@ -146,3 +146,9 @@ $('#project-about .collaborators .carousel').slick({
     }
   ]
 });
+
+// Fancybox
+
+$('[data-fancybox="gallery"]').fancybox({
+	// Options will go here
+});
