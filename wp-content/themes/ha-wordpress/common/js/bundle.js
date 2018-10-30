@@ -29240,7 +29240,7 @@ var $ = require('jquery');
 
 window.jQuery = $;
 
-require('@fancyapps/fancybox')($);
+//require('@fancyapps/fancybox')($);
 
 var slick = require('slick-carousel');
 
@@ -29250,7 +29250,7 @@ var bootstrap = require('bootstrap/dist/js/bootstrap');
 
 var fontawesome = require('@fortawesome/fontawesome-free/js/all');
 
-//var fancybox = require('@fancyapps/fancybox');
+var fancybox = require('@fancyapps/fancybox');
 
 // Menu
 
