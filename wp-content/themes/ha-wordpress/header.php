@@ -33,7 +33,7 @@
             ?>
             <? if( $loop->have_posts() ): ?>
               <p class="head">
-                <?= pll_e( 'Desarrollos en Preventa' ) ?>
+                <?= pll_e( 'Desarrollos en preventa' ) ?>
               </p>
               <ul>
                 <? while( $loop->have_posts() ) : $loop->the_post() ?>
