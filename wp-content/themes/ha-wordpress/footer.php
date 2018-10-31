@@ -18,7 +18,15 @@
           </button>
         </div>-->
         <div class="modal-body">
-          <iframe src="<?= get_post_permalink( pll_get_post( 3 ) ) ?>" frameborder="0" allowtransparency="true"></iframe>
+          <!--<iframe src="<?= get_post_permalink( pll_get_post( 3 ) ) ?>" frameborder="0" allowtransparency="true"></iframe>-->
+
+          <?
+            $privacy_id = 3;
+            $privacy_post = get_post( $privacy_id ); 
+          ?>
+          
+          <? print_r( $privacy_post ) ?>
+
         </div>
         <!--<div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
