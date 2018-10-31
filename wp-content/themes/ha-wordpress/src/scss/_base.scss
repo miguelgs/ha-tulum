@@ -89,7 +89,8 @@ b {
       }
 
       .sub-navigation {
-        background: getAppColorAlpha('gallery',0.8);
+        background: getAppColor('gallery');
+        //background: getAppColorAlpha('gallery',0.8);
         //bottom: 0;
         //display: none;
         left: 100%;
