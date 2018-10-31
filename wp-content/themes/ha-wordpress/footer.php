@@ -28,7 +28,7 @@
           <p class="screen-title screen-title-border">
             <?=  $privacy_post->post_title ?>
           </p>
-          <?= $privacy_post->post_content ?>
+          <?= wpautop( $privacy_post->post_content ) ?>
 
         </div>
         <!--<div class="modal-footer">
