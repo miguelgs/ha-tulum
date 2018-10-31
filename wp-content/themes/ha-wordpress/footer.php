@@ -22,7 +22,7 @@
             <!--<iframe src="<?= get_post_permalink( pll_get_post( 3 ) ) ?>" frameborder="0" allowtransparency="true"></iframe>-->
 
             <?
-              $privacy_id = 3;
+              $privacy_id = pll_get_post( 3 );
               $privacy_post = get_post( $privacy_id ); 
             ?>
 
