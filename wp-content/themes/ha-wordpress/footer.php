@@ -24,8 +24,11 @@
             $privacy_id = 3;
             $privacy_post = get_post( $privacy_id ); 
           ?>
-          
-          <? print_r( $privacy_post ) ?>
+
+          <p class="screen-title screen-title-border">
+            <?=  $privacy_post->post_title ?>
+          </p>
+          <?= $privacy_post->post_content ?>
 
         </div>
         <!--<div class="modal-footer">
