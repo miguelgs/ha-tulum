@@ -134,6 +134,7 @@
 }
 
 .modal {
+  
   .modal-dialog {
     max-width: unset;
 
@@ -175,4 +176,6 @@
 
 .modal-body {
   background: transparent;
+  -webkit-overflow-scrolling: auto !important;
+  overflow-y: auto !important;
 }
