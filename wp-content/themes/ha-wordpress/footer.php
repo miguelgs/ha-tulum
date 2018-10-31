@@ -18,18 +18,19 @@
           </button>
         </div>-->
         <div class="modal-body">
-          <!--<iframe src="<?= get_post_permalink( pll_get_post( 3 ) ) ?>" frameborder="0" allowtransparency="true"></iframe>-->
+          <div class="container">
+            <!--<iframe src="<?= get_post_permalink( pll_get_post( 3 ) ) ?>" frameborder="0" allowtransparency="true"></iframe>-->
 
-          <?
-            $privacy_id = 3;
-            $privacy_post = get_post( $privacy_id ); 
-          ?>
+            <?
+              $privacy_id = 3;
+              $privacy_post = get_post( $privacy_id ); 
+            ?>
 
-          <p class="screen-title screen-title-border">
-            <?=  $privacy_post->post_title ?>
-          </p>
-          <?= wpautop( $privacy_post->post_content ) ?>
-
+            <p class="screen-title screen-title-border">
+              <?=  $privacy_post->post_title ?>
+            </p>
+            <?= wpautop( $privacy_post->post_content ) ?>
+          </div>
         </div>
         <!--<div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
