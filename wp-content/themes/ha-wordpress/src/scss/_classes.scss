@@ -167,15 +167,15 @@
       }
 
       .modal-body {
-        -webkit-overflow-scrolling: auto !important;
-        overflow-y: auto !important;
+        
+        p, ul, ol {
+          color: getAppColor('white');
+    
+          &:last-child {
+            margin: 0;
+          }
+        }
       }
     }
   }
-}
-
-.modal-body {
-  background: transparent;
-  -webkit-overflow-scrolling: auto !important;
-  overflow-y: auto !important;
 }
