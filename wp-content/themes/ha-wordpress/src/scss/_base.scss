@@ -170,7 +170,8 @@ b {
   }
 
   .bar {
-    background: getAppColor('mirage');
+    background: getAppColor('mirage') url(../../assets/images/logo-ha-horizontal.svg) 10px center no-repeat;
+    background-size: 200px 40px;
     height: 50px;
     position: relative;
 
