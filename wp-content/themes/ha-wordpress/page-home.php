@@ -29,6 +29,8 @@
               </p>
               <p class="mb-0">
                 <a href="<?= get_sub_field('link') ?>" class="ha-btn ha-btn-lg ha-btn-white"><?= pll_e( 'Ver más' ) ?></a>
+              </p>
+              <p class="mb-0">
                 <a href="#" class="arrow" rel="projects"></a>
               </p>
             </div>

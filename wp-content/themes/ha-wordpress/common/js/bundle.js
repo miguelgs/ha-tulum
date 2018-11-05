@@ -29266,6 +29266,11 @@ function getScreenOffset() {
   return offset;
 }
 
+$('#slider .arrow').click(function(e) {
+  e.preventDefault();
+  $('html, body').stop().animate({ scrollTop: $('#' + $(this).attr('rel')).offset().top - getScreenOffset() }, 500);
+});
+
 $('#main-navigation > ul > li > a, #main-navigation-mobile > ul > li > a').click(function (e) {
   if ($(this).attr('rel')) {
     e.preventDefault();
