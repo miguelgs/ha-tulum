@@ -130,7 +130,7 @@
                     <? while (have_rows('collaborators')) : the_row(); ?>
                     <div class="item">
                       <? $file = wp_get_attachment_image_src( get_sub_field( 'image' ), 'full' ) ?>
-                      <div class="logo" style="background-image:url(<?= $file[0] ?>)"></div>
+                      <a href="<?= get_sub_field('url') ?>" class="logo" style="background-image:url(<?= $file[0] ?>)"></a>
                     </div>
                     <? endwhile ?>
                   </div>
