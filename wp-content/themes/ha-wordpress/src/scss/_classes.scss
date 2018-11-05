@@ -134,6 +134,7 @@
 }
 
 .modal {
+  -webkit-overflow-scrolling: touch;
   
   .modal-dialog {
     max-width: unset;
