@@ -8,7 +8,7 @@
   </div>
 
   <div class="modal fade" id="privacy">
-    <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-dialog" role="document">
       <div class="modal-content">
         <a href="#" rel="privacy" class="close"><a>
         <!--<div class="modal-header">
@@ -41,7 +41,7 @@
   </div>
 
   <div class="modal fade" id="terms">
-    <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-dialog" role="document">
       <div class="modal-content">
         <a href="#" rel="terms" class="close"><a>
         <!--<div class="modal-header">
