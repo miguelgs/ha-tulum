@@ -109,14 +109,17 @@
             }
           }
 
-          &.arrow {
-            background: url(../../assets/images/icons/arrow-down.svg) bottom center no-repeat;
-            background-size: 24px 24px;
-            padding-bottom: 50px;
-
-            @include media-breakpoint-down(sm) {
-              background: none;
-              padding: 0;
+          a {
+            &.arrow {
+              background: red url(../../assets/images/icons/arrow-down.svg) center center no-repeat;
+              background-size: 24px 24px;
+              display: inline-block;
+              height: 30px;
+              width: 30px;
+  
+              @include media-breakpoint-down(sm) {
+                display: none;
+              }
             }
           }
         }
