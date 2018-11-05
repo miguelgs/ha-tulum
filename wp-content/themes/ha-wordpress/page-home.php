@@ -182,7 +182,7 @@
                 
                 <div class="item">
                   <? $image = wp_get_attachment_image_src(get_sub_field('image'), 'full') ?>
-                  <a href="<?= get_sub_field('url') ?>" class="logo" style="background-image:url(<?= $image[0] ?>)"></a>
+                  <a href="<?= get_sub_field('url') ?>" target="_blank" class="logo" style="background-image:url(<?= $image[0] ?>)"></a>
                 </div>
 
                 <? endwhile ?>
